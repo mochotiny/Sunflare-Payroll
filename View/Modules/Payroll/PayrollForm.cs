@@ -24,7 +24,88 @@ namespace WFA_APP.View.Modules.Payroll
 
         private void PayrollBtn_Click(object sender, EventArgs e)
         {
+            
+            if (Monthly.Checked)
+            {
+                //15 && 30/31
+                //Filter Employees who has weekly = 0
+                if (PhilHealth.Checked && PagIbig.Checked && SSS.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("SELECT * FROM Employees WHERE", conn);
+                }
+                else if (PhilHealth.Checked && PagIbig.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (PhilHealth.Checked && SSS.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (PagIbig.Checked && SSS.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (SSS.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (PagIbig.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (PhilHealth.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
 
+            }
+            //Weekly = 1
+            else
+            {
+                //Between 2 dates
+                if (PhilHealth.Checked && PagIbig.Checked && SSS.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("SELECT * FROM Employees WHERE Phil_Health = 1 AND PagIbig = 1 AND SSS = 1", conn);
+                }
+                else if (PhilHealth.Checked && PagIbig.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (PhilHealth.Checked && SSS.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (PagIbig.Checked && SSS.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (SSS.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (PagIbig.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+                else if (PhilHealth.Checked)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("", conn);
+                }
+            }
         }
     }
 }

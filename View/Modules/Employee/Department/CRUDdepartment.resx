@@ -118,31 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnDeleteDept.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAAmCAYAAAAr8EX5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACvSURBVHhe7dQxDQQxEARB80dlyzAexgG4kyUnj6GrpEk2
-        3x5A3N77N+d8zayx8/P3/cc4B6Dj/Px9fwGAGgGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGA
-        MAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGA
-        MAGAsL8ArLWeczCzxs7P3/cHmsb4AJT6r81c+/AzAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQAAAAAmCAYAAAAr8EX5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACvSURBVHhe7dQxDQQxEARB80dlyzAexgG4kyUnj6GrpEk2
-        3x5A3N77N+d8zayx8/P3/cc4B6Dj/Px9fwGAGgGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGA
-        MAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGA
-        MAGAsL8ArLWeczCzxs7P3/cHmsb4AJT6r81c+/AzAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="BtnCreateDept.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQAAAAAmCAYAAAAr8EX5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACgSURBVHhe7dQxAYAwAMAwlMwy84cM/g0EoIDmyNW/x5jr
-        GnNvoGZd7wC+AlBgABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBm
-        ABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABB2jHPd
-        XwH4uXPdD2MKjYZrklpnAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAChSURBVHhe7dQxAYBAEMTA13D4V4aAF4AAQAAKyBRTbb1Z
+        e+bcx3EDMe/31+cAJAgAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkA
+        hAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhK09
+        c30NwM/NXA8UJ8wcDqQx2AAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="BtnUpdateDept.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -154,13 +136,31 @@
         xtrzvA3An9vzfAFTMRTSkBMGOgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BtnDeleteDept.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnCreateDept.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAAmCAYAAAAr8EX5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAChSURBVHhe7dQxAYBAEMTA13D4V4aAF4AAQAAKyBRTbb1Z
-        e+bcx3EDMe/31+cAJAgAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkA
-        hAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhK09
-        c30NwM/NXA8UJ8wcDqQx2AAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACgSURBVHhe7dQxAYAwAMAwlMwy84cM/g0EoIDmyNW/x5jr
+        GnNvoGZd7wC+AlBgABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBm
+        ABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABBmABB2jHPd
+        XwH4uXPdD2MKjYZrklpnAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="DeptName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQAAAAAmCAYAAAAr8EX5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACvSURBVHhe7dQxDQQxEARB80dlyzAexgG4kyUnj6GrpEk2
+        3x5A3N77N+d8zayx8/P3/cc4B6Dj/Px9fwGAGgGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGA
+        MAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGA
+        MAGAsL8ArLWeczCzxs7P3/cHmsb4AJT6r81c+/AzAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="DeptID.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQAAAAAmCAYAAAAr8EX5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACvSURBVHhe7dQxDQQxEARB80dlyzAexgG4kyUnj6GrpEk2
+        3x5A3N77N+d8zayx8/P3/cc4B6Dj/Px9fwGAGgGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGA
+        MAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGAMAGA
+        MAGAsL8ArLWeczCzxs7P3/cHmsb4AJT6r81c+/AzAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>
