@@ -41,6 +41,9 @@ namespace WFA_APP.View.Modules.Attendance
             cmd.ExecuteNonQuery();
             MessageBox.Show("Logged.");
             connect.Close();
+            
+            this.Close();
+
         }
     }
 }

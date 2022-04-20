@@ -74,6 +74,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
         private void BtnCreateEmp_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+            int active;
             if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
@@ -83,6 +84,23 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             {
                 con.Open();
                 //cmd = new SqlCommand("INSERT INTO Employees (Biometric_Id, Dept_Name, Contact, Address, Department_Id, Job_Id) VALUES( '" + BioID.Text + "','" + EmpName.Text + "','" + EmpContact.Text + "','" + EmpAddress.Text + "','" + DeptDrop.SelectedValue.ToString() + "','" + JobDrop.SelectedValue.ToString() + "' )", con);
+                if (PhilHealth.Checked)
+                { active = 1; }
+                else 
+                { active = 0; }
+                if (PagIbig.Checked)
+                { active = 1; }
+                else 
+                { active = 0; }
+                if (SSS.Checked)
+                { active = 1; }
+                else 
+                { active = 0; }
+                if (Weekly.Checked)
+                { active = 1; }
+                else
+                { active = 0; }
+
                 cmd = new SqlCommand("proc_CreateEmployee", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@BiometricID", BioID.Text);
@@ -92,11 +110,23 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 cmd.Parameters.AddWithValue("@DepartmentID", DeptDrop.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@JobID", JobDrop.SelectedValue.ToString());
 
+                cmd.Parameters.AddWithValue("@PhilHealth", PhilHealth.Checked);
+                cmd.Parameters.AddWithValue("@PagIbig", PagIbig.Checked);
+                cmd.Parameters.AddWithValue("@SSS", SSS.Checked);
+                cmd.Parameters.AddWithValue("@Weekly", Weekly.Checked);
+
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved.");
+
+                sda = new SqlDataAdapter("SELECT * FROM Employees", con);
+                DataSet ds = new DataSet();
+                sda.Fill(ds, "Employees");
+                EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;
+
                 con.Close();
-                this.Refresh();
+                
             }
+            
         }
 
         private void BioID_KeyPress(object sender, KeyPressEventArgs e)
@@ -109,18 +139,25 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
 
         private void BtnUpdateEmp_Click(object sender, EventArgs e)
         {
+           
             BioID.Text = this.EmpDgv.CurrentRow.Cells[1].Value.ToString();
             EmpName.Text = this.EmpDgv.CurrentRow.Cells[2].Value.ToString();
             EmpContact.Text = this.EmpDgv.CurrentRow.Cells[3].Value.ToString();
             EmpAddress.Text = this.EmpDgv.CurrentRow.Cells[4].Value.ToString();
             DeptDrop.Text = this.EmpDgv.CurrentRow.Cells[5].Value.ToString();
             JobDrop.Text = this.EmpDgv.CurrentRow.Cells[6].Value.ToString();
+            PhilHealth.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[8].Value);
+            PagIbig.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[9].Value);
+            SSS.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[10].Value);
+            Weekly.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[11].Value);
+
             CheckBtn.Visible = true;
         }
 
         private void CheckBtn_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+            int active;
             if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
@@ -130,6 +167,22 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             {
                 con.Open();
                 //cmd = new SqlCommand("UPDATE Employees SET (Biometric_Id, Employee_Name, Employee_Contact, Employee_Address, DepartmentID, JobID) VALUES ( '" + BioID.Text + "','" + EmpName.Text + "','" + EmpContact.Text + "','" + EmpAddress.Text + "','" + DeptDrop.SelectedValue.ToString() + "','" + JobDrop.SelectedValue.ToString() + "' )", con);
+                if (PhilHealth.Checked)
+                { active = 1; }
+                else
+                { active = 0; }
+                if (PagIbig.Checked)
+                { active = 1; }
+                else
+                { active = 0; }
+                if (SSS.Checked)
+                { active = 1; }
+                else
+                { active = 0; }
+                if (Weekly.Checked)
+                { active = 1; }
+                else
+                { active = 0; }
                 cmd = new SqlCommand("proc_UpdateEmployee", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@EmployeeId", EmpDgv.CurrentRow.Cells[0].Value.ToString());
@@ -140,15 +193,25 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 cmd.Parameters.AddWithValue("@DepartmentId", DeptDrop.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@JobID", JobDrop.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@DayRate", EmpDgv.CurrentRow.Cells[7].Value.ToString());
+                
+                cmd.Parameters.AddWithValue("@PhilHealth", PhilHealth.Checked);
+                cmd.Parameters.AddWithValue("@PagIbig", PagIbig.Checked);
+                cmd.Parameters.AddWithValue("@SSS", SSS.Checked);
+                cmd.Parameters.AddWithValue("@Weekly", Weekly.Checked);
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved.");
-                this.Refresh();
+
+                sda = new SqlDataAdapter("SELECT * FROM Employees", con);
+                DataSet ds = new DataSet();
+                sda.Fill(ds, "Employees");
+                EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;
+
                 con.Close();
                 
             }
             CheckBtn.Visible = false;
-            
+
         }
 
         private void BtnDeleteEmp_Click(object sender, EventArgs e)
@@ -189,6 +252,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                                 con.Close();
                                 BioID.Clear();
                                 this.Refresh();
+                                DeleteBtn.Visible = false;
                             }
 
                         }

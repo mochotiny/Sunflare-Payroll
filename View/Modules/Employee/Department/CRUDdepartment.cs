@@ -71,9 +71,18 @@ namespace WFA_APP.View.Modules.Department
             {
                 con.Open();
                 //cmd = new SqlCommand("INSERT INTO Employees (Biometric_Id, Dept_Name, Contact, Address, Department_Id, Job_Id) VALUES( '" + BioID.Text + "','" + EmpName.Text + "','" + EmpContact.Text + "','" + EmpAddress.Text + "','" + DeptDrop.SelectedValue.ToString() + "','" + JobDrop.SelectedValue.ToString() + "' )", con);
-                cmd = new SqlCommand("INSERT INTO Departments (Department_Name) VALUES ("+ DeptName.Text +")", con);
+                //cmd = new SqlCommand("INSERT INTO Departments (Department_Name) VALUES ("+ DeptName.Text +")", con);
+                cmd = new SqlCommand("proc_CreateDepartment", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@DepartmentName", DeptName.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Created.");
+
+                sda = new SqlDataAdapter("SELECT * FROM Departments", con);
+                DataSet ds = new DataSet();
+                sda.Fill(ds, "Departments");
+                DeptDgv.DataSource = ds.Tables["Departments"].DefaultView;
+
                 con.Close();
                 this.Refresh();
             }
@@ -88,20 +97,31 @@ namespace WFA_APP.View.Modules.Department
 
         private void CheckBtn_Click(object sender, EventArgs e)
         {
-            using (db.con)
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+            if (DeptID.Text == "" || DeptName.Text == "")
             {
-                if (DeptID.Text == "" || DeptName.Text == "")
-                {
                     MessageBox.Show("Fill up all fields");
-                }
-                else
-                {
-                    cmd = new SqlCommand("UPDATE Departments SET Department_Name = '"+ DeptName.Text +"' WHERE DepartmentID = '"+ DeptID.Text +"' ", db.con);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Updated.");
-                    db.con.Close();
-                    this.Refresh();
-                }
+            }
+            else
+            {
+                con.Open();
+                //cmd = new SqlCommand("UPDATE Departments SET Department_Name = '"+ DeptName.Text +"' WHERE DepartmentID = '"+ DeptID.Text +"' ", db.con);
+                cmd = new SqlCommand("proc_UpdateDepartment", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@DepartmentID", DeptID.Text);
+                cmd.Parameters.AddWithValue("@DepartmentName", DeptName.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Updated.");
+
+                sda = new SqlDataAdapter("SELECT * FROM Departments", con);
+                DataSet ds = new DataSet();
+                sda.Fill(ds, "Departments");
+                DeptDgv.DataSource = ds.Tables["Departments"].DefaultView;
+
+                con.Close();
+                CheckBtn.Visible=false;
+                this.Refresh();
             }
         }
 
@@ -114,50 +134,49 @@ namespace WFA_APP.View.Modules.Department
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            using (db.con)
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+
+            try
             {
-                try
+                if (DeptDgv.Rows.Count > 1)
                 {
-                    if (DeptDgv.Rows.Count > 1)
+                    if (DeptDgv.CurrentRow.Index == DeptDgv.Rows.Count - 1)
                     {
-                        if (DeptDgv.CurrentRow.Index == DeptDgv.Rows.Count - 1)
-                        {
-                            MessageBox.Show("Please select data to be deleted.");
-                        }
-                        else
-                        {
-                            if (MessageBox.Show("Do you want to delete this data?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                            {
-                                string del = DeptDgv.CurrentRow.Cells[0].Value.ToString();
-                                db.con.Open();
-                                cmd = new SqlCommand("DELETE FROM Departments WHERE DepartmentID = '" + del + "' ", db.con);
-                                cmd.ExecuteNonQuery();
-                                MessageBox.Show("Data has been deleted");
-
-
-                                string query = "SELECT * FROM Departments";
-                                SqlDataAdapter da = new SqlDataAdapter(query, db.con);
-                                DataSet ds = new DataSet();
-                                da.Fill(ds, "Departments");
-                                DeptDgv.DataSource = ds;
-                                DeptDgv.DataMember = "Departments";
-                                DeptDgv.DataSource = DeptDgv.DataSource;
-                                db.con.Close();
-                            }
-
-                        }
-
-
+                        MessageBox.Show("Please select data to be deleted.");
                     }
                     else
                     {
-                        MessageBox.Show("No more data to be deleted");
+                        if (MessageBox.Show("Do you want to delete this data?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                        {
+                            string del = DeptDgv.CurrentRow.Cells[0].Value.ToString();
+                            con.Open();
+                            cmd = new SqlCommand("DELETE FROM Departments WHERE DepartmentID = '" + del + "' ", con);
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Data has been deleted");
+
+                            DeptID.Clear();
+                            DeptName.Clear();
+                            DeleteBtn.Visible = false;
+
+                            string query = "SELECT * FROM Departments";
+                            SqlDataAdapter da = new SqlDataAdapter(query, con);
+                            DataSet ds = new DataSet();
+                            da.Fill(ds, "Departments");
+                            DeptDgv.DataSource = ds;
+                            DeptDgv.DataMember = "Departments";
+                            DeptDgv.DataSource = DeptDgv.DataSource;
+                            con.Close();
+                        }
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("No more data to be deleted");
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

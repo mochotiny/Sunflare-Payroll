@@ -86,6 +86,11 @@ namespace WFA_APP.View.Modules.Attendance
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
+            connect = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+            sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BiometricID", connect);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            AttDgv.DataSource = dt;
             this.Refresh();
         }
     }  

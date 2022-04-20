@@ -227,11 +227,29 @@
     <Compile Include="View\Modules\Employee\Job\CRUDjob.Designer.cs">
       <DependentUpon>CRUDjob.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Modules\Payroll\Deduction\Deductions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Payroll\Deduction\Deductions.Designer.cs">
+      <DependentUpon>Deductions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Payroll\Monthly\Month.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Payroll\Monthly\Month.Designer.cs">
+      <DependentUpon>Month.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Modules\Payroll\PayrollForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Modules\Payroll\PayrollForm.Designer.cs">
       <DependentUpon>PayrollForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Payroll\Weekly\Week.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Payroll\Weekly\Week.Designer.cs">
+      <DependentUpon>Week.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Modules\Report\ReportForm.cs">
       <SubType>Form</SubType>
@@ -295,8 +313,17 @@
     <EmbeddedResource Include="View\Modules\Home\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Payroll\Deduction\Deductions.resx">
+      <DependentUpon>Deductions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Payroll\Monthly\Month.resx">
+      <DependentUpon>Month.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Payroll\PayrollForm.resx">
       <DependentUpon>PayrollForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Payroll\Weekly\Week.resx">
+      <DependentUpon>Week.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Report\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
@@ -387,5 +414,6 @@
   <ItemGroup>
     <None Include="Resources\delete.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
