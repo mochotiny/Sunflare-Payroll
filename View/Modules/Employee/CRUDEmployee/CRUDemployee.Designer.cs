@@ -137,13 +137,13 @@
             this.EmpDgv.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.EmpDgv.HeaderBgColor = System.Drawing.Color.Empty;
             this.EmpDgv.HeaderForeColor = System.Drawing.Color.White;
-            this.EmpDgv.Location = new System.Drawing.Point(12, 209);
+            this.EmpDgv.Location = new System.Drawing.Point(12, 172);
             this.EmpDgv.Name = "EmpDgv";
             this.EmpDgv.ReadOnly = true;
             this.EmpDgv.RowHeadersVisible = false;
             this.EmpDgv.RowTemplate.Height = 40;
             this.EmpDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EmpDgv.Size = new System.Drawing.Size(1068, 354);
+            this.EmpDgv.Size = new System.Drawing.Size(1062, 316);
             this.EmpDgv.TabIndex = 0;
             this.EmpDgv.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -175,7 +175,7 @@
             this.EmpName.IconRight = null;
             this.EmpName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.EmpName.Lines = new string[0];
-            this.EmpName.Location = new System.Drawing.Point(162, 50);
+            this.EmpName.Location = new System.Drawing.Point(162, 45);
             this.EmpName.MaxLength = 32767;
             this.EmpName.MinimumSize = new System.Drawing.Size(1, 1);
             this.EmpName.Modified = false;
@@ -325,7 +325,7 @@
             this.EmpAddress.IconRight = null;
             this.EmpAddress.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.EmpAddress.Lines = new string[0];
-            this.EmpAddress.Location = new System.Drawing.Point(419, 50);
+            this.EmpAddress.Location = new System.Drawing.Point(419, 45);
             this.EmpAddress.MaxLength = 32767;
             this.EmpAddress.MinimumSize = new System.Drawing.Size(1, 1);
             this.EmpAddress.Modified = false;
@@ -467,7 +467,7 @@
             this.JobDrop.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.JobDrop.ItemHighLightForeColor = System.Drawing.Color.White;
             this.JobDrop.ItemTopMargin = 3;
-            this.JobDrop.Location = new System.Drawing.Point(671, 50);
+            this.JobDrop.Location = new System.Drawing.Point(671, 45);
             this.JobDrop.Name = "JobDrop";
             this.JobDrop.Size = new System.Drawing.Size(233, 32);
             this.JobDrop.TabIndex = 6;
@@ -611,7 +611,7 @@
             this.BtnCreateEmp.IdleIconLeftImage = null;
             this.BtnCreateEmp.IdleIconRightImage = null;
             this.BtnCreateEmp.IndicateFocus = false;
-            this.BtnCreateEmp.Location = new System.Drawing.Point(273, 134);
+            this.BtnCreateEmp.Location = new System.Drawing.Point(281, 139);
             this.BtnCreateEmp.Name = "BtnCreateEmp";
             this.BtnCreateEmp.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnCreateEmp.OnDisabledState.BorderRadius = 1;
@@ -645,7 +645,7 @@
             this.BtnCreateEmp.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.BtnCreateEmp.OnPressedState.IconLeftImage = null;
             this.BtnCreateEmp.OnPressedState.IconRightImage = null;
-            this.BtnCreateEmp.Size = new System.Drawing.Size(131, 38);
+            this.BtnCreateEmp.Size = new System.Drawing.Size(131, 27);
             this.BtnCreateEmp.TabIndex = 8;
             this.BtnCreateEmp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnCreateEmp.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -703,7 +703,7 @@
             this.BtnUpdateEmp.IdleIconLeftImage = null;
             this.BtnUpdateEmp.IdleIconRightImage = null;
             this.BtnUpdateEmp.IndicateFocus = false;
-            this.BtnUpdateEmp.Location = new System.Drawing.Point(466, 134);
+            this.BtnUpdateEmp.Location = new System.Drawing.Point(470, 139);
             this.BtnUpdateEmp.Name = "BtnUpdateEmp";
             this.BtnUpdateEmp.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnUpdateEmp.OnDisabledState.BorderRadius = 1;
@@ -737,7 +737,7 @@
             this.BtnUpdateEmp.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.BtnUpdateEmp.OnPressedState.IconLeftImage = null;
             this.BtnUpdateEmp.OnPressedState.IconRightImage = null;
-            this.BtnUpdateEmp.Size = new System.Drawing.Size(131, 38);
+            this.BtnUpdateEmp.Size = new System.Drawing.Size(131, 27);
             this.BtnUpdateEmp.TabIndex = 9;
             this.BtnUpdateEmp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnUpdateEmp.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -795,7 +795,7 @@
             this.BtnDeleteEmp.IdleIconLeftImage = null;
             this.BtnDeleteEmp.IdleIconRightImage = null;
             this.BtnDeleteEmp.IndicateFocus = false;
-            this.BtnDeleteEmp.Location = new System.Drawing.Point(659, 134);
+            this.BtnDeleteEmp.Location = new System.Drawing.Point(659, 139);
             this.BtnDeleteEmp.Name = "BtnDeleteEmp";
             this.BtnDeleteEmp.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnDeleteEmp.OnDisabledState.BorderRadius = 1;
@@ -829,7 +829,7 @@
             this.BtnDeleteEmp.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.BtnDeleteEmp.OnPressedState.IconLeftImage = null;
             this.BtnDeleteEmp.OnPressedState.IconRightImage = null;
-            this.BtnDeleteEmp.Size = new System.Drawing.Size(131, 38);
+            this.BtnDeleteEmp.Size = new System.Drawing.Size(131, 27);
             this.BtnDeleteEmp.TabIndex = 10;
             this.BtnDeleteEmp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnDeleteEmp.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -849,7 +849,7 @@
             // CheckBtn
             // 
             this.CheckBtn.Image = global::WFA_APP.Properties.Resources.check;
-            this.CheckBtn.Location = new System.Drawing.Point(930, 50);
+            this.CheckBtn.Location = new System.Drawing.Point(930, 45);
             this.CheckBtn.Name = "CheckBtn";
             this.CheckBtn.Size = new System.Drawing.Size(32, 32);
             this.CheckBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -860,7 +860,7 @@
             // DeleteBtn
             // 
             this.DeleteBtn.Image = global::WFA_APP.Properties.Resources.delete;
-            this.DeleteBtn.Location = new System.Drawing.Point(930, 50);
+            this.DeleteBtn.Location = new System.Drawing.Point(930, 45);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(32, 32);
             this.DeleteBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -886,7 +886,7 @@
             this.Weekly.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Weekly.Cursor = System.Windows.Forms.Cursors.Default;
             this.Weekly.CustomCheckmarkImage = null;
-            this.Weekly.Location = new System.Drawing.Point(355, 96);
+            this.Weekly.Location = new System.Drawing.Point(355, 112);
             this.Weekly.MinimumSize = new System.Drawing.Size(17, 17);
             this.Weekly.Name = "Weekly";
             this.Weekly.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -939,7 +939,7 @@
             this.PhilHealth.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.PhilHealth.Cursor = System.Windows.Forms.Cursors.Default;
             this.PhilHealth.CustomCheckmarkImage = null;
-            this.PhilHealth.Location = new System.Drawing.Point(452, 96);
+            this.PhilHealth.Location = new System.Drawing.Point(452, 112);
             this.PhilHealth.MinimumSize = new System.Drawing.Size(17, 17);
             this.PhilHealth.Name = "PhilHealth";
             this.PhilHealth.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -992,7 +992,7 @@
             this.PagIbig.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.PagIbig.Cursor = System.Windows.Forms.Cursors.Default;
             this.PagIbig.CustomCheckmarkImage = null;
-            this.PagIbig.Location = new System.Drawing.Point(568, 96);
+            this.PagIbig.Location = new System.Drawing.Point(568, 112);
             this.PagIbig.MinimumSize = new System.Drawing.Size(17, 17);
             this.PagIbig.Name = "PagIbig";
             this.PagIbig.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -1045,7 +1045,7 @@
             this.SSS.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.SSS.Cursor = System.Windows.Forms.Cursors.Default;
             this.SSS.CustomCheckmarkImage = null;
-            this.SSS.Location = new System.Drawing.Point(669, 96);
+            this.SSS.Location = new System.Drawing.Point(669, 112);
             this.SSS.MinimumSize = new System.Drawing.Size(17, 17);
             this.SSS.Name = "SSS";
             this.SSS.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -1084,9 +1084,10 @@
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
             this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(379, 99);
+            this.bunifuLabel1.Location = new System.Drawing.Point(379, 115);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(38, 15);
@@ -1101,7 +1102,7 @@
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(476, 99);
+            this.bunifuLabel2.Location = new System.Drawing.Point(476, 115);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(55, 15);
@@ -1116,7 +1117,7 @@
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(592, 99);
+            this.bunifuLabel3.Location = new System.Drawing.Point(592, 115);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(40, 15);
@@ -1131,7 +1132,7 @@
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(693, 99);
+            this.bunifuLabel4.Location = new System.Drawing.Point(693, 115);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(18, 15);
@@ -1145,7 +1146,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1092, 575);
+            this.ClientSize = new System.Drawing.Size(1086, 489);
             this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel2);

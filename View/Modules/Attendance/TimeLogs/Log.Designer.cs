@@ -381,7 +381,7 @@
             this.TimeIn.ShowUpDown = true;
             this.TimeIn.Size = new System.Drawing.Size(230, 29);
             this.TimeIn.TabIndex = 7;
-            this.TimeIn.Value = new System.DateTime(2022, 4, 20, 2, 40, 0, 0);
+            this.TimeIn.Value = new System.DateTime(2022, 4, 20, 8, 0, 0, 0);
             // 
             // TimeOut
             // 
@@ -393,6 +393,7 @@
             this.TimeOut.ShowUpDown = true;
             this.TimeOut.Size = new System.Drawing.Size(230, 29);
             this.TimeOut.TabIndex = 10;
+            this.TimeOut.Value = new System.DateTime(2022, 4, 21, 17, 0, 0, 0);
             // 
             // Log
             // 

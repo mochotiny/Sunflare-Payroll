@@ -37,7 +37,7 @@ namespace WFA_APP.View.Modules.Attendance
         {
             using (db.con)
             {
-                sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BiometricID", db.con);
+                sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BioID", db.con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 AttDgv.DataSource = dt;
@@ -48,7 +48,7 @@ namespace WFA_APP.View.Modules.Attendance
         {
             connect = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
             connect.Open();
-            string sql = ("SELECT AttendanceID, BiometricID, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances WHERE BiometricID = @EmployeeId AND WorkedDay BETWEEN @Start AND @End");
+            string sql = ("SELECT AttendanceID, BioID, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances WHERE BioID = @EmployeeId AND WorkedDay BETWEEN @Start AND @End");
             DataTable dt = new DataTable();
             SqlDataAdapter sda = new SqlDataAdapter(sql, connect);
             sda.SelectCommand.Parameters.AddWithValue("@EmployeeId", EmpDrop.SelectedValue.ToString());
@@ -87,7 +87,7 @@ namespace WFA_APP.View.Modules.Attendance
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             connect = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
-            sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BiometricID", connect);
+            sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BioID", connect);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             AttDgv.DataSource = dt;

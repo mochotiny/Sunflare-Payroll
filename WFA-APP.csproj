@@ -179,23 +179,41 @@
     <Compile Include="View\App\LogForm.Designer.cs">
       <DependentUpon>LogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Modules\Attendance\AttendanceForm.cs">
+    <Compile Include="View\Modules\Attendance\Attendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Modules\Attendance\AttendanceForm.Designer.cs">
+    <Compile Include="View\Modules\Attendance\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Attendance\TimeLogs\AttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Attendance\TimeLogs\AttendanceForm.Designer.cs">
       <DependentUpon>AttendanceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Modules\Attendance\Log.cs">
+    <Compile Include="View\Modules\Attendance\TimeLogs\Log.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Modules\Attendance\Log.Designer.cs">
+    <Compile Include="View\Modules\Attendance\TimeLogs\Log.Designer.cs">
       <DependentUpon>Log.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Modules\Attendance\Update.cs">
+    <Compile Include="View\Modules\Attendance\TimeLogs\Update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Modules\Attendance\Update.Designer.cs">
+    <Compile Include="View\Modules\Attendance\TimeLogs\Update.Designer.cs">
       <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Attendance\TimeSheet\Sheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Attendance\TimeSheet\Sheet.Designer.cs">
+      <DependentUpon>Sheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Employee\Account\AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Employee\Account\AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Modules\Employee\CRUDEmployee\CRUDemployee.cs">
       <SubType>Form</SubType>
@@ -208,6 +226,12 @@
     </Compile>
     <Compile Include="View\Modules\Employee\Department\CRUDdepartment.Designer.cs">
       <DependentUpon>CRUDdepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Employee\Emp\EmpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Employee\Emp\EmpForm.Designer.cs">
+      <DependentUpon>EmpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Modules\Employee\EmployeeForm.cs">
       <SubType>Form</SubType>
@@ -289,20 +313,32 @@
     <EmbeddedResource Include="View\App\LogForm.resx">
       <DependentUpon>LogForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Modules\Attendance\AttendanceForm.resx">
+    <EmbeddedResource Include="View\Modules\Attendance\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Attendance\TimeLogs\AttendanceForm.resx">
       <DependentUpon>AttendanceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Modules\Attendance\Log.resx">
+    <EmbeddedResource Include="View\Modules\Attendance\TimeLogs\Log.resx">
       <DependentUpon>Log.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Modules\Attendance\Update.resx">
+    <EmbeddedResource Include="View\Modules\Attendance\TimeLogs\Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Attendance\TimeSheet\Sheet.resx">
+      <DependentUpon>Sheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Employee\Account\AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Employee\CRUDEmployee\CRUDemployee.resx">
       <DependentUpon>CRUDemployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Employee\Department\CRUDdepartment.resx">
       <DependentUpon>CRUDdepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Employee\Emp\EmpForm.resx">
+      <DependentUpon>EmpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Employee\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>

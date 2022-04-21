@@ -24,7 +24,7 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
             int nWidthEllipse,
             int nHeightEllipse
         );
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
         public Week()
         {
@@ -34,10 +34,42 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
 
         private void BtnWeeklyPayroll_Click(object sender, EventArgs e)
         {
-            con.Open();
-            cmd = new SqlCommand("" +
-                "SELECT * FROM Employees WHERE Weekly = 1" +
-                "");
+            if (Week_PhilHealth.Checked && Week_PagIbig.Checked && Week_SSS.Checked)
+            {
+                conn.Open();
+                cmd = new SqlCommand("", conn);
+            }
+            else if (Week_PhilHealth.Checked && Week_PagIbig.Checked)
+            {
+                conn.Open();
+                cmd = new SqlCommand("", conn);
+            }
+            else if (Week_PhilHealth.Checked && Week_SSS.Checked)
+            {
+                conn.Open();
+                cmd = new SqlCommand("", conn);
+            }
+            else if (Week_PagIbig.Checked && Week_SSS.Checked)
+            {
+                conn.Open();
+                cmd = new SqlCommand("", conn);
+            }
+            else if (Week_SSS.Checked)
+            {
+                conn.Open();
+                cmd = new SqlCommand("", conn);
+            }
+            else if (Week_PagIbig.Checked)
+            {
+                conn.Open();
+                cmd = new SqlCommand("", conn);
+            }
+            else if (Week_PhilHealth.Checked)
+            {
+                conn.Open();
+                cmd = new SqlCommand("", conn);
+            }
+
         }
     }
 }

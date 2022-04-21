@@ -49,7 +49,7 @@ namespace WFA_APP.View.App
         private void BtnAttendance_Click(object sender, EventArgs e)
         {
             this.PanelForm.Controls.Clear();
-            AttendanceForm att = new AttendanceForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            Attendance att = new Attendance() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             att.FormBorderStyle = FormBorderStyle.None;
             this.PanelForm.Controls.Add(att);
             att.Show();

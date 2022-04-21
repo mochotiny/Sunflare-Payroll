@@ -21,7 +21,7 @@ namespace WFA_APP.View.Modules.Employee
         {
             InitializeComponent();
             this.PanelEmployee.Controls.Clear();
-            CRUDemployee emp = new CRUDemployee() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            EmpForm emp = new EmpForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             emp.FormBorderStyle = FormBorderStyle.None;
             this.PanelEmployee.Controls.Add(emp);
             emp.Show();
@@ -33,7 +33,7 @@ namespace WFA_APP.View.Modules.Employee
             PanelDeck.Size = new Size(1092, 2);
 
             this.PanelEmployee.Controls.Clear();
-            CRUDemployee emp = new CRUDemployee() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            EmpForm emp = new EmpForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             emp.FormBorderStyle = FormBorderStyle.None;
             this.PanelEmployee.Controls.Add(emp);
             emp.Show();

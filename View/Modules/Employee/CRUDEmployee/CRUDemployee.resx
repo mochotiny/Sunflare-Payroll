@@ -168,26 +168,26 @@
   </data>
   <data name="BtnCreateEmp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIMAAAAmCAYAAADnTCg7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB9SURBVHhe7dKhAYAwAMAwLtnL8B9n4DdQVXywiKjaHuOa
-        97jWYnfz/mb4C+zIDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzE
-        DMQMxAzEDMQMxAzEDMQMxAzEDMQM5BjnfP4Cmznn8wJN8vcwRK+OwwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAIMAAAAbCAYAAABfqDxIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVGhD7dKhAYAwAMAwLtnL8B9n4DdQVXywiKjaHuOa
+        97jWYnfz/mb4C+zIDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzk
+        GOd8/gKbOefzAiyn7COZAIxDAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="BtnUpdateEmp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIMAAAAmCAYAAADnTCg7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVHhe7dIxAcMwAMCwcGowBWYGZDAKYOvlqwyiQ5df
+        iVBORw0KGgoAAAANSUhEUgAAAIMAAAAbCAYAAABfqDxIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABpSURBVGhD7dIxAcMwAMCwcGowBWYGZDAKYOvlqwyiQ5df
         j7Wv7/rMH4d7PhivgSOZgZiBmIGYgZiBmIGYgZiBmIGYgZiBmIGYgZiBmIGYgZiBmIGYgZiBmIGYgZiB
-        mIGYgZiBmIGYgZiBmIGYgZiBmIGYgZiBjLXn/RY4zJ73H2yDlW5eEMz/AAAAAElFTkSuQmCC
+        mIGMtef9FjjMnvcfvVNjU9nKoPcAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="BtnDeleteEmp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIMAAAAmCAYAAADnTCg7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVHhe7dwpAcAwAATBakj9K6uACIiAPmRRHWTAoKOL
+        iVBORw0KGgoAAAANSUhEUgAAAIMAAAAbCAYAAABfqDxIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABpSURBVGhD7dspAcAwAATBakj9K6uACIiAPmRRHWTAoKNL
         75hjXPM8bzb3dnD8DmxJDEQMRAxEDEQMRAxEDEQMRAxEDEQMRAxEDEQMRAxEDEQMRAxEDEQMRAxEDEQM
-        RAxEDEQMRAxEDEQMRAxEDEQMRAxEDEQM5Dv4Wn8DmxljPbP7zzqpVDrBAAAAAElFTkSuQmCC
+        RAzke1Stv4HNjLEepehJCczIL24AAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="departmentsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

@@ -59,7 +59,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             {
                 using (db.con)
                 {
-                    sda = new SqlDataAdapter("SELECT * FROM Employees", db.con);
+                    sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID", db.con);
                     DataSet ds = new DataSet();
                     sda.Fill(ds, "Employees");
                     EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;
@@ -146,10 +146,12 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             EmpAddress.Text = this.EmpDgv.CurrentRow.Cells[4].Value.ToString();
             DeptDrop.Text = this.EmpDgv.CurrentRow.Cells[5].Value.ToString();
             JobDrop.Text = this.EmpDgv.CurrentRow.Cells[6].Value.ToString();
-            PhilHealth.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[8].Value);
-            PagIbig.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[9].Value);
-            SSS.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[10].Value);
-            Weekly.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[11].Value);
+            
+
+            PhilHealth.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[9].Value);
+            PagIbig.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[10].Value);
+            SSS.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[11].Value);
+            Weekly.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[12].Value);
 
             CheckBtn.Visible = true;
         }
@@ -158,7 +160,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
             int active;
-            if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "")
+            if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "" )
             {
                 MessageBox.Show("Fill up all fields");
                 this.Close();
@@ -211,6 +213,12 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 
             }
             CheckBtn.Visible = false;
+            BioID.Clear();
+            EmpName.Clear();
+            EmpContact.Clear();
+            EmpAddress.Clear();
+            
+            
 
         }
 

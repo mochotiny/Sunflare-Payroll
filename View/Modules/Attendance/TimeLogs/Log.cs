@@ -36,7 +36,7 @@ namespace WFA_APP.View.Modules.Attendance
         {
             connect.Open();
             //payrollVB
-            cmd = new SqlCommand(" INSERT INTO Attendances (BiometricID, WorkedDay, StartAt, EndAt, NoOfOvertime) VALUES ('" + EmpDrop.SelectedValue.ToString() + "', '" + DayWork.Value.Date.ToString("dd-MMM-yyyy") + "', '" + TimeIn.Value.ToString("HH:mm") + "', '" + TimeOut.Value.ToString("HH:mm") + "', '"+ Overtime.Text.ToString() +"' ) ", connect);
+            cmd = new SqlCommand(" INSERT INTO Attendances (BioID, WorkedDay, StartAt, EndAt, NoOfOvertime) VALUES ('" + EmpDrop.SelectedValue.ToString() + "', '" + DayWork.Value.Date.ToString("dd-MMM-yyyy") + "', '" + TimeIn.Value.ToString("HH:mm") + "', '" + TimeOut.Value.ToString("HH:mm") + "', '"+ Overtime.Text.ToString() +"' ) ", connect);
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("Logged.");

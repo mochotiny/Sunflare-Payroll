@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.PanelEmployee = new Bunifu.UI.WinForms.BunifuPanel();
             this.PanelDeck = new Bunifu.UI.WinForms.BunifuPanel();
             this.BtnJob = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -86,11 +86,11 @@
             this.BtnJob.ColorContrastOnClick = 45;
             this.BtnJob.ColorContrastOnHover = 45;
             this.BtnJob.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.BtnJob.CustomizableEdges = borderEdges1;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.BtnJob.CustomizableEdges = borderEdges4;
             this.BtnJob.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnJob.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnJob.DisabledFillColor = System.Drawing.Color.Empty;
@@ -178,11 +178,11 @@
             this.BtnDepartment.ColorContrastOnClick = 45;
             this.BtnDepartment.ColorContrastOnHover = 45;
             this.BtnDepartment.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.BtnDepartment.CustomizableEdges = borderEdges2;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.BtnDepartment.CustomizableEdges = borderEdges5;
             this.BtnDepartment.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnDepartment.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnDepartment.DisabledFillColor = System.Drawing.Color.Empty;
@@ -270,11 +270,11 @@
             this.BtnEmployee.ColorContrastOnClick = 45;
             this.BtnEmployee.ColorContrastOnHover = 45;
             this.BtnEmployee.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.BtnEmployee.CustomizableEdges = borderEdges3;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.BtnEmployee.CustomizableEdges = borderEdges6;
             this.BtnEmployee.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnEmployee.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnEmployee.DisabledFillColor = System.Drawing.Color.Empty;
