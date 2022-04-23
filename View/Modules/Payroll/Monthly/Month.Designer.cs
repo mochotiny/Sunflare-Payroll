@@ -395,16 +395,16 @@
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(1068, 478);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(1144, 547);
             this.bunifuDataGridView1.TabIndex = 10;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // Monthly
+            // Month
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1092, 588);
+            this.ClientSize = new System.Drawing.Size(1168, 657);
             this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.SSS);
             this.Controls.Add(this.PagIbig);
@@ -414,7 +414,7 @@
             this.Controls.Add(this.bunifuCheckBox1);
             this.Controls.Add(this.bunifuDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Monthly";
+            this.Name = "Month";
             this.Text = "Monthly";
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -118,49 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CA.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ExportBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAANEAAAAjCAYAAAAKYO/9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACdSURBVHhe7dOxDcMwAANB7T+VBY2RMTJAAgFu0jl+l3cA
-        G/Y/gAestV7HcXzM7Pp2N2dCY+wD+M/u5kxIRHCHiCASEUQigkhEEIkIIhFBJCKIRASRiCASEUQigkhE
-        EIkIIhFBJCKIRASRiCASEUQigkhEEIkIIhFBJCKIRASRiCASEUQigkhEEIkIop+I5pzvfZjZ9e1uzoSA
-        +8b4Ar7896n/EYdMAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAG4AAAAoCAYAAAAfWs+KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAoSURBVHhe7cExAQAAAMKg9U9tCj8gAAAAAAAAAAAAAAAA
+        AAAAAICrGkToAAHfKGtoAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="BtnUpdateBalance.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANEAAAAkCAYAAAAXZd9FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACSSURBVHhe7dMxEcMwAMBAc6oxGaYLpDACIAmADLlq/eEn
-        zRprf37rO0/gD/c/4zEAr5kIIhNBZCKITASRiSAyEUQmgshEEJkIIhNBZCKITASRiSAyEUQmgshEEJkI
-        IhNBZCKITASRiSAyEUQmgshEEJkIIhNBZCKITASRiSAyEUQmgshEEJkIorH2PJ4C8MKexwWR1eX3eyXx
-        AgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="BtnCreateBalance.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANEAAAAkCAYAAAAXZd9FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACPSURBVHhe7dOhEYAwAMBAJunKsB9j4FsYAMER++JVdLZx
-        zHMcawF/zPOZ6C0AX5kIIhNBZCKITASRiSAyEUQmgshEEJkIIhNBZCKITASRiSAyEUQmgshEEJkIIhNB
-        ZCKITASRiSAyEUQmgshEEJkIIhNBZCKITASRiSAyEUQmgshEEJkIom3s83oLwAf7vG5xjItdft4H+wAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="Pay.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANEAAAAjCAYAAAAKYO/9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACdSURBVHhe7dOxDcMwAANB7T+VBY2RMTJAAgFu0jl+l3cA
-        G/Y/gAestV7HcXzM7Pp2N2dCY+wD+M/u5kxIRHCHiCASEUQigkhEEIkIIhFBJCKIRASRiCASEUQigkhE
-        EIkIIhFBJCKIRASRiCASEUQigkhEEIkIIhFBJCKIRASRiCASEUQigkhEEIkIop+I5pzvfZjZ9e1uzoSA
-        +8b4Ar7896n/EYdMAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="employeesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>175, 17</value>
-  </metadata>
-  <metadata name="_Employee_DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="employeesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>364, 17</value>
-  </metadata>
 </root>

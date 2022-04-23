@@ -251,11 +251,23 @@
     <Compile Include="View\Modules\Employee\Job\CRUDjob.Designer.cs">
       <DependentUpon>CRUDjob.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Modules\Payroll\Deduction\Deductions.cs">
+    <Compile Include="View\Modules\Payroll\Deduction\Deduct\Deductions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Modules\Payroll\Deduction\Deductions.Designer.cs">
+    <Compile Include="View\Modules\Payroll\Deduction\Deduct\Deductions.Designer.cs">
       <DependentUpon>Deductions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Payroll\Deduction\PRForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Payroll\Deduction\PRForm.Designer.cs">
+      <DependentUpon>PRForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Payroll\Deduction\Sheet\SheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Payroll\Deduction\Sheet\SheetForm.Designer.cs">
+      <DependentUpon>SheetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Modules\Payroll\Monthly\Month.cs">
       <SubType>Form</SubType>
@@ -280,6 +292,18 @@
     </Compile>
     <Compile Include="View\Modules\Report\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\ReportPR\PR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Report\ReportPR\PR.Designer.cs">
+      <DependentUpon>PR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\ReportPS\PS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Report\ReportPS\PS.Designer.cs">
+      <DependentUpon>PS.cs</DependentUpon>
     </Compile>
     <Compile Include="_Department_DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -349,8 +373,14 @@
     <EmbeddedResource Include="View\Modules\Home\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Modules\Payroll\Deduction\Deductions.resx">
+    <EmbeddedResource Include="View\Modules\Payroll\Deduction\Deduct\Deductions.resx">
       <DependentUpon>Deductions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Payroll\Deduction\PRForm.resx">
+      <DependentUpon>PRForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Payroll\Deduction\Sheet\SheetForm.resx">
+      <DependentUpon>SheetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Payroll\Monthly\Month.resx">
       <DependentUpon>Month.cs</DependentUpon>
@@ -363,6 +393,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Report\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Report\ReportPR\PR.resx">
+      <DependentUpon>PR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Report\ReportPS\PS.resx">
+      <DependentUpon>PS.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

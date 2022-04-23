@@ -28,33 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountForm));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.AccountDgv = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.BioID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.CA = new Bunifu.UI.WinForms.BunifuTextBox();
             this.BtnUpdateBalance = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.BtnCreateBalance = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Pay = new Bunifu.UI.WinForms.BunifuTextBox();
             this.CheckBtn = new System.Windows.Forms.PictureBox();
+            this.EmpDrop = new Bunifu.UI.WinForms.BunifuDropdown();
+            this._Employee_DataSet = new WFA_APP._Employee_DataSet();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesTableAdapter = new WFA_APP._Employee_DataSetTableAdapters.EmployeesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.AccountDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // AccountDgv
@@ -75,7 +77,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.AccountDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.AccountDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AccountDgv.ColumnHeadersHeight = 40;
             this.AccountDgv.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.AccountDgv.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.AccountDgv.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -116,81 +118,6 @@
             this.AccountDgv.TabIndex = 0;
             this.AccountDgv.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // BioID
-            // 
-            this.BioID.AcceptsReturn = false;
-            this.BioID.AcceptsTab = false;
-            this.BioID.AnimationSpeed = 200;
-            this.BioID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.BioID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.BioID.AutoSizeHeight = true;
-            this.BioID.BackColor = System.Drawing.Color.Transparent;
-            this.BioID.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BioID.BackgroundImage")));
-            this.BioID.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.BioID.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.BioID.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.BioID.BorderColorIdle = System.Drawing.Color.Silver;
-            this.BioID.BorderRadius = 1;
-            this.BioID.BorderThickness = 1;
-            this.BioID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.BioID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.BioID.DefaultFont = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BioID.DefaultText = "";
-            this.BioID.FillColor = System.Drawing.Color.White;
-            this.BioID.HideSelection = true;
-            this.BioID.IconLeft = null;
-            this.BioID.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.BioID.IconPadding = 10;
-            this.BioID.IconRight = null;
-            this.BioID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.BioID.Lines = new string[0];
-            this.BioID.Location = new System.Drawing.Point(37, 53);
-            this.BioID.MaxLength = 32767;
-            this.BioID.MinimumSize = new System.Drawing.Size(1, 1);
-            this.BioID.Modified = false;
-            this.BioID.Multiline = false;
-            this.BioID.Name = "BioID";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.BioID.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.BioID.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.BioID.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.BioID.OnIdleState = stateProperties16;
-            this.BioID.Padding = new System.Windows.Forms.Padding(3);
-            this.BioID.PasswordChar = '\0';
-            this.BioID.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.BioID.PlaceholderText = "ID";
-            this.BioID.ReadOnly = false;
-            this.BioID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.BioID.SelectedText = "";
-            this.BioID.SelectionLength = 0;
-            this.BioID.SelectionStart = 0;
-            this.BioID.ShortcutsEnabled = true;
-            this.BioID.Size = new System.Drawing.Size(209, 38);
-            this.BioID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.BioID.TabIndex = 1;
-            this.BioID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BioID.TextMarginBottom = 0;
-            this.BioID.TextMarginLeft = 3;
-            this.BioID.TextMarginTop = 1;
-            this.BioID.TextPlaceholder = "ID";
-            this.BioID.UseSystemPasswordChar = false;
-            this.BioID.WordWrap = true;
-            // 
             // CA
             // 
             this.CA.AcceptsReturn = false;
@@ -225,26 +152,26 @@
             this.CA.Modified = false;
             this.CA.Multiline = false;
             this.CA.Name = "CA";
-            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.CA.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.CA.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.CA.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.Silver;
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Empty;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.CA.OnIdleState = stateProperties20;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.CA.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.CA.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.CA.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.CA.OnIdleState = stateProperties12;
             this.CA.Padding = new System.Windows.Forms.Padding(3);
             this.CA.PasswordChar = '\0';
             this.CA.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -255,7 +182,7 @@
             this.CA.SelectionLength = 0;
             this.CA.SelectionStart = 0;
             this.CA.ShortcutsEnabled = true;
-            this.CA.Size = new System.Drawing.Size(209, 38);
+            this.CA.Size = new System.Drawing.Size(209, 35);
             this.CA.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.CA.TabIndex = 2;
             this.CA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -484,26 +411,26 @@
             this.Pay.Modified = false;
             this.Pay.Multiline = false;
             this.Pay.Name = "Pay";
-            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties21.FillColor = System.Drawing.Color.Empty;
-            stateProperties21.ForeColor = System.Drawing.Color.Empty;
-            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Pay.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.Pay.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Pay.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.Silver;
-            stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Pay.OnIdleState = stateProperties24;
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Pay.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Pay.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Pay.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Pay.OnIdleState = stateProperties16;
             this.Pay.Padding = new System.Windows.Forms.Padding(3);
             this.Pay.PasswordChar = '\0';
             this.Pay.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -514,7 +441,7 @@
             this.Pay.SelectionLength = 0;
             this.Pay.SelectionStart = 0;
             this.Pay.ShortcutsEnabled = true;
-            this.Pay.Size = new System.Drawing.Size(209, 38);
+            this.Pay.Size = new System.Drawing.Size(209, 35);
             this.Pay.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.Pay.TabIndex = 13;
             this.Pay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -536,24 +463,86 @@
             this.CheckBtn.TabStop = false;
             this.CheckBtn.Click += new System.EventHandler(this.CheckBtn_Click);
             // 
-            // Account
+            // EmpDrop
+            // 
+            this.EmpDrop.BackColor = System.Drawing.Color.Transparent;
+            this.EmpDrop.BackgroundColor = System.Drawing.Color.White;
+            this.EmpDrop.BorderColor = System.Drawing.Color.Silver;
+            this.EmpDrop.BorderRadius = 1;
+            this.EmpDrop.Color = System.Drawing.Color.Silver;
+            this.EmpDrop.DataSource = this.employeesBindingSource;
+            this.EmpDrop.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.EmpDrop.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.EmpDrop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.EmpDrop.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.EmpDrop.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.EmpDrop.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.EmpDrop.DisplayMember = "Employee_Name";
+            this.EmpDrop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.EmpDrop.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.EmpDrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EmpDrop.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.EmpDrop.FillDropDown = true;
+            this.EmpDrop.FillIndicator = false;
+            this.EmpDrop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpDrop.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.EmpDrop.ForeColor = System.Drawing.Color.Black;
+            this.EmpDrop.FormattingEnabled = true;
+            this.EmpDrop.Icon = null;
+            this.EmpDrop.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.EmpDrop.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.EmpDrop.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.EmpDrop.IndicatorThickness = 2;
+            this.EmpDrop.IsDropdownOpened = false;
+            this.EmpDrop.ItemBackColor = System.Drawing.Color.White;
+            this.EmpDrop.ItemBorderColor = System.Drawing.Color.White;
+            this.EmpDrop.ItemForeColor = System.Drawing.Color.Black;
+            this.EmpDrop.ItemHeight = 26;
+            this.EmpDrop.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.EmpDrop.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.EmpDrop.ItemTopMargin = 3;
+            this.EmpDrop.Location = new System.Drawing.Point(37, 49);
+            this.EmpDrop.Name = "EmpDrop";
+            this.EmpDrop.Size = new System.Drawing.Size(209, 32);
+            this.EmpDrop.TabIndex = 15;
+            this.EmpDrop.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.EmpDrop.TextLeftMargin = 5;
+            this.EmpDrop.ValueMember = "BiometricID";
+            // 
+            // _Employee_DataSet
+            // 
+            this._Employee_DataSet.DataSetName = "_Employee_DataSet";
+            this._Employee_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this._Employee_DataSet;
+            // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
+            // 
+            // AccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 489);
+            this.Controls.Add(this.EmpDrop);
             this.Controls.Add(this.CheckBtn);
             this.Controls.Add(this.Pay);
             this.Controls.Add(this.BtnUpdateBalance);
             this.Controls.Add(this.BtnCreateBalance);
             this.Controls.Add(this.CA);
-            this.Controls.Add(this.BioID);
             this.Controls.Add(this.AccountDgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Account";
+            this.Name = "AccountForm";
             this.Text = "Account";
             this.Load += new System.EventHandler(this.Account_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AccountDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -561,11 +550,14 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuDataGridView AccountDgv;
-        private Bunifu.UI.WinForms.BunifuTextBox BioID;
         private Bunifu.UI.WinForms.BunifuTextBox CA;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnUpdateBalance;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnCreateBalance;
         private Bunifu.UI.WinForms.BunifuTextBox Pay;
         private System.Windows.Forms.PictureBox CheckBtn;
+        private Bunifu.UI.WinForms.BunifuDropdown EmpDrop;
+        private _Employee_DataSet _Employee_DataSet;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
+        private _Employee_DataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
     }
 }

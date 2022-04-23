@@ -32,6 +32,11 @@ namespace WFA_APP.View.Modules.Payroll.Deduction
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            sda = new SqlDataAdapter("SELECT * FROM Deductions", con);
+            DataSet ds = new DataSet();
+            sda.Fill(ds, "Deductions");
+            DeductDgv.DataSource = ds.Tables["Deductions"].DefaultView;
+            con.Close();
         }
 
         private void DeductBtn_Click(object sender, EventArgs e)

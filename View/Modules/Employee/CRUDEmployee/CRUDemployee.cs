@@ -124,7 +124,10 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;
 
                 con.Close();
-                
+                BioID.Clear();
+                EmpName.Clear();
+                EmpContact.Clear();
+                EmpAddress.Clear();
             }
             
         }
@@ -148,10 +151,10 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             JobDrop.Text = this.EmpDgv.CurrentRow.Cells[6].Value.ToString();
             
 
-            PhilHealth.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[9].Value);
-            PagIbig.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[10].Value);
-            SSS.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[11].Value);
-            Weekly.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[12].Value);
+            PhilHealth.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[7].Value);
+            PagIbig.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[8].Value);
+            SSS.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[9].Value);
+            Weekly.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[10].Value);
 
             CheckBtn.Visible = true;
         }
@@ -194,7 +197,6 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 cmd.Parameters.AddWithValue("@EmployeeAddress", EmpAddress.Text);
                 cmd.Parameters.AddWithValue("@DepartmentId", DeptDrop.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@JobID", JobDrop.SelectedValue.ToString());
-                cmd.Parameters.AddWithValue("@DayRate", EmpDgv.CurrentRow.Cells[7].Value.ToString());
                 
                 cmd.Parameters.AddWithValue("@PhilHealth", PhilHealth.Checked);
                 cmd.Parameters.AddWithValue("@PagIbig", PagIbig.Checked);
@@ -217,8 +219,8 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             EmpName.Clear();
             EmpContact.Clear();
             EmpAddress.Clear();
-            
-            
+            this.jobsTableAdapter.Fill(this._Job_DataSet.Jobs);
+            this.departmentsTableAdapter.Fill(this._Department_DataSet.Departments);
 
         }
 

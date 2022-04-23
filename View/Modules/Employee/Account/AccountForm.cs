@@ -37,7 +37,13 @@ namespace WFA_APP.View.Modules.Employee.Account
 
         private void Account_Load(object sender, EventArgs e)
         {
-            sda = new SqlDataAdapter("SELECT * FROM Balance", con);
+            // TODO: This line of code loads data into the '_Employee_DataSet.Employees' table. You can move, or remove it, as needed.
+            this.employeesTableAdapter.Fill(this._Employee_DataSet.Employees);
+            // TODO: This line of code loads data into the '_Employee_DataSet.Employees' table. You can move, or remove it, as needed.
+            this.employeesTableAdapter.Fill(this._Employee_DataSet.Employees);
+
+
+            sda = new SqlDataAdapter("SELECT E.Employee_Name, Balance, Pay FROM Balance INNER JOIN Employees AS E ON Balance.BiometricID = E.BiometricID", con);
             DataSet ds = new DataSet();
             sda.Fill(ds, "Balance");
             AccountDgv.DataSource = ds.Tables["Balance"].DefaultView;
@@ -45,14 +51,14 @@ namespace WFA_APP.View.Modules.Employee.Account
 
         private void BtnCreateBalance_Click(object sender, EventArgs e)
         {
-            if (BioID.Text == "" || CA.Text == "" || Pay.Text == "")
+            if (EmpDrop.Text == "" || CA.Text == "" || Pay.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
             }
             else
             {
                 con.Open();
-                cmd = new SqlCommand("INSERT INTO Balance (BiometricID, Balance, Pay) VALUES ('"+ BioID.Text +"', '"+ CA.Text +"', '"+ Pay.Text +"')", con);
+                cmd = new SqlCommand("INSERT INTO Balance (BiometricID, Balance, Pay) VALUES ('"+ EmpDrop.SelectedValue.ToString() +"', '"+ CA.Text +"', '"+ Pay.Text +"')", con);
                 cmd.ExecuteNonQuery();
                 this.Refresh();
                 con.Close();
@@ -61,27 +67,38 @@ namespace WFA_APP.View.Modules.Employee.Account
 
         private void BtnUpdateBalance_Click(object sender, EventArgs e)
         {
-            BioID.Text = this.AccountDgv.CurrentRow.Cells[1].Value.ToString();
-            CA.Text = this.AccountDgv.CurrentRow.Cells[2].Value.ToString();
-            Pay.Text = this.AccountDgv.CurrentRow.Cells[3].Value.ToString();
+            EmpDrop.Text = this.AccountDgv.CurrentRow.Cells[0].Value.ToString();
+            CA.Text = this.AccountDgv.CurrentRow.Cells[1].Value.ToString();
+            Pay.Text = this.AccountDgv.CurrentRow.Cells[2].Value.ToString();
 
             CheckBtn.Visible = true;
         }
 
         private void CheckBtn_Click(object sender, EventArgs e)
         {
-            if (BioID.Text == "" || CA.Text == "" || Pay.Text == "")
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+            if (EmpDrop.Text == "" || CA.Text == "" || Pay.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
             }
             else
             {
                 con.Open();
-                cmd = new SqlCommand("UPDATE Balance SET Balance = '" + CA.Text + "', Pay = '" + Pay.Text + "' WHERE BiometricID = '" + BioID.Text + "' ", con);
+                cmd = new SqlCommand("UPDATE Balance SET Balance = '" + CA.Text + "', Pay = '" + Pay.Text + "' WHERE BiometricID = '" + EmpDrop.SelectedValue.ToString() + "' ", con);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Updated.");
                 this.Refresh();
                 con.Close();
+                CheckBtn.Visible=false;
+
+                sda = new SqlDataAdapter("SELECT E.Employee_Name, Balance, Pay FROM Balance INNER JOIN Employees AS E ON Balance.BiometricID = E.BiometricID", con);
+                DataSet ds = new DataSet();
+                sda.Fill(ds, "Balance");
+                AccountDgv.DataSource = ds.Tables["Balance"].DefaultView;
             }
+
         }
+
+       
     }
 }

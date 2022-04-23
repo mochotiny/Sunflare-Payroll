@@ -29,41 +29,249 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            this.ReportPR = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.ReportPS = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.PanelBoard = new Bunifu.UI.WinForms.BunifuPanel();
+            this.PanelReport = new Bunifu.UI.WinForms.BunifuPanel();
             this.SuspendLayout();
             // 
-            // bunifuLabel1
+            // ReportPR
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Anton", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(519, 12);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(111, 36);
-            this.bunifuLabel1.TabIndex = 0;
-            this.bunifuLabel1.Text = "Report Form";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ReportPR.AllowAnimations = true;
+            this.ReportPR.AllowMouseEffects = true;
+            this.ReportPR.AllowToggling = false;
+            this.ReportPR.AnimationSpeed = 200;
+            this.ReportPR.AutoGenerateColors = false;
+            this.ReportPR.AutoRoundBorders = false;
+            this.ReportPR.AutoSizeLeftIcon = true;
+            this.ReportPR.AutoSizeRightIcon = true;
+            this.ReportPR.BackColor = System.Drawing.Color.Transparent;
+            this.ReportPR.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.ReportPR.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReportPR.BackgroundImage")));
+            this.ReportPR.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPR.ButtonText = "Payroll";
+            this.ReportPR.ButtonTextMarginLeft = 0;
+            this.ReportPR.ColorContrastOnClick = 45;
+            this.ReportPR.ColorContrastOnHover = 45;
+            this.ReportPR.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.ReportPR.CustomizableEdges = borderEdges3;
+            this.ReportPR.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ReportPR.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ReportPR.DisabledFillColor = System.Drawing.Color.Empty;
+            this.ReportPR.DisabledForecolor = System.Drawing.Color.Empty;
+            this.ReportPR.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.ReportPR.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportPR.ForeColor = System.Drawing.Color.Gray;
+            this.ReportPR.IconLeft = null;
+            this.ReportPR.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportPR.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.ReportPR.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.ReportPR.IconMarginLeft = 11;
+            this.ReportPR.IconPadding = 10;
+            this.ReportPR.IconRight = null;
+            this.ReportPR.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ReportPR.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.ReportPR.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.ReportPR.IconSize = 25;
+            this.ReportPR.IdleBorderColor = System.Drawing.Color.Empty;
+            this.ReportPR.IdleBorderRadius = 0;
+            this.ReportPR.IdleBorderThickness = 0;
+            this.ReportPR.IdleFillColor = System.Drawing.Color.Empty;
+            this.ReportPR.IdleIconLeftImage = null;
+            this.ReportPR.IdleIconRightImage = null;
+            this.ReportPR.IndicateFocus = false;
+            this.ReportPR.Location = new System.Drawing.Point(12, 12);
+            this.ReportPR.Name = "ReportPR";
+            this.ReportPR.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ReportPR.OnDisabledState.BorderRadius = 1;
+            this.ReportPR.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPR.OnDisabledState.BorderThickness = 1;
+            this.ReportPR.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ReportPR.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ReportPR.OnDisabledState.IconLeftImage = null;
+            this.ReportPR.OnDisabledState.IconRightImage = null;
+            this.ReportPR.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.ReportPR.onHoverState.BorderRadius = 1;
+            this.ReportPR.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPR.onHoverState.BorderThickness = 1;
+            this.ReportPR.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.ReportPR.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.ReportPR.onHoverState.IconLeftImage = null;
+            this.ReportPR.onHoverState.IconRightImage = null;
+            this.ReportPR.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.ReportPR.OnIdleState.BorderRadius = 1;
+            this.ReportPR.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPR.OnIdleState.BorderThickness = 1;
+            this.ReportPR.OnIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.ReportPR.OnIdleState.ForeColor = System.Drawing.Color.Gray;
+            this.ReportPR.OnIdleState.IconLeftImage = null;
+            this.ReportPR.OnIdleState.IconRightImage = null;
+            this.ReportPR.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.ReportPR.OnPressedState.BorderRadius = 1;
+            this.ReportPR.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPR.OnPressedState.BorderThickness = 1;
+            this.ReportPR.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.ReportPR.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.ReportPR.OnPressedState.IconLeftImage = null;
+            this.ReportPR.OnPressedState.IconRightImage = null;
+            this.ReportPR.Size = new System.Drawing.Size(110, 40);
+            this.ReportPR.TabIndex = 0;
+            this.ReportPR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ReportPR.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ReportPR.TextMarginLeft = 0;
+            this.ReportPR.TextPadding = new System.Windows.Forms.Padding(0);
+            this.ReportPR.UseDefaultRadiusAndThickness = true;
+            this.ReportPR.Click += new System.EventHandler(this.ReportPR_Click);
+            // 
+            // ReportPS
+            // 
+            this.ReportPS.AllowAnimations = true;
+            this.ReportPS.AllowMouseEffects = true;
+            this.ReportPS.AllowToggling = false;
+            this.ReportPS.AnimationSpeed = 200;
+            this.ReportPS.AutoGenerateColors = false;
+            this.ReportPS.AutoRoundBorders = false;
+            this.ReportPS.AutoSizeLeftIcon = true;
+            this.ReportPS.AutoSizeRightIcon = true;
+            this.ReportPS.BackColor = System.Drawing.Color.Transparent;
+            this.ReportPS.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.ReportPS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReportPS.BackgroundImage")));
+            this.ReportPS.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPS.ButtonText = "Payslip";
+            this.ReportPS.ButtonTextMarginLeft = 0;
+            this.ReportPS.ColorContrastOnClick = 45;
+            this.ReportPS.ColorContrastOnHover = 45;
+            this.ReportPS.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.ReportPS.CustomizableEdges = borderEdges4;
+            this.ReportPS.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ReportPS.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ReportPS.DisabledFillColor = System.Drawing.Color.Empty;
+            this.ReportPS.DisabledForecolor = System.Drawing.Color.Empty;
+            this.ReportPS.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.ReportPS.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportPS.ForeColor = System.Drawing.Color.Gray;
+            this.ReportPS.IconLeft = null;
+            this.ReportPS.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportPS.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.ReportPS.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.ReportPS.IconMarginLeft = 11;
+            this.ReportPS.IconPadding = 10;
+            this.ReportPS.IconRight = null;
+            this.ReportPS.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ReportPS.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.ReportPS.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.ReportPS.IconSize = 25;
+            this.ReportPS.IdleBorderColor = System.Drawing.Color.Empty;
+            this.ReportPS.IdleBorderRadius = 0;
+            this.ReportPS.IdleBorderThickness = 0;
+            this.ReportPS.IdleFillColor = System.Drawing.Color.Empty;
+            this.ReportPS.IdleIconLeftImage = null;
+            this.ReportPS.IdleIconRightImage = null;
+            this.ReportPS.IndicateFocus = false;
+            this.ReportPS.Location = new System.Drawing.Point(128, 12);
+            this.ReportPS.Name = "ReportPS";
+            this.ReportPS.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ReportPS.OnDisabledState.BorderRadius = 1;
+            this.ReportPS.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPS.OnDisabledState.BorderThickness = 1;
+            this.ReportPS.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ReportPS.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ReportPS.OnDisabledState.IconLeftImage = null;
+            this.ReportPS.OnDisabledState.IconRightImage = null;
+            this.ReportPS.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.ReportPS.onHoverState.BorderRadius = 1;
+            this.ReportPS.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPS.onHoverState.BorderThickness = 1;
+            this.ReportPS.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.ReportPS.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.ReportPS.onHoverState.IconLeftImage = null;
+            this.ReportPS.onHoverState.IconRightImage = null;
+            this.ReportPS.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.ReportPS.OnIdleState.BorderRadius = 1;
+            this.ReportPS.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPS.OnIdleState.BorderThickness = 1;
+            this.ReportPS.OnIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.ReportPS.OnIdleState.ForeColor = System.Drawing.Color.Gray;
+            this.ReportPS.OnIdleState.IconLeftImage = null;
+            this.ReportPS.OnIdleState.IconRightImage = null;
+            this.ReportPS.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.ReportPS.OnPressedState.BorderRadius = 1;
+            this.ReportPS.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportPS.OnPressedState.BorderThickness = 1;
+            this.ReportPS.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.ReportPS.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.ReportPS.OnPressedState.IconLeftImage = null;
+            this.ReportPS.OnPressedState.IconRightImage = null;
+            this.ReportPS.Size = new System.Drawing.Size(110, 40);
+            this.ReportPS.TabIndex = 1;
+            this.ReportPS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ReportPS.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ReportPS.TextMarginLeft = 0;
+            this.ReportPS.TextPadding = new System.Windows.Forms.Padding(0);
+            this.ReportPS.UseDefaultRadiusAndThickness = true;
+            this.ReportPS.Click += new System.EventHandler(this.ReportPS_Click);
+            // 
+            // PanelBoard
+            // 
+            this.PanelBoard.BackgroundColor = System.Drawing.Color.DimGray;
+            this.PanelBoard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelBoard.BackgroundImage")));
+            this.PanelBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelBoard.BorderColor = System.Drawing.Color.Transparent;
+            this.PanelBoard.BorderRadius = 3;
+            this.PanelBoard.BorderThickness = 1;
+            this.PanelBoard.Location = new System.Drawing.Point(12, 50);
+            this.PanelBoard.Name = "PanelBoard";
+            this.PanelBoard.ShowBorders = true;
+            this.PanelBoard.Size = new System.Drawing.Size(110, 2);
+            this.PanelBoard.TabIndex = 2;
+            // 
+            // PanelReport
+            // 
+            this.PanelReport.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.PanelReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelReport.BackgroundImage")));
+            this.PanelReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelReport.BorderColor = System.Drawing.Color.Transparent;
+            this.PanelReport.BorderRadius = 25;
+            this.PanelReport.BorderThickness = 1;
+            this.PanelReport.Location = new System.Drawing.Point(12, 58);
+            this.PanelReport.Name = "PanelReport";
+            this.PanelReport.ShowBorders = true;
+            this.PanelReport.Size = new System.Drawing.Size(1170, 650);
+            this.PanelReport.TabIndex = 3;
             // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1192, 720);
-            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.PanelReport);
+            this.Controls.Add(this.PanelBoard);
+            this.Controls.Add(this.ReportPS);
+            this.Controls.Add(this.ReportPR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportForm";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton ReportPR;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton ReportPS;
+        private Bunifu.UI.WinForms.BunifuPanel PanelBoard;
+        private Bunifu.UI.WinForms.BunifuPanel PanelReport;
     }
 }

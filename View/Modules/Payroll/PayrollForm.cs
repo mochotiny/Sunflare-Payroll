@@ -18,29 +18,31 @@ namespace WFA_APP.View.Modules.Payroll
     {
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
-        
+
 
         public PayrollForm()
         {
             InitializeComponent();
             this.PanelPayroll.Controls.Clear();
-            Deductions deduct = new Deductions() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            deduct.FormBorderStyle = FormBorderStyle.None;
-            this.PanelPayroll.Controls.Add(deduct);
-            deduct.Show();
+            PRForm prf = new PRForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            prf.FormBorderStyle = FormBorderStyle.None;
+            this.PanelPayroll.Controls.Add(prf);
+            prf.Show();
+
         }
 
-        private void BtnDeduction_Click(object sender, EventArgs e)
+        private void BtnPR_Click(object sender, EventArgs e)
         {
+            PanelDeck.Location = new Point(11, 45);
             this.PanelPayroll.Controls.Clear();
-            Deductions deduct = new Deductions() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            deduct.FormBorderStyle = FormBorderStyle.None;
-            this.PanelPayroll.Controls.Add(deduct);
-            deduct.Show();
+            PRForm prf = new PRForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            prf.FormBorderStyle = FormBorderStyle.None;
+            this.PanelPayroll.Controls.Add(prf);
+            prf.Show();
         }
-
         private void BtnWeekly_Click(object sender, EventArgs e)
         {
+            PanelDeck.Location = new Point(111, 45);
             this.PanelPayroll.Controls.Clear();
             Week week = new Week() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             week.FormBorderStyle = FormBorderStyle.None;
@@ -50,12 +52,14 @@ namespace WFA_APP.View.Modules.Payroll
 
         private void BtnMonthly_Click(object sender, EventArgs e)
         {
+            PanelDeck.Location = new Point(211, 45);
             this.PanelPayroll.Controls.Clear();
             Month month = new Month() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             month.FormBorderStyle = FormBorderStyle.None;
             this.PanelPayroll.Controls.Add(month);
             month.Show();
         }
+
 
         //private void PayrollBtn_Click(object sender, EventArgs e)
         //{

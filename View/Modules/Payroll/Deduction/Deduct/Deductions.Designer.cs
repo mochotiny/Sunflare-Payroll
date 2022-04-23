@@ -90,13 +90,13 @@
             this.DeductDgv.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.DeductDgv.HeaderBgColor = System.Drawing.Color.Empty;
             this.DeductDgv.HeaderForeColor = System.Drawing.Color.White;
-            this.DeductDgv.Location = new System.Drawing.Point(12, 130);
+            this.DeductDgv.Location = new System.Drawing.Point(12, 65);
             this.DeductDgv.Name = "DeductDgv";
             this.DeductDgv.ReadOnly = true;
             this.DeductDgv.RowHeadersVisible = false;
             this.DeductDgv.RowTemplate.Height = 40;
             this.DeductDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DeductDgv.Size = new System.Drawing.Size(1068, 446);
+            this.DeductDgv.Size = new System.Drawing.Size(1068, 511);
             this.DeductDgv.TabIndex = 0;
             this.DeductDgv.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -149,7 +149,7 @@
             this.DeductBtn.IdleIconLeftImage = null;
             this.DeductBtn.IdleIconRightImage = null;
             this.DeductBtn.IndicateFocus = false;
-            this.DeductBtn.Location = new System.Drawing.Point(12, 92);
+            this.DeductBtn.Location = new System.Drawing.Point(12, 27);
             this.DeductBtn.Name = "DeductBtn";
             this.DeductBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.DeductBtn.OnDisabledState.BorderRadius = 1;
@@ -203,6 +203,7 @@
             this.Startat.DisabledColor = System.Drawing.Color.Gray;
             this.Startat.DisplayWeekNumbers = false;
             this.Startat.DPHeight = 0;
+            this.Startat.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.Startat.FillDatePicker = false;
             this.Startat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Startat.ForeColor = System.Drawing.Color.Black;
@@ -210,8 +211,8 @@
             this.Startat.IconColor = System.Drawing.Color.Gray;
             this.Startat.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.Startat.LeftTextMargin = 5;
-            this.Startat.Location = new System.Drawing.Point(179, 92);
-            this.Startat.MinimumSize = new System.Drawing.Size(0, 32);
+            this.Startat.Location = new System.Drawing.Point(179, 27);
+            this.Startat.MinimumSize = new System.Drawing.Size(4, 32);
             this.Startat.Name = "Startat";
             this.Startat.Size = new System.Drawing.Size(178, 32);
             this.Startat.TabIndex = 2;
@@ -227,6 +228,7 @@
             this.Endat.DisabledColor = System.Drawing.Color.Gray;
             this.Endat.DisplayWeekNumbers = false;
             this.Endat.DPHeight = 0;
+            this.Endat.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.Endat.FillDatePicker = false;
             this.Endat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Endat.ForeColor = System.Drawing.Color.Black;
@@ -234,8 +236,8 @@
             this.Endat.IconColor = System.Drawing.Color.Gray;
             this.Endat.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.Endat.LeftTextMargin = 5;
-            this.Endat.Location = new System.Drawing.Point(375, 92);
-            this.Endat.MinimumSize = new System.Drawing.Size(0, 32);
+            this.Endat.Location = new System.Drawing.Point(375, 27);
+            this.Endat.MinimumSize = new System.Drawing.Size(4, 32);
             this.Endat.Name = "Endat";
             this.Endat.Size = new System.Drawing.Size(178, 32);
             this.Endat.TabIndex = 3;
