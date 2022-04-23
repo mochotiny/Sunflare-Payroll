@@ -60,6 +60,7 @@ namespace WFA_APP.View.Modules.Employee.Account
                 con.Open();
                 cmd = new SqlCommand("INSERT INTO Balance (BiometricID, Balance, Pay) VALUES ('"+ EmpDrop.SelectedValue.ToString() +"', '"+ CA.Text +"', '"+ Pay.Text +"')", con);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Created.");
                 this.Refresh();
                 con.Close();
             }
@@ -67,7 +68,7 @@ namespace WFA_APP.View.Modules.Employee.Account
 
         private void BtnUpdateBalance_Click(object sender, EventArgs e)
         {
-            EmpDrop.Text = this.AccountDgv.CurrentRow.Cells[0].Value.ToString();
+            
             CA.Text = this.AccountDgv.CurrentRow.Cells[1].Value.ToString();
             Pay.Text = this.AccountDgv.CurrentRow.Cells[2].Value.ToString();
 
