@@ -74,7 +74,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
         private void BtnCreateEmp_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
-            int active;
+            
             if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
@@ -84,22 +84,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             {
                 con.Open();
                 //cmd = new SqlCommand("INSERT INTO Employees (Biometric_Id, Dept_Name, Contact, Address, Department_Id, Job_Id) VALUES( '" + BioID.Text + "','" + EmpName.Text + "','" + EmpContact.Text + "','" + EmpAddress.Text + "','" + DeptDrop.SelectedValue.ToString() + "','" + JobDrop.SelectedValue.ToString() + "' )", con);
-                if (PhilHealth.Checked)
-                { active = 1; }
-                else 
-                { active = 0; }
-                if (PagIbig.Checked)
-                { active = 1; }
-                else 
-                { active = 0; }
-                if (SSS.Checked)
-                { active = 1; }
-                else 
-                { active = 0; }
-                if (Weekly.Checked)
-                { active = 1; }
-                else
-                { active = 0; }
+                
 
                 cmd = new SqlCommand("proc_CreateEmployee", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -162,7 +147,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
         private void CheckBtn_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
-            int active;
+            
             if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "" )
             {
                 MessageBox.Show("Fill up all fields");
@@ -172,22 +157,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             {
                 con.Open();
                 //cmd = new SqlCommand("UPDATE Employees SET (Biometric_Id, Employee_Name, Employee_Contact, Employee_Address, DepartmentID, JobID) VALUES ( '" + BioID.Text + "','" + EmpName.Text + "','" + EmpContact.Text + "','" + EmpAddress.Text + "','" + DeptDrop.SelectedValue.ToString() + "','" + JobDrop.SelectedValue.ToString() + "' )", con);
-                if (PhilHealth.Checked)
-                { active = 1; }
-                else
-                { active = 0; }
-                if (PagIbig.Checked)
-                { active = 1; }
-                else
-                { active = 0; }
-                if (SSS.Checked)
-                { active = 1; }
-                else
-                { active = 0; }
-                if (Weekly.Checked)
-                { active = 1; }
-                else
-                { active = 0; }
+                
                 cmd = new SqlCommand("proc_UpdateEmployee", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@EmployeeId", EmpDgv.CurrentRow.Cells[0].Value.ToString());

@@ -31,7 +31,7 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-
+            DeleteBtn.Visible = false;
             sda = new SqlDataAdapter("SELECT * FROM Weekly", conn);
             DataSet ds = new DataSet();
             sda.Fill(ds, "Weekly");
@@ -41,22 +41,28 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
 
         private void BtnWeeklyPayroll_Click(object sender, EventArgs e)
         {
-            if (Holiday.Checked)
-            {
-                conn.Open();
-                cmd = new SqlCommand("" +
-                    "CASE" +
-                    "   WHEN @Start TO @End")
-            }
-            else 
-            { 
+            conn.Open();
             
-            }
+            cmd = new SqlCommand("proc_Weekly", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Start", StartAt.Value.Date);
+            cmd.Parameters.AddWithValue("@End", EndAt.Value.Date);
+            cmd.Parameters.AddWithValue("@PhilHealth", Week_PhilHealth.Checked);
+            cmd.Parameters.AddWithValue("@PagIbig", Week_PagIbig.Checked);
+            cmd.Parameters.AddWithValue("@SSS", Week_SSS.Checked);
 
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Created.");
+            conn.Close();
+
+            DeleteBtn.Visible = true;
+            sda = new SqlDataAdapter("SELECT * FROM Weekly", conn);
+            DataSet ds = new DataSet();
+            sda.Fill(ds, "Weekly");
+            WeekDgv.DataSource = ds.Tables["Weekly"].DefaultView;
         }
         void FilterData()
         {
-            conn = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
             conn.Open();
             string sql = ("SELECT * FROM Weekly WHERE  StartAt = @Start AND EndAt = @End");
             DataTable dt = new DataTable();
@@ -73,6 +79,24 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
         private void FilterBtn_Click(object sender, EventArgs e)
         {
             FilterData();
+        }
+
+        private void Week_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_Holiday_DataSet.TblHoliday' table. You can move, or remove it, as needed.
+            this.tblHolidayTableAdapter.Fill(this._Holiday_DataSet.TblHoliday);
+
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            cmd = new SqlCommand("DELETE FROM Weekly", conn);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Deleted");
+            conn.Close();
+            DeleteBtn.Visible=false;
         }
     }
 }

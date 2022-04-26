@@ -315,6 +315,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_Employee_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_Holiday_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Holiday_DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="_Job_DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -431,6 +436,17 @@
     </None>
     <None Include="_Employee_DataSet.xss">
       <DependentUpon>_Employee_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Holiday_DataSet.xsc">
+      <DependentUpon>_Holiday_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Holiday_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Holiday_DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Holiday_DataSet.xss">
+      <DependentUpon>_Holiday_DataSet.xsd</DependentUpon>
     </None>
     <None Include="_Job_DataSet.xsc">
       <DependentUpon>_Job_DataSet.xsd</DependentUpon>

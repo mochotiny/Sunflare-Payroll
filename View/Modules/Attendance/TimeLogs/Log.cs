@@ -37,7 +37,8 @@ namespace WFA_APP.View.Modules.Attendance
             connect.Open();
             //payrollVB
             cmd = new SqlCommand(" INSERT INTO Attendances (BioID, WorkedDay, StartAt, EndAt, NoOfOvertime) VALUES ('" + EmpDrop.SelectedValue.ToString() + "', '" + DayWork.Value.Date.ToString("dd-MMM-yyyy") + "', '" + TimeIn.Value.ToString("HH:mm") + "', '" + TimeOut.Value.ToString("HH:mm") + "', '"+ Overtime.Text.ToString() +"' ) ", connect);
-
+            cmd.ExecuteNonQuery();
+            cmd = new SqlCommand("UPDATE Att SET IsHoliday = CASE When WorkedDay = Hol.Day AND Hol.Type = 1 THEN 1 WHEN WorkedDay = Hol.Day AND Hol.Type IS NULL THEN 2 ELSE 0 END FROM Attendances AS Att LEFT JOIN Holidays AS Hol ON Att.WorkedDay = Hol.day", connect);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Logged.");
             connect.Close();

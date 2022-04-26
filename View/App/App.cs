@@ -21,6 +21,8 @@ namespace WFA_APP.View.App
         public App()
         {
             InitializeComponent();
+            ControlBox = false;
+
             this.PanelForm.Controls.Clear();
             HomeForm home = new HomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             home.FormBorderStyle = FormBorderStyle.None;

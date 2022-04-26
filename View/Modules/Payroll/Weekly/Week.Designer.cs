@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,10 +44,15 @@
             this.PagIbig = new Bunifu.UI.WinForms.BunifuLabel();
             this.SSS = new Bunifu.UI.WinForms.BunifuLabel();
             this.BtnWeeklyPayroll = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.Holiday = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.FilterBtn = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tblHolidayBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Holiday_DataSet = new WFA_APP._Holiday_DataSet();
+            this.tblHolidayTableAdapter = new WFA_APP._Holiday_DataSetTableAdapters.TblHolidayTableAdapter();
+            this.DeleteBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.WeekDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHolidayBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Holiday_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // WeekDgv
@@ -178,7 +184,7 @@
             this.Week_PhilHealth.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Week_PhilHealth.Cursor = System.Windows.Forms.Cursors.Default;
             this.Week_PhilHealth.CustomCheckmarkImage = null;
-            this.Week_PhilHealth.Location = new System.Drawing.Point(530, 49);
+            this.Week_PhilHealth.Location = new System.Drawing.Point(438, 49);
             this.Week_PhilHealth.MinimumSize = new System.Drawing.Size(17, 17);
             this.Week_PhilHealth.Name = "Week_PhilHealth";
             this.Week_PhilHealth.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -231,7 +237,7 @@
             this.Week_PagIbig.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Week_PagIbig.Cursor = System.Windows.Forms.Cursors.Default;
             this.Week_PagIbig.CustomCheckmarkImage = null;
-            this.Week_PagIbig.Location = new System.Drawing.Point(622, 49);
+            this.Week_PagIbig.Location = new System.Drawing.Point(530, 49);
             this.Week_PagIbig.MinimumSize = new System.Drawing.Size(17, 17);
             this.Week_PagIbig.Name = "Week_PagIbig";
             this.Week_PagIbig.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -284,7 +290,7 @@
             this.Week_SSS.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Week_SSS.Cursor = System.Windows.Forms.Cursors.Default;
             this.Week_SSS.CustomCheckmarkImage = null;
-            this.Week_SSS.Location = new System.Drawing.Point(714, 49);
+            this.Week_SSS.Location = new System.Drawing.Point(622, 49);
             this.Week_SSS.MinimumSize = new System.Drawing.Size(17, 17);
             this.Week_SSS.Name = "Week_SSS";
             this.Week_SSS.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -326,7 +332,7 @@
             this.PhilHealth.Cursor = System.Windows.Forms.Cursors.Default;
             this.PhilHealth.CursorType = System.Windows.Forms.Cursors.Default;
             this.PhilHealth.Font = new System.Drawing.Font("Inter", 9.75F);
-            this.PhilHealth.Location = new System.Drawing.Point(554, 52);
+            this.PhilHealth.Location = new System.Drawing.Point(462, 52);
             this.PhilHealth.Name = "PhilHealth";
             this.PhilHealth.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PhilHealth.Size = new System.Drawing.Size(63, 16);
@@ -341,7 +347,7 @@
             this.PagIbig.AutoEllipsis = false;
             this.PagIbig.CursorType = null;
             this.PagIbig.Font = new System.Drawing.Font("Inter", 9.75F);
-            this.PagIbig.Location = new System.Drawing.Point(646, 52);
+            this.PagIbig.Location = new System.Drawing.Point(554, 52);
             this.PagIbig.Name = "PagIbig";
             this.PagIbig.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PagIbig.Size = new System.Drawing.Size(45, 16);
@@ -356,7 +362,7 @@
             this.SSS.AutoEllipsis = false;
             this.SSS.CursorType = null;
             this.SSS.Font = new System.Drawing.Font("Inter", 9.75F);
-            this.SSS.Location = new System.Drawing.Point(738, 52);
+            this.SSS.Location = new System.Drawing.Point(646, 52);
             this.SSS.Name = "SSS";
             this.SSS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SSS.Size = new System.Drawing.Size(24, 16);
@@ -414,7 +420,7 @@
             this.BtnWeeklyPayroll.IdleIconLeftImage = null;
             this.BtnWeeklyPayroll.IdleIconRightImage = null;
             this.BtnWeeklyPayroll.IndicateFocus = false;
-            this.BtnWeeklyPayroll.Location = new System.Drawing.Point(1006, 43);
+            this.BtnWeeklyPayroll.Location = new System.Drawing.Point(969, 43);
             this.BtnWeeklyPayroll.Name = "BtnWeeklyPayroll";
             this.BtnWeeklyPayroll.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnWeeklyPayroll.OnDisabledState.BorderRadius = 1;
@@ -457,79 +463,11 @@
             this.BtnWeeklyPayroll.UseDefaultRadiusAndThickness = true;
             this.BtnWeeklyPayroll.Click += new System.EventHandler(this.BtnWeeklyPayroll_Click);
             // 
-            // Holiday
-            // 
-            this.Holiday.AllowBindingControlAnimation = true;
-            this.Holiday.AllowBindingControlColorChanges = false;
-            this.Holiday.AllowBindingControlLocation = true;
-            this.Holiday.AllowCheckBoxAnimation = false;
-            this.Holiday.AllowCheckmarkAnimation = true;
-            this.Holiday.AllowOnHoverStates = true;
-            this.Holiday.AutoCheck = true;
-            this.Holiday.BackColor = System.Drawing.Color.Transparent;
-            this.Holiday.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Holiday.BackgroundImage")));
-            this.Holiday.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Holiday.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.Holiday.BorderRadius = 12;
-            this.Holiday.Checked = false;
-            this.Holiday.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.Holiday.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Holiday.CustomCheckmarkImage = null;
-            this.Holiday.Location = new System.Drawing.Point(438, 49);
-            this.Holiday.MinimumSize = new System.Drawing.Size(17, 17);
-            this.Holiday.Name = "Holiday";
-            this.Holiday.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.Holiday.OnCheck.BorderRadius = 12;
-            this.Holiday.OnCheck.BorderThickness = 2;
-            this.Holiday.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.Holiday.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.Holiday.OnCheck.CheckmarkThickness = 2;
-            this.Holiday.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.Holiday.OnDisable.BorderRadius = 12;
-            this.Holiday.OnDisable.BorderThickness = 2;
-            this.Holiday.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.Holiday.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.Holiday.OnDisable.CheckmarkThickness = 2;
-            this.Holiday.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.Holiday.OnHoverChecked.BorderRadius = 12;
-            this.Holiday.OnHoverChecked.BorderThickness = 2;
-            this.Holiday.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.Holiday.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.Holiday.OnHoverChecked.CheckmarkThickness = 2;
-            this.Holiday.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.Holiday.OnHoverUnchecked.BorderRadius = 12;
-            this.Holiday.OnHoverUnchecked.BorderThickness = 1;
-            this.Holiday.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.Holiday.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.Holiday.OnUncheck.BorderRadius = 12;
-            this.Holiday.OnUncheck.BorderThickness = 1;
-            this.Holiday.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.Holiday.Size = new System.Drawing.Size(21, 21);
-            this.Holiday.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.Holiday.TabIndex = 10;
-            this.Holiday.ThreeState = false;
-            this.Holiday.ToolTipText = null;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Inter", 9.75F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(462, 52);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(46, 16);
-            this.bunifuLabel1.TabIndex = 11;
-            this.bunifuLabel1.Text = "Holiday";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // FilterBtn
             // 
             this.FilterBtn.AllowParentOverrides = false;
             this.FilterBtn.AutoEllipsis = false;
+            this.FilterBtn.Cursor = System.Windows.Forms.Cursors.Default;
             this.FilterBtn.CursorType = System.Windows.Forms.Cursors.Default;
             this.FilterBtn.Font = new System.Drawing.Font("Inter Medium", 15.75F, System.Drawing.FontStyle.Bold);
             this.FilterBtn.Location = new System.Drawing.Point(15, 15);
@@ -542,15 +480,39 @@
             this.FilterBtn.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.FilterBtn.Click += new System.EventHandler(this.FilterBtn_Click);
             // 
+            // tblHolidayBindingSource
+            // 
+            this.tblHolidayBindingSource.DataMember = "TblHoliday";
+            this.tblHolidayBindingSource.DataSource = this._Holiday_DataSet;
+            // 
+            // _Holiday_DataSet
+            // 
+            this._Holiday_DataSet.DataSetName = "_Holiday_DataSet";
+            this._Holiday_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblHolidayTableAdapter
+            // 
+            this.tblHolidayTableAdapter.ClearBeforeFill = true;
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.Image = global::WFA_APP.Properties.Resources.delete;
+            this.DeleteBtn.Location = new System.Drawing.Point(1124, 43);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(32, 32);
+            this.DeleteBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DeleteBtn.TabIndex = 13;
+            this.DeleteBtn.TabStop = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
             // Week
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1168, 657);
+            this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.FilterBtn);
-            this.Controls.Add(this.bunifuLabel1);
-            this.Controls.Add(this.Holiday);
             this.Controls.Add(this.BtnWeeklyPayroll);
             this.Controls.Add(this.SSS);
             this.Controls.Add(this.PagIbig);
@@ -564,7 +526,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Week";
             this.Text = "Weekly";
+            this.Load += new System.EventHandler(this.Week_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WeekDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHolidayBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Holiday_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,8 +548,10 @@
         private Bunifu.UI.WinForms.BunifuLabel PagIbig;
         private Bunifu.UI.WinForms.BunifuLabel SSS;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnWeeklyPayroll;
-        private Bunifu.UI.WinForms.BunifuCheckBox Holiday;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel FilterBtn;
+        private _Holiday_DataSet _Holiday_DataSet;
+        private System.Windows.Forms.BindingSource tblHolidayBindingSource;
+        private _Holiday_DataSetTableAdapters.TblHolidayTableAdapter tblHolidayTableAdapter;
+        private System.Windows.Forms.PictureBox DeleteBtn;
     }
 }
