@@ -21,13 +21,28 @@ namespace WFA_APP.View.App
         public App()
         {
             InitializeComponent();
-            ControlBox = false;
+            this.MaximizeBox = false;
+            
+            this.MinimizeBox = true;
+            
+            //ControlBox = false;
 
             this.PanelForm.Controls.Clear();
             HomeForm home = new HomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             home.FormBorderStyle = FormBorderStyle.None;
             this.PanelForm.Controls.Add(home);
             home.Show();
+        }
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
