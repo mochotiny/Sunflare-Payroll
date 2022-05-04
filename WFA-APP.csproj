@@ -161,6 +161,24 @@
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <HintPath>packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -192,6 +210,13 @@
     <Compile Include="Presenter\PayrollPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Modules\Report\CrystalReport\PayRoll\ReportPayRoll.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportPayRoll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\App\App.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,16 +337,39 @@
     <Compile Include="View\Modules\Payroll\Weekly\Week.Designer.cs">
       <DependentUpon>Week.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Modules\Report\CrystalReport\PayRoll\FormPayRoll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Report\CrystalReport\PayRoll\FormPayRoll.Designer.cs">
+      <DependentUpon>FormPayRoll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\CrystalReport\PayRoll\PayRoll.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayRoll.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\CrystalReport\PaySlip\FormPaySlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Report\CrystalReport\PaySlip\FormPaySlip.Designer.cs">
+      <DependentUpon>FormPaySlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\CrystalReport\PaySlip\PaySlipDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaySlipDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\CrystalReport\PaySlip\PSReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PSReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\Modules\Report\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Modules\Report\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Modules\Report\ReportPR\PayrollWeekly.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PayrollWeekly.xsd</DependentUpon>
     </Compile>
     <Compile Include="View\Modules\Report\ReportPR\PR.cs">
       <SubType>Form</SubType>
@@ -329,17 +377,24 @@
     <Compile Include="View\Modules\Report\ReportPR\PR.Designer.cs">
       <DependentUpon>PR.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Modules\Report\ReportPR\WeeklyReport.cs">
+    <Compile Include="View\Modules\Report\ReportPR\WeeklyPR.cs">
+      <DependentUpon>WeeklyPR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\ReportPR\WeeklyPR.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>WeeklyReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
+      <DependentUpon>WeeklyPR.xsd</DependentUpon>
     </Compile>
     <Compile Include="View\Modules\Report\ReportPS\PS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Modules\Report\ReportPS\PS.Designer.cs">
       <DependentUpon>PS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\ReportPS\WeekPS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeekPS.xsd</DependentUpon>
     </Compile>
     <Compile Include="_Department_DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -372,6 +427,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Modules\Report\CrystalReport\PayRoll\ReportPayRoll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportPayRoll.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\App\App.resx">
       <DependentUpon>App.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,19 +491,27 @@
     <EmbeddedResource Include="View\Modules\Payroll\Weekly\Week.resx">
       <DependentUpon>Week.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Report\CrystalReport\PayRoll\FormPayRoll.resx">
+      <DependentUpon>FormPayRoll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Report\CrystalReport\PaySlip\FormPaySlip.resx">
+      <DependentUpon>FormPaySlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Report\CrystalReport\PaySlip\PSReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PSReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Report\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Report\ReportPR\PR.resx">
       <DependentUpon>PR.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Modules\Report\ReportPR\WeeklyReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>WeeklyReport.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Report\ReportPR\WeeklyPayrollReport.rdlc" />
     <EmbeddedResource Include="View\Modules\Report\ReportPS\PS.resx">
       <DependentUpon>PS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Report\ReportPS\PSrpt.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -455,16 +522,49 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="View\Modules\Report\ReportPR\PayrollWeekly.xsc">
-      <DependentUpon>PayrollWeekly.xsd</DependentUpon>
+    <None Include="View\Modules\Report\CrystalReport\PayRoll\PayRoll.xsc">
+      <DependentUpon>PayRoll.xsd</DependentUpon>
     </None>
-    <None Include="View\Modules\Report\ReportPR\PayrollWeekly.xsd">
+    <None Include="View\Modules\Report\CrystalReport\PayRoll\PayRoll.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PayrollWeekly.Designer.cs</LastGenOutput>
+      <LastGenOutput>PayRoll.Designer.cs</LastGenOutput>
     </None>
-    <None Include="View\Modules\Report\ReportPR\PayrollWeekly.xss">
-      <DependentUpon>PayrollWeekly.xsd</DependentUpon>
+    <None Include="View\Modules\Report\CrystalReport\PayRoll\PayRoll.xss">
+      <DependentUpon>PayRoll.xsd</DependentUpon>
+    </None>
+    <None Include="View\Modules\Report\CrystalReport\PaySlip\PaySlipDS.xsc">
+      <DependentUpon>PaySlipDS.xsd</DependentUpon>
+    </None>
+    <None Include="View\Modules\Report\CrystalReport\PaySlip\PaySlipDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PaySlipDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\Modules\Report\CrystalReport\PaySlip\PaySlipDS.xss">
+      <DependentUpon>PaySlipDS.xsd</DependentUpon>
+    </None>
+    <None Include="View\Modules\Report\ReportPR\WeeklyPR.xsc">
+      <DependentUpon>WeeklyPR.xsd</DependentUpon>
+    </None>
+    <None Include="View\Modules\Report\ReportPR\WeeklyPR.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WeeklyPR.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\Modules\Report\ReportPR\WeeklyPR.xss">
+      <DependentUpon>WeeklyPR.xsd</DependentUpon>
+    </None>
+    <None Include="View\Modules\Report\ReportPS\WeekPS.xsc">
+      <DependentUpon>WeekPS.xsd</DependentUpon>
+    </None>
+    <None Include="View\Modules\Report\ReportPS\WeekPS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WeekPS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\Modules\Report\ReportPS\WeekPS.xss">
+      <DependentUpon>WeekPS.xsd</DependentUpon>
     </None>
     <None Include="_Department_DataSet.xsc">
       <DependentUpon>_Department_DataSet.xsd</DependentUpon>
@@ -568,8 +668,21 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="View\Modules\Report\CrystalReport\" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

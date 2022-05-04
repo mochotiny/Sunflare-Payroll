@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using WFA_APP.View.Modules.Report.ReportPR;
 using WFA_APP.View.Modules.Report.ReportPS;
+using WFA_APP.View.Modules.Report.CrystalReport.PaySlip;
 
 namespace WFA_APP.View.Modules.Report
 {
@@ -43,7 +44,7 @@ namespace WFA_APP.View.Modules.Report
         {
             PanelBoard.Location = new Point(128, 50);
             this.PanelReport.Controls.Clear();
-            PS ps = new PS() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FormPaySlip ps = new FormPaySlip() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             ps.FormBorderStyle = FormBorderStyle.None;
             this.PanelReport.Controls.Add(ps);
             ps.Show();

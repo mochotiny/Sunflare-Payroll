@@ -1,7 +1,7 @@
 ﻿
-namespace WFA_APP.View.Modules.Report.ReportPS
+namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip
 {
-    partial class PS
+    partial class FormPaySlip
     {
         /// <summary>
         /// Required designer variable.
@@ -29,33 +29,27 @@ namespace WFA_APP.View.Modules.Report.ReportPS
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PS));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPaySlip));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.PSReport = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.ShowBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.End = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.Start = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.WeekPS = new WFA_APP.View.Modules.Report.ReportPS.WeekPS();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataTable1TableAdapter = new WFA_APP.View.Modules.Report.ReportPS.WeekPSTableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.WeekPS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
+            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.SuspendLayout();
             // 
-            // PSReport
+            // crystalReportViewer1
             // 
-            this.PSReport.Dock = System.Windows.Forms.DockStyle.Bottom;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable1BindingSource;
-            this.PSReport.LocalReport.DataSources.Add(reportDataSource1);
-            this.PSReport.LocalReport.ReportEmbeddedResource = "WFA_APP.View.Modules.Report.ReportPS.PSrpt.rdlc";
-            this.PSReport.Location = new System.Drawing.Point(0, 63);
-            this.PSReport.Name = "PSReport";
-            this.PSReport.ServerReport.BearerToken = null;
-            this.PSReport.Size = new System.Drawing.Size(1154, 548);
-            this.PSReport.TabIndex = 0;
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 62);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1170, 588);
+            this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // ShowBtn
             // 
@@ -147,7 +141,6 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.ShowBtn.TextMarginLeft = 0;
             this.ShowBtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.ShowBtn.UseDefaultRadiusAndThickness = true;
-            this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
             // 
             // End
             // 
@@ -199,47 +192,93 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.Start.Size = new System.Drawing.Size(169, 32);
             this.Start.TabIndex = 4;
             // 
-            // WeekPS
+            // bunifuDropdown1
             // 
-            this.WeekPS.DataSetName = "WeekPS";
-            this.WeekPS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuDropdown1.BorderRadius = 1;
+            this.bunifuDropdown1.Color = System.Drawing.Color.Silver;
+            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.bunifuDropdown1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bunifuDropdown1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bunifuDropdown1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bunifuDropdown1.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdown1.FillDropDown = true;
+            this.bunifuDropdown1.FillIndicator = false;
+            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bunifuDropdown1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.FormattingEnabled = true;
+            this.bunifuDropdown1.Icon = null;
+            this.bunifuDropdown1.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdown1.IndicatorThickness = 2;
+            this.bunifuDropdown1.IsDropdownOpened = false;
+            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.ItemHeight = 26;
+            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDropdown1.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemTopMargin = 3;
+            this.bunifuDropdown1.Location = new System.Drawing.Point(632, 12);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.Size = new System.Drawing.Size(231, 32);
+            this.bunifuDropdown1.TabIndex = 7;
+            this.bunifuDropdown1.Text = null;
+            this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdown1.TextLeftMargin = 5;
             // 
-            // DataTable1BindingSource
+            // bunifuLabel1
             // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.WeekPS;
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Inter", 12F);
+            this.bunifuLabel1.Location = new System.Drawing.Point(546, 19);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(75, 19);
+            this.bunifuLabel1.TabIndex = 8;
+            this.bunifuLabel1.Text = "Employee";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // DataTable1TableAdapter
-            // 
-            this.DataTable1TableAdapter.ClearBeforeFill = true;
-            // 
-            // PS
+            // FormPaySlip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 611);
+            this.ClientSize = new System.Drawing.Size(1170, 650);
+            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.bunifuDropdown1);
             this.Controls.Add(this.ShowBtn);
             this.Controls.Add(this.End);
             this.Controls.Add(this.Start);
-            this.Controls.Add(this.PSReport);
+            this.Controls.Add(this.crystalReportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PS";
-            this.Text = "PS";
-            this.Load += new System.EventHandler(this.PS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.WeekPS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            this.Name = "FormPaySlip";
+            this.Text = "FormPaySlip";
+            this.Load += new System.EventHandler(this.FormPaySlip_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer PSReport;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ShowBtn;
         private Bunifu.UI.WinForms.BunifuDatePicker End;
         private Bunifu.UI.WinForms.BunifuDatePicker Start;
-        private System.Windows.Forms.BindingSource DataTable1BindingSource;
-        private WeekPS WeekPS;
-        private WeekPSTableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
+        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }

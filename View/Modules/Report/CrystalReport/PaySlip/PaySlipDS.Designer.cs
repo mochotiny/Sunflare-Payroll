@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WFA_APP.View.Modules.Report.ReportPR {
+namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("PayrollWeekly")]
+    [global::System.Xml.Serialization.XmlRootAttribute("PaySlipDS")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class PayrollWeekly : global::System.Data.DataSet {
+    public partial class PaySlipDS : global::System.Data.DataSet {
         
-        private WeeklyDataTable tableWeekly;
+        private PayslipDTDataTable tablePayslipDT;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public PayrollWeekly() {
+        public PaySlipDS() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected PayrollWeekly(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected PaySlipDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Weekly"] != null)) {
-                    base.Tables.Add(new WeeklyDataTable(ds.Tables["Weekly"]));
+                if ((ds.Tables["PayslipDT"] != null)) {
+                    base.Tables.Add(new PayslipDTDataTable(ds.Tables["PayslipDT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public WeeklyDataTable Weekly {
+        public PayslipDTDataTable PayslipDT {
             get {
-                return this.tableWeekly;
+                return this.tablePayslipDT;
             }
         }
         
@@ -127,7 +127,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            PayrollWeekly cln = ((PayrollWeekly)(base.Clone()));
+            PaySlipDS cln = ((PaySlipDS)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Weekly"] != null)) {
-                    base.Tables.Add(new WeeklyDataTable(ds.Tables["Weekly"]));
+                if ((ds.Tables["PayslipDT"] != null)) {
+                    base.Tables.Add(new PayslipDTDataTable(ds.Tables["PayslipDT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableWeekly = ((WeeklyDataTable)(base.Tables["Weekly"]));
+            this.tablePayslipDT = ((PayslipDTDataTable)(base.Tables["PayslipDT"]));
             if ((initTable == true)) {
-                if ((this.tableWeekly != null)) {
-                    this.tableWeekly.InitVars();
+                if ((this.tablePayslipDT != null)) {
+                    this.tablePayslipDT.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "PayrollWeekly";
+            this.DataSetName = "PaySlipDS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/PayrollWeekly.xsd";
+            this.Namespace = "http://tempuri.org/PaySlipDS.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableWeekly = new WeeklyDataTable();
-            base.Tables.Add(this.tableWeekly);
+            this.tablePayslipDT = new PayslipDTDataTable();
+            base.Tables.Add(this.tablePayslipDT);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeWeekly() {
+        private bool ShouldSerializePayslipDT() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            PayrollWeekly ds = new PayrollWeekly();
+            PaySlipDS ds = new PaySlipDS();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,20 +270,20 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void WeeklyRowChangeEventHandler(object sender, WeeklyRowChangeEvent e);
+        public delegate void PayslipDTRowChangeEventHandler(object sender, PayslipDTRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class WeeklyDataTable : global::System.Data.TypedTableBase<WeeklyRow> {
-            
-            private global::System.Data.DataColumn columnPayrollID;
+        public partial class PayslipDTDataTable : global::System.Data.TypedTableBase<PayslipDTRow> {
             
             private global::System.Data.DataColumn columnEmployeeName;
             
             private global::System.Data.DataColumn columnBiometricID;
+            
+            private global::System.Data.DataColumn columnJobTitle;
             
             private global::System.Data.DataColumn columnDayRate;
             
@@ -297,8 +297,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             private global::System.Data.DataColumn columnOTRate;
             
-            private global::System.Data.DataColumn columnNoOfOT;
-            
             private global::System.Data.DataColumn columnOTPay;
             
             private global::System.Data.DataColumn columnHoliday;
@@ -310,8 +308,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             private global::System.Data.DataColumn columnPhilHealth;
             
             private global::System.Data.DataColumn columnPagIbig;
-            
-            private global::System.Data.DataColumn columnSSS;
             
             private global::System.Data.DataColumn columnLoanOrCA;
             
@@ -325,12 +321,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             private global::System.Data.DataColumn columnNetSalary;
             
-            private global::System.Data.DataColumn columnCreated_At;
+            private global::System.Data.DataColumn columnSSS;
+            
+            private global::System.Data.DataColumn columnNoOfOT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public WeeklyDataTable() {
-                this.TableName = "Weekly";
+            public PayslipDTDataTable() {
+                this.TableName = "PayslipDT";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -338,7 +336,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal WeeklyDataTable(global::System.Data.DataTable table) {
+            internal PayslipDTDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -355,17 +353,9 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected WeeklyDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PayslipDTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PayrollIDColumn {
-                get {
-                    return this.columnPayrollID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -381,6 +371,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public global::System.Data.DataColumn BiometricIDColumn {
                 get {
                     return this.columnBiometricID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobTitleColumn {
+                get {
+                    return this.columnJobTitle;
                 }
             }
             
@@ -434,14 +432,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NoOfOTColumn {
-                get {
-                    return this.columnNoOfOT;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn OTPayColumn {
                 get {
                     return this.columnOTPay;
@@ -485,14 +475,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public global::System.Data.DataColumn PagIbigColumn {
                 get {
                     return this.columnPagIbig;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SSSColumn {
-                get {
-                    return this.columnSSS;
                 }
             }
             
@@ -546,9 +528,17 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Created_AtColumn {
+            public global::System.Data.DataColumn SSSColumn {
                 get {
-                    return this.columnCreated_At;
+                    return this.columnSSS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NoOfOTColumn {
+                get {
+                    return this.columnNoOfOT;
                 }
             }
             
@@ -563,91 +553,90 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public WeeklyRow this[int index] {
+            public PayslipDTRow this[int index] {
                 get {
-                    return ((WeeklyRow)(this.Rows[index]));
+                    return ((PayslipDTRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event WeeklyRowChangeEventHandler WeeklyRowChanging;
+            public event PayslipDTRowChangeEventHandler PayslipDTRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event WeeklyRowChangeEventHandler WeeklyRowChanged;
+            public event PayslipDTRowChangeEventHandler PayslipDTRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event WeeklyRowChangeEventHandler WeeklyRowDeleting;
+            public event PayslipDTRowChangeEventHandler PayslipDTRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event WeeklyRowChangeEventHandler WeeklyRowDeleted;
+            public event PayslipDTRowChangeEventHandler PayslipDTRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddWeeklyRow(WeeklyRow row) {
+            public void AddPayslipDTRow(PayslipDTRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public WeeklyRow AddWeeklyRow(
+            public PayslipDTRow AddPayslipDTRow(
                         string EmployeeName, 
                         int BiometricID, 
+                        string JobTitle, 
                         decimal DayRate, 
                         System.DateTime StartAt, 
                         System.DateTime EndAt, 
                         decimal DaysWorked, 
                         decimal BasicPay, 
                         decimal OTRate, 
-                        decimal NoOfOT, 
                         decimal OTPay, 
                         decimal Holiday, 
                         decimal Adjustments, 
                         decimal GrossSalary, 
                         decimal PhilHealth, 
                         decimal PagIbig, 
-                        decimal SSS, 
                         decimal LoanOrCA, 
                         decimal UnderTime, 
                         decimal Late, 
                         decimal Others, 
                         decimal TotalDeductions, 
                         decimal NetSalary, 
-                        System.DateTime Created_At) {
-                WeeklyRow rowWeeklyRow = ((WeeklyRow)(this.NewRow()));
+                        decimal SSS, 
+                        decimal NoOfOT) {
+                PayslipDTRow rowPayslipDTRow = ((PayslipDTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         EmployeeName,
                         BiometricID,
+                        JobTitle,
                         DayRate,
                         StartAt,
                         EndAt,
                         DaysWorked,
                         BasicPay,
                         OTRate,
-                        NoOfOT,
                         OTPay,
                         Holiday,
                         Adjustments,
                         GrossSalary,
                         PhilHealth,
                         PagIbig,
-                        SSS,
                         LoanOrCA,
                         UnderTime,
                         Late,
                         Others,
                         TotalDeductions,
                         NetSalary,
-                        Created_At};
-                rowWeeklyRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowWeeklyRow);
-                return rowWeeklyRow;
+                        SSS,
+                        NoOfOT};
+                rowPayslipDTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPayslipDTRow);
+                return rowPayslipDTRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                WeeklyDataTable cln = ((WeeklyDataTable)(base.Clone()));
+                PayslipDTDataTable cln = ((PayslipDTDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -655,47 +644,46 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new WeeklyDataTable();
+                return new PayslipDTDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnPayrollID = base.Columns["PayrollID"];
                 this.columnEmployeeName = base.Columns["EmployeeName"];
                 this.columnBiometricID = base.Columns["BiometricID"];
+                this.columnJobTitle = base.Columns["JobTitle"];
                 this.columnDayRate = base.Columns["DayRate"];
                 this.columnStartAt = base.Columns["StartAt"];
                 this.columnEndAt = base.Columns["EndAt"];
                 this.columnDaysWorked = base.Columns["DaysWorked"];
                 this.columnBasicPay = base.Columns["BasicPay"];
                 this.columnOTRate = base.Columns["OTRate"];
-                this.columnNoOfOT = base.Columns["NoOfOT"];
                 this.columnOTPay = base.Columns["OTPay"];
                 this.columnHoliday = base.Columns["Holiday"];
                 this.columnAdjustments = base.Columns["Adjustments"];
                 this.columnGrossSalary = base.Columns["GrossSalary"];
                 this.columnPhilHealth = base.Columns["PhilHealth"];
                 this.columnPagIbig = base.Columns["PagIbig"];
-                this.columnSSS = base.Columns["SSS"];
                 this.columnLoanOrCA = base.Columns["LoanOrCA"];
                 this.columnUnderTime = base.Columns["UnderTime"];
                 this.columnLate = base.Columns["Late"];
                 this.columnOthers = base.Columns["Others"];
                 this.columnTotalDeductions = base.Columns["TotalDeductions"];
                 this.columnNetSalary = base.Columns["NetSalary"];
-                this.columnCreated_At = base.Columns["Created_At"];
+                this.columnSSS = base.Columns["SSS"];
+                this.columnNoOfOT = base.Columns["NoOfOT"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnPayrollID = new global::System.Data.DataColumn("PayrollID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPayrollID);
                 this.columnEmployeeName = new global::System.Data.DataColumn("EmployeeName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeName);
                 this.columnBiometricID = new global::System.Data.DataColumn("BiometricID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBiometricID);
+                this.columnJobTitle = new global::System.Data.DataColumn("JobTitle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJobTitle);
                 this.columnDayRate = new global::System.Data.DataColumn("DayRate", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDayRate);
                 this.columnStartAt = new global::System.Data.DataColumn("StartAt", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -708,8 +696,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                 base.Columns.Add(this.columnBasicPay);
                 this.columnOTRate = new global::System.Data.DataColumn("OTRate", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOTRate);
-                this.columnNoOfOT = new global::System.Data.DataColumn("NoOfOT", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNoOfOT);
                 this.columnOTPay = new global::System.Data.DataColumn("OTPay", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOTPay);
                 this.columnHoliday = new global::System.Data.DataColumn("Holiday", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -722,8 +708,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                 base.Columns.Add(this.columnPhilHealth);
                 this.columnPagIbig = new global::System.Data.DataColumn("PagIbig", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPagIbig);
-                this.columnSSS = new global::System.Data.DataColumn("SSS", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSSS);
                 this.columnLoanOrCA = new global::System.Data.DataColumn("LoanOrCA", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLoanOrCA);
                 this.columnUnderTime = new global::System.Data.DataColumn("UnderTime", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -736,23 +720,21 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                 base.Columns.Add(this.columnTotalDeductions);
                 this.columnNetSalary = new global::System.Data.DataColumn("NetSalary", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNetSalary);
-                this.columnCreated_At = new global::System.Data.DataColumn("Created_At", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCreated_At);
-                this.columnPayrollID.AutoIncrement = true;
-                this.columnPayrollID.AutoIncrementSeed = -1;
-                this.columnPayrollID.AutoIncrementStep = -1;
-                this.columnPayrollID.AllowDBNull = false;
-                this.columnPayrollID.ReadOnly = true;
+                this.columnSSS = new global::System.Data.DataColumn("SSS", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSSS);
+                this.columnNoOfOT = new global::System.Data.DataColumn("NoOfOT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNoOfOT);
                 this.columnEmployeeName.AllowDBNull = false;
                 this.columnEmployeeName.MaxLength = 50;
                 this.columnBiometricID.AllowDBNull = false;
+                this.columnJobTitle.AllowDBNull = false;
+                this.columnJobTitle.MaxLength = 50;
                 this.columnDayRate.AllowDBNull = false;
                 this.columnStartAt.AllowDBNull = false;
                 this.columnEndAt.AllowDBNull = false;
                 this.columnDaysWorked.AllowDBNull = false;
                 this.columnBasicPay.ReadOnly = true;
                 this.columnOTRate.ReadOnly = true;
-                this.columnNoOfOT.AllowDBNull = false;
                 this.columnOTPay.ReadOnly = true;
                 this.columnGrossSalary.ReadOnly = true;
                 this.columnLoanOrCA.AllowDBNull = false;
@@ -761,33 +743,33 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                 this.columnOthers.AllowDBNull = false;
                 this.columnTotalDeductions.ReadOnly = true;
                 this.columnNetSalary.ReadOnly = true;
-                this.columnCreated_At.AllowDBNull = false;
+                this.columnNoOfOT.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public WeeklyRow NewWeeklyRow() {
-                return ((WeeklyRow)(this.NewRow()));
+            public PayslipDTRow NewPayslipDTRow() {
+                return ((PayslipDTRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new WeeklyRow(builder);
+                return new PayslipDTRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(WeeklyRow);
+                return typeof(PayslipDTRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.WeeklyRowChanged != null)) {
-                    this.WeeklyRowChanged(this, new WeeklyRowChangeEvent(((WeeklyRow)(e.Row)), e.Action));
+                if ((this.PayslipDTRowChanged != null)) {
+                    this.PayslipDTRowChanged(this, new PayslipDTRowChangeEvent(((PayslipDTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -795,8 +777,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.WeeklyRowChanging != null)) {
-                    this.WeeklyRowChanging(this, new WeeklyRowChangeEvent(((WeeklyRow)(e.Row)), e.Action));
+                if ((this.PayslipDTRowChanging != null)) {
+                    this.PayslipDTRowChanging(this, new PayslipDTRowChangeEvent(((PayslipDTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -804,8 +786,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.WeeklyRowDeleted != null)) {
-                    this.WeeklyRowDeleted(this, new WeeklyRowChangeEvent(((WeeklyRow)(e.Row)), e.Action));
+                if ((this.PayslipDTRowDeleted != null)) {
+                    this.PayslipDTRowDeleted(this, new PayslipDTRowChangeEvent(((PayslipDTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -813,14 +795,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.WeeklyRowDeleting != null)) {
-                    this.WeeklyRowDeleting(this, new WeeklyRowChangeEvent(((WeeklyRow)(e.Row)), e.Action));
+                if ((this.PayslipDTRowDeleting != null)) {
+                    this.PayslipDTRowDeleting(this, new PayslipDTRowChangeEvent(((PayslipDTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveWeeklyRow(WeeklyRow row) {
+            public void RemovePayslipDTRow(PayslipDTRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -829,7 +811,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PayrollWeekly ds = new PayrollWeekly();
+                PaySlipDS ds = new PaySlipDS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -847,7 +829,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "WeeklyDataTable";
+                attribute2.FixedValue = "PayslipDTDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -891,36 +873,25 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class WeeklyRow : global::System.Data.DataRow {
+        public partial class PayslipDTRow : global::System.Data.DataRow {
             
-            private WeeklyDataTable tableWeekly;
+            private PayslipDTDataTable tablePayslipDT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal WeeklyRow(global::System.Data.DataRowBuilder rb) : 
+            internal PayslipDTRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableWeekly = ((WeeklyDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int PayrollID {
-                get {
-                    return ((int)(this[this.tableWeekly.PayrollIDColumn]));
-                }
-                set {
-                    this[this.tableWeekly.PayrollIDColumn] = value;
-                }
+                this.tablePayslipDT = ((PayslipDTDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string EmployeeName {
                 get {
-                    return ((string)(this[this.tableWeekly.EmployeeNameColumn]));
+                    return ((string)(this[this.tablePayslipDT.EmployeeNameColumn]));
                 }
                 set {
-                    this[this.tableWeekly.EmployeeNameColumn] = value;
+                    this[this.tablePayslipDT.EmployeeNameColumn] = value;
                 }
             }
             
@@ -928,10 +899,21 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int BiometricID {
                 get {
-                    return ((int)(this[this.tableWeekly.BiometricIDColumn]));
+                    return ((int)(this[this.tablePayslipDT.BiometricIDColumn]));
                 }
                 set {
-                    this[this.tableWeekly.BiometricIDColumn] = value;
+                    this[this.tablePayslipDT.BiometricIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string JobTitle {
+                get {
+                    return ((string)(this[this.tablePayslipDT.JobTitleColumn]));
+                }
+                set {
+                    this[this.tablePayslipDT.JobTitleColumn] = value;
                 }
             }
             
@@ -939,10 +921,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal DayRate {
                 get {
-                    return ((decimal)(this[this.tableWeekly.DayRateColumn]));
+                    return ((decimal)(this[this.tablePayslipDT.DayRateColumn]));
                 }
                 set {
-                    this[this.tableWeekly.DayRateColumn] = value;
+                    this[this.tablePayslipDT.DayRateColumn] = value;
                 }
             }
             
@@ -950,10 +932,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime StartAt {
                 get {
-                    return ((global::System.DateTime)(this[this.tableWeekly.StartAtColumn]));
+                    return ((global::System.DateTime)(this[this.tablePayslipDT.StartAtColumn]));
                 }
                 set {
-                    this[this.tableWeekly.StartAtColumn] = value;
+                    this[this.tablePayslipDT.StartAtColumn] = value;
                 }
             }
             
@@ -961,10 +943,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime EndAt {
                 get {
-                    return ((global::System.DateTime)(this[this.tableWeekly.EndAtColumn]));
+                    return ((global::System.DateTime)(this[this.tablePayslipDT.EndAtColumn]));
                 }
                 set {
-                    this[this.tableWeekly.EndAtColumn] = value;
+                    this[this.tablePayslipDT.EndAtColumn] = value;
                 }
             }
             
@@ -972,10 +954,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal DaysWorked {
                 get {
-                    return ((decimal)(this[this.tableWeekly.DaysWorkedColumn]));
+                    return ((decimal)(this[this.tablePayslipDT.DaysWorkedColumn]));
                 }
                 set {
-                    this[this.tableWeekly.DaysWorkedColumn] = value;
+                    this[this.tablePayslipDT.DaysWorkedColumn] = value;
                 }
             }
             
@@ -984,14 +966,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal BasicPay {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.BasicPayColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.BasicPayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BasicPay\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'BasicPay\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.BasicPayColumn] = value;
+                    this[this.tablePayslipDT.BasicPayColumn] = value;
                 }
             }
             
@@ -1000,25 +982,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal OTRate {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.OTRateColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.OTRateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OTRate\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'OTRate\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.OTRateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal NoOfOT {
-                get {
-                    return ((decimal)(this[this.tableWeekly.NoOfOTColumn]));
-                }
-                set {
-                    this[this.tableWeekly.NoOfOTColumn] = value;
+                    this[this.tablePayslipDT.OTRateColumn] = value;
                 }
             }
             
@@ -1027,14 +998,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal OTPay {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.OTPayColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.OTPayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OTPay\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'OTPay\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.OTPayColumn] = value;
+                    this[this.tablePayslipDT.OTPayColumn] = value;
                 }
             }
             
@@ -1043,14 +1014,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal Holiday {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.HolidayColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.HolidayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Holiday\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Holiday\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.HolidayColumn] = value;
+                    this[this.tablePayslipDT.HolidayColumn] = value;
                 }
             }
             
@@ -1059,14 +1030,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal Adjustments {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.AdjustmentsColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.AdjustmentsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Adjustments\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Adjustments\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.AdjustmentsColumn] = value;
+                    this[this.tablePayslipDT.AdjustmentsColumn] = value;
                 }
             }
             
@@ -1075,14 +1046,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal GrossSalary {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.GrossSalaryColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.GrossSalaryColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'GrossSalary\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'GrossSalary\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.GrossSalaryColumn] = value;
+                    this[this.tablePayslipDT.GrossSalaryColumn] = value;
                 }
             }
             
@@ -1091,14 +1062,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal PhilHealth {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.PhilHealthColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.PhilHealthColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PhilHealth\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PhilHealth\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.PhilHealthColumn] = value;
+                    this[this.tablePayslipDT.PhilHealthColumn] = value;
                 }
             }
             
@@ -1107,30 +1078,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal PagIbig {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.PagIbigColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.PagIbigColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PagIbig\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PagIbig\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.PagIbigColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal SSS {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableWeekly.SSSColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SSS\' in table \'Weekly\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWeekly.SSSColumn] = value;
+                    this[this.tablePayslipDT.PagIbigColumn] = value;
                 }
             }
             
@@ -1138,10 +1093,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal LoanOrCA {
                 get {
-                    return ((decimal)(this[this.tableWeekly.LoanOrCAColumn]));
+                    return ((decimal)(this[this.tablePayslipDT.LoanOrCAColumn]));
                 }
                 set {
-                    this[this.tableWeekly.LoanOrCAColumn] = value;
+                    this[this.tablePayslipDT.LoanOrCAColumn] = value;
                 }
             }
             
@@ -1149,10 +1104,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal UnderTime {
                 get {
-                    return ((decimal)(this[this.tableWeekly.UnderTimeColumn]));
+                    return ((decimal)(this[this.tablePayslipDT.UnderTimeColumn]));
                 }
                 set {
-                    this[this.tableWeekly.UnderTimeColumn] = value;
+                    this[this.tablePayslipDT.UnderTimeColumn] = value;
                 }
             }
             
@@ -1160,10 +1115,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal Late {
                 get {
-                    return ((decimal)(this[this.tableWeekly.LateColumn]));
+                    return ((decimal)(this[this.tablePayslipDT.LateColumn]));
                 }
                 set {
-                    this[this.tableWeekly.LateColumn] = value;
+                    this[this.tablePayslipDT.LateColumn] = value;
                 }
             }
             
@@ -1171,10 +1126,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal Others {
                 get {
-                    return ((decimal)(this[this.tableWeekly.OthersColumn]));
+                    return ((decimal)(this[this.tablePayslipDT.OthersColumn]));
                 }
                 set {
-                    this[this.tableWeekly.OthersColumn] = value;
+                    this[this.tablePayslipDT.OthersColumn] = value;
                 }
             }
             
@@ -1183,14 +1138,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal TotalDeductions {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.TotalDeductionsColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.TotalDeductionsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalDeductions\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalDeductions\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.TotalDeductionsColumn] = value;
+                    this[this.tablePayslipDT.TotalDeductionsColumn] = value;
                 }
             }
             
@@ -1199,158 +1154,174 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal NetSalary {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly.NetSalaryColumn]));
+                        return ((decimal)(this[this.tablePayslipDT.NetSalaryColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NetSalary\' in table \'Weekly\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NetSalary\' in table \'PayslipDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly.NetSalaryColumn] = value;
+                    this[this.tablePayslipDT.NetSalaryColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Created_At {
+            public decimal SSS {
                 get {
-                    return ((global::System.DateTime)(this[this.tableWeekly.Created_AtColumn]));
+                    try {
+                        return ((decimal)(this[this.tablePayslipDT.SSSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SSS\' in table \'PayslipDT\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableWeekly.Created_AtColumn] = value;
+                    this[this.tablePayslipDT.SSSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal NoOfOT {
+                get {
+                    return ((decimal)(this[this.tablePayslipDT.NoOfOTColumn]));
+                }
+                set {
+                    this[this.tablePayslipDT.NoOfOTColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsBasicPayNull() {
-                return this.IsNull(this.tableWeekly.BasicPayColumn);
+                return this.IsNull(this.tablePayslipDT.BasicPayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetBasicPayNull() {
-                this[this.tableWeekly.BasicPayColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.BasicPayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsOTRateNull() {
-                return this.IsNull(this.tableWeekly.OTRateColumn);
+                return this.IsNull(this.tablePayslipDT.OTRateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetOTRateNull() {
-                this[this.tableWeekly.OTRateColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.OTRateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsOTPayNull() {
-                return this.IsNull(this.tableWeekly.OTPayColumn);
+                return this.IsNull(this.tablePayslipDT.OTPayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetOTPayNull() {
-                this[this.tableWeekly.OTPayColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.OTPayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsHolidayNull() {
-                return this.IsNull(this.tableWeekly.HolidayColumn);
+                return this.IsNull(this.tablePayslipDT.HolidayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetHolidayNull() {
-                this[this.tableWeekly.HolidayColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.HolidayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsAdjustmentsNull() {
-                return this.IsNull(this.tableWeekly.AdjustmentsColumn);
+                return this.IsNull(this.tablePayslipDT.AdjustmentsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetAdjustmentsNull() {
-                this[this.tableWeekly.AdjustmentsColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.AdjustmentsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsGrossSalaryNull() {
-                return this.IsNull(this.tableWeekly.GrossSalaryColumn);
+                return this.IsNull(this.tablePayslipDT.GrossSalaryColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetGrossSalaryNull() {
-                this[this.tableWeekly.GrossSalaryColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.GrossSalaryColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPhilHealthNull() {
-                return this.IsNull(this.tableWeekly.PhilHealthColumn);
+                return this.IsNull(this.tablePayslipDT.PhilHealthColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPhilHealthNull() {
-                this[this.tableWeekly.PhilHealthColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.PhilHealthColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPagIbigNull() {
-                return this.IsNull(this.tableWeekly.PagIbigColumn);
+                return this.IsNull(this.tablePayslipDT.PagIbigColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPagIbigNull() {
-                this[this.tableWeekly.PagIbigColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsSSSNull() {
-                return this.IsNull(this.tableWeekly.SSSColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetSSSNull() {
-                this[this.tableWeekly.SSSColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.PagIbigColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalDeductionsNull() {
-                return this.IsNull(this.tableWeekly.TotalDeductionsColumn);
+                return this.IsNull(this.tablePayslipDT.TotalDeductionsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalDeductionsNull() {
-                this[this.tableWeekly.TotalDeductionsColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.TotalDeductionsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNetSalaryNull() {
-                return this.IsNull(this.tableWeekly.NetSalaryColumn);
+                return this.IsNull(this.tablePayslipDT.NetSalaryColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNetSalaryNull() {
-                this[this.tableWeekly.NetSalaryColumn] = global::System.Convert.DBNull;
+                this[this.tablePayslipDT.NetSalaryColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSSSNull() {
+                return this.IsNull(this.tablePayslipDT.SSSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSSSNull() {
+                this[this.tablePayslipDT.SSSColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1358,22 +1329,22 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class WeeklyRowChangeEvent : global::System.EventArgs {
+        public class PayslipDTRowChangeEvent : global::System.EventArgs {
             
-            private WeeklyRow eventRow;
+            private PayslipDTRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public WeeklyRowChangeEvent(WeeklyRow row, global::System.Data.DataRowAction action) {
+            public PayslipDTRowChangeEvent(PayslipDTRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public WeeklyRow Row {
+            public PayslipDTRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1389,7 +1360,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         }
     }
 }
-namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
+namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip.PaySlipDSTableAdapters {
     
     
     /// <summary>
@@ -1401,7 +1372,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class WeeklyTableAdapter : global::System.ComponentModel.Component {
+    public partial class PayslipDTTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1415,7 +1386,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public WeeklyTableAdapter() {
+        public PayslipDTTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1512,53 +1483,31 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Weekly";
-            tableMapping.ColumnMappings.Add("PayrollID", "PayrollID");
+            tableMapping.DataSetTable = "PayslipDT";
             tableMapping.ColumnMappings.Add("EmployeeName", "EmployeeName");
             tableMapping.ColumnMappings.Add("BiometricID", "BiometricID");
+            tableMapping.ColumnMappings.Add("JobTitle", "JobTitle");
             tableMapping.ColumnMappings.Add("DayRate", "DayRate");
             tableMapping.ColumnMappings.Add("StartAt", "StartAt");
             tableMapping.ColumnMappings.Add("EndAt", "EndAt");
             tableMapping.ColumnMappings.Add("DaysWorked", "DaysWorked");
             tableMapping.ColumnMappings.Add("BasicPay", "BasicPay");
             tableMapping.ColumnMappings.Add("OTRate", "OTRate");
-            tableMapping.ColumnMappings.Add("NoOfOT", "NoOfOT");
             tableMapping.ColumnMappings.Add("OTPay", "OTPay");
             tableMapping.ColumnMappings.Add("Holiday", "Holiday");
             tableMapping.ColumnMappings.Add("Adjustments", "Adjustments");
             tableMapping.ColumnMappings.Add("GrossSalary", "GrossSalary");
             tableMapping.ColumnMappings.Add("PhilHealth", "PhilHealth");
             tableMapping.ColumnMappings.Add("PagIbig", "PagIbig");
-            tableMapping.ColumnMappings.Add("SSS", "SSS");
             tableMapping.ColumnMappings.Add("LoanOrCA", "LoanOrCA");
             tableMapping.ColumnMappings.Add("UnderTime", "UnderTime");
             tableMapping.ColumnMappings.Add("Late", "Late");
             tableMapping.ColumnMappings.Add("Others", "Others");
             tableMapping.ColumnMappings.Add("TotalDeductions", "TotalDeductions");
             tableMapping.ColumnMappings.Add("NetSalary", "NetSalary");
-            tableMapping.ColumnMappings.Add("Created_At", "Created_At");
+            tableMapping.ColumnMappings.Add("SSS", "SSS");
+            tableMapping.ColumnMappings.Add("NoOfOT", "NoOfOT");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Weekly] ([EmployeeName], [BiometricID], [DayRate], [StartAt], [EndAt], [DaysWorked], [NoOfOT], [Holiday], [Adjustments], [PhilHealth], [PagIbig], [SSS], [LoanOrCA], [UnderTime], [Late], [Others], [Created_At]) VALUES (@EmployeeName, @BiometricID, @DayRate, @StartAt, @EndAt, @DaysWorked, @NoOfOT, @Holiday, @Adjustments, @PhilHealth, @PagIbig, @SSS, @LoanOrCA, @UnderTime, @Late, @Others, @Created_At)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BiometricID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BiometricID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DayRate", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "DayRate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartAt", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndAt", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DaysWorked", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "DaysWorked", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoOfOT", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "NoOfOT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Holiday", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "Holiday", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adjustments", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "Adjustments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhilHealth", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "PhilHealth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PagIbig", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "PagIbig", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SSS", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "SSS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LoanOrCA", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "LoanOrCA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnderTime", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "UnderTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Late", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "Late", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Others", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 8, 2, "Others", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Created_At", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Created_At", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1571,18 +1520,32 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT PayrollID, EmployeeName, BiometricID, DayRate, StartAt, EndAt, DaysWorked, BasicPay, OTRate, NoOfOT, OTPay, Holiday, Adjustments, GrossSalary, PhilHealth, PagIbig, SSS, LoanOrCA, UnderTime, Late, Others, TotalDeductions, NetSalary, Created_At FROM dbo.Weekly";
+            this._commandCollection[0].CommandText = @"SELECT        Weekly.EmployeeName, Employees.BiometricID, Jobs.JobTitle, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, Weekly.Holiday, Weekly.Adjustments, 
+                         Weekly.GrossSalary, Weekly.PhilHealth, Weekly.PagIbig, Weekly.LoanOrCA, Weekly.UnderTime, Weekly.Late, Weekly.Others, Weekly.TotalDeductions, Weekly.NetSalary, Weekly.SSS, Weekly.NoOfOT
+FROM            Weekly INNER JOIN
+                         Employees ON Employees.BiometricID = Weekly.BiometricID INNER JOIN
+                         Jobs ON Employees.JobID = Jobs.JobID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Weekly.EmployeeName, Employees.BiometricID, Jobs.JobTitle, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, Weekly.Holiday, Weekly.Adjustments, 
+                         Weekly.GrossSalary, Weekly.PhilHealth, Weekly.PagIbig, Weekly.LoanOrCA, Weekly.UnderTime, Weekly.Late, Weekly.Others, Weekly.TotalDeductions, Weekly.NetSalary, Weekly.SSS, Weekly.NoOfOT
+FROM            Weekly INNER JOIN
+                         Employees ON Employees.BiometricID = Weekly.BiometricID INNER JOIN
+                         Jobs ON Employees.JobID = Jobs.JobID
+WHERE        (Employees.BiometricID = @Param1)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BiometricID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PayrollWeekly.WeeklyDataTable dataTable) {
+        public virtual int GetPaySlipWeekly(PaySlipDS.PayslipDTDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1595,9 +1558,9 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PayrollWeekly.WeeklyDataTable GetData() {
+        public virtual PaySlipDS.PayslipDTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PayrollWeekly.WeeklyDataTable dataTable = new PayrollWeekly.WeeklyDataTable();
+            PaySlipDS.PayslipDTDataTable dataTable = new PaySlipDS.PayslipDTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1605,115 +1568,27 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PayrollWeekly.WeeklyDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int GetPaySlipByName(PaySlipDS.PayslipDTDataTable dataTable, int Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PayrollWeekly dataSet) {
-            return this.Adapter.Update(dataSet, "Weekly");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(
-                    string EmployeeName, 
-                    int BiometricID, 
-                    decimal DayRate, 
-                    System.DateTime StartAt, 
-                    System.DateTime EndAt, 
-                    decimal DaysWorked, 
-                    decimal NoOfOT, 
-                    global::System.Nullable<decimal> Holiday, 
-                    global::System.Nullable<decimal> Adjustments, 
-                    global::System.Nullable<decimal> PhilHealth, 
-                    global::System.Nullable<decimal> PagIbig, 
-                    global::System.Nullable<decimal> SSS, 
-                    decimal LoanOrCA, 
-                    decimal UnderTime, 
-                    decimal Late, 
-                    decimal Others, 
-                    System.DateTime Created_At) {
-            if ((EmployeeName == null)) {
-                throw new global::System.ArgumentNullException("EmployeeName");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(EmployeeName));
-            }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(BiometricID));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(DayRate));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(StartAt));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(EndAt));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(DaysWorked));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(NoOfOT));
-            if ((Holiday.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(Holiday.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Adjustments.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(Adjustments.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((PhilHealth.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(PhilHealth.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((PagIbig.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(PagIbig.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((SSS.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((decimal)(SSS.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[12].Value = ((decimal)(LoanOrCA));
-            this.Adapter.InsertCommand.Parameters[13].Value = ((decimal)(UnderTime));
-            this.Adapter.InsertCommand.Parameters[14].Value = ((decimal)(Late));
-            this.Adapter.InsertCommand.Parameters[15].Value = ((decimal)(Others));
-            this.Adapter.InsertCommand.Parameters[16].Value = ((System.DateTime)(Created_At));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual PaySlipDS.PayslipDTDataTable GetDataBy(int Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1));
+            PaySlipDS.PayslipDTDataTable dataTable = new PaySlipDS.PayslipDTDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
@@ -1729,8 +1604,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private WeeklyTableAdapter _weeklyTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1743,20 +1616,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public WeeklyTableAdapter WeeklyTableAdapter {
-            get {
-                return this._weeklyTableAdapter;
-            }
-            set {
-                this._weeklyTableAdapter = value;
             }
         }
         
@@ -1779,10 +1638,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._weeklyTableAdapter != null) 
-                            && (this._weeklyTableAdapter.Connection != null))) {
-                    return this._weeklyTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1796,9 +1651,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._weeklyTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1808,17 +1660,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(PayrollWeekly dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(PaySlipDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._weeklyTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Weekly.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._weeklyTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1827,16 +1670,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(PayrollWeekly dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(PaySlipDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._weeklyTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Weekly.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._weeklyTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1845,16 +1680,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(PayrollWeekly dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(PaySlipDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._weeklyTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Weekly.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._weeklyTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1887,17 +1714,12 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(PayrollWeekly dataSet) {
+        public virtual int UpdateAll(PaySlipDS dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._weeklyTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._weeklyTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1931,15 +1753,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._weeklyTableAdapter != null)) {
-                    revertConnections.Add(this._weeklyTableAdapter, this._weeklyTableAdapter.Connection);
-                    this._weeklyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._weeklyTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._weeklyTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._weeklyTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._weeklyTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1997,10 +1810,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR.PayrollWeeklyTableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._weeklyTableAdapter != null)) {
-                    this._weeklyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._weeklyTableAdapter]));
-                    this._weeklyTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

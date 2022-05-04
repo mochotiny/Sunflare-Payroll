@@ -96,7 +96,7 @@
             this.DeductDgv.RowHeadersVisible = false;
             this.DeductDgv.RowTemplate.Height = 40;
             this.DeductDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DeductDgv.Size = new System.Drawing.Size(1068, 511);
+            this.DeductDgv.Size = new System.Drawing.Size(1120, 498);
             this.DeductDgv.TabIndex = 0;
             this.DeductDgv.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -247,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1092, 588);
+            this.ClientSize = new System.Drawing.Size(1144, 575);
             this.Controls.Add(this.Endat);
             this.Controls.Add(this.Startat);
             this.Controls.Add(this.DeductBtn);

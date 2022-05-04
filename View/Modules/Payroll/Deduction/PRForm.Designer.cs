@@ -243,10 +243,10 @@
             this.PanelPR.BorderColor = System.Drawing.Color.Transparent;
             this.PanelPR.BorderRadius = 25;
             this.PanelPR.BorderThickness = 1;
-            this.PanelPR.Location = new System.Drawing.Point(12, 92);
+            this.PanelPR.Location = new System.Drawing.Point(12, 70);
             this.PanelPR.Name = "PanelPR";
             this.PanelPR.ShowBorders = true;
-            this.PanelPR.Size = new System.Drawing.Size(1144, 536);
+            this.PanelPR.Size = new System.Drawing.Size(1144, 575);
             this.PanelPR.TabIndex = 3;
             // 
             // PRForm

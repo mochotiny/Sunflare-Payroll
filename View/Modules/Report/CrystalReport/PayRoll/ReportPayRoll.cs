@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WFA_APP.View.Modules.Report.ReportPR {
+namespace WFA_APP.View.Modules.Report.CrystalReport.PayRoll {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class WeeklyReport : ReportClass {
+    public class ReportPayRoll : ReportClass {
         
-        public WeeklyReport() {
+        public ReportPayRoll() {
         }
         
         public override string ResourceName {
             get {
-                return "WeeklyReport.rpt";
+                return "ReportPayRoll.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         
         public override string FullResourceName {
             get {
-                return "WFA_APP.View.Modules.Report.ReportPR.WeeklyReport.rpt";
+                return "WFA_APP.View.Modules.Report.CrystalReport.PayRoll.ReportPayRoll.rpt";
             }
             set {
                 // Do nothing
@@ -87,12 +87,28 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                 return this.ReportDefinition.Sections[4];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Start {
+            get {
+                return this.DataDefinition.ParameterFields[0];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_End {
+            get {
+                return this.DataDefinition.ParameterFields[1];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedWeeklyReport : Component, ICachedReport {
+    public class CachedReportPayRoll : Component, ICachedReport {
         
-        public CachedWeeklyReport() {
+        public CachedReportPayRoll() {
         }
         
         [Browsable(false)]
@@ -129,7 +145,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            WeeklyReport rpt = new WeeklyReport();
+            ReportPayRoll rpt = new ReportPayRoll();
             rpt.Site = this.Site;
             return rpt;
         }

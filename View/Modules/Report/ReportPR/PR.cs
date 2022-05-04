@@ -6,21 +6,31 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace WFA_APP.View.Modules.Report.ReportPR
 {
     public partial class PR : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
-        SqlCommand cmd = new SqlCommand();
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable dt = new DataTable();
         public PR()
         {
             InitializeComponent();
         }
 
+        private void PR_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'WeeklyPR.Weekly2' table. You can move, or remove it, as needed.
+            this.Weekly2TableAdapter.Fill(this.WeeklyPR.Weekly2);
+            // TODO: This line of code loads data into the 'WeeklyPR.Weekly' table. You can move, or remove it, as needed.
+            this.WeeklyTableAdapter.Fill(this.WeeklyPR.Weekly);
+
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void ShowBtn_Click(object sender, EventArgs e)
+        {
+            this.WeeklyTableAdapter.ShowPr(this.WeeklyPR.Weekly, Start.Value.ToString(), End.Value.ToString());
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

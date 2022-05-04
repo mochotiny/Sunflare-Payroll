@@ -52,6 +52,9 @@ namespace WFA_APP.View.Modules.Payroll.Deduction
 
             cmd = new SqlCommand("proc_Deduction", con);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Start", Startat.Value.Date.ToString("dd-MMM-yyyy"));
+            cmd.Parameters.AddWithValue("@End", Endat.Value.Date.ToString("dd-MMM-yyyy"));
+
             cmd.ExecuteNonQuery();
 
 

@@ -122,7 +122,7 @@
             this.SheetDgv.RowHeadersVisible = false;
             this.SheetDgv.RowTemplate.Height = 40;
             this.SheetDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SheetDgv.Size = new System.Drawing.Size(1120, 467);
+            this.SheetDgv.Size = new System.Drawing.Size(1120, 506);
             this.SheetDgv.TabIndex = 1;
             this.SheetDgv.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -383,7 +383,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 536);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1144, 575);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.CheckBtn);
             this.Controls.Add(this.Adjustments);
