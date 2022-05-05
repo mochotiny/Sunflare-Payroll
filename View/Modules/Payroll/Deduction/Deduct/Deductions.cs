@@ -57,7 +57,7 @@ namespace WFA_APP.View.Modules.Payroll.Deduction
 
             cmd.ExecuteNonQuery();
 
-
+            MessageBox.Show("Deducted");
             sda = new SqlDataAdapter("SELECT * FROM Deductions", con);
             DataSet ds = new DataSet();
             sda.Fill(ds, "Deductions");

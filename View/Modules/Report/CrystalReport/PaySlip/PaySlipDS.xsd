@@ -9,14 +9,15 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PayslipDTTableAdapter" GeneratorDataComponentClassName="PayslipDTTableAdapter" Name="PayslipDT" UserDataComponentName="PayslipDTTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="pr_appConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="GetPaySlipWeekly" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="GetPaySlipWeekly" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="GetPaySlipWeekly">
+              <DbSource ConnectionRef="pr_appConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="GetPaySlipWeekly" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="GetPaySlipWeekly" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="GetPaySlipWeekly">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Weekly.EmployeeName, Employees.BiometricID, Jobs.JobTitle, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, Weekly.Holiday, Weekly.Adjustments, 
+                    <CommandText>SELECT        Weekly.EmployeeName, Employees.BiometricID, Jobs.JobTitle, Departments.Department_Name, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, Weekly.Holiday, Weekly.Adjustments, 
                          Weekly.GrossSalary, Weekly.PhilHealth, Weekly.PagIbig, Weekly.LoanOrCA, Weekly.UnderTime, Weekly.Late, Weekly.Others, Weekly.TotalDeductions, Weekly.NetSalary, Weekly.SSS, Weekly.NoOfOT
 FROM            Weekly INNER JOIN
                          Employees ON Employees.BiometricID = Weekly.BiometricID INNER JOIN
-                         Jobs ON Employees.JobID = Jobs.JobID</CommandText>
+                         Jobs ON Employees.JobID = Jobs.JobID INNER JOIN
+                         Departments ON Employees.DepartmentID = Departments.DepartmentID</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -46,6 +47,7 @@ FROM            Weekly INNER JOIN
               <Mapping SourceColumn="NetSalary" DataSetColumn="NetSalary" />
               <Mapping SourceColumn="SSS" DataSetColumn="SSS" />
               <Mapping SourceColumn="NoOfOT" DataSetColumn="NoOfOT" />
+              <Mapping SourceColumn="Department_Name" DataSetColumn="Department_Name" />
             </Mappings>
             <Sources>
               <DbSource ConnectionRef="pr_appConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="GetPaySlipByName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="GetPaySlipByName" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetPaySlipByName">
@@ -111,6 +113,13 @@ WHERE        (Employees.BiometricID = @Param1)</CommandText>
               <xs:element name="NetSalary" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNetSalary" msprop:Generator_ColumnPropNameInRow="NetSalary" msprop:Generator_ColumnPropNameInTable="NetSalaryColumn" msprop:Generator_UserColumnName="NetSalary" type="xs:decimal" minOccurs="0" />
               <xs:element name="SSS" msprop:Generator_ColumnVarNameInTable="columnSSS" msprop:Generator_ColumnPropNameInRow="SSS" msprop:Generator_ColumnPropNameInTable="SSSColumn" msprop:Generator_UserColumnName="SSS" type="xs:decimal" minOccurs="0" />
               <xs:element name="NoOfOT" msprop:Generator_ColumnVarNameInTable="columnNoOfOT" msprop:Generator_ColumnPropNameInRow="NoOfOT" msprop:Generator_ColumnPropNameInTable="NoOfOTColumn" msprop:Generator_UserColumnName="NoOfOT" type="xs:decimal" />
+              <xs:element name="Department_Name" msprop:Generator_ColumnVarNameInTable="columnDepartment_Name" msprop:Generator_ColumnPropNameInRow="Department_Name" msprop:Generator_ColumnPropNameInTable="Department_NameColumn" msprop:Generator_UserColumnName="Department_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

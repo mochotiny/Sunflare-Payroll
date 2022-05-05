@@ -359,10 +359,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PaySlipDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="View\Modules\Report\CrystalReport\PaySlip\PSReport.cs">
+    <Compile Include="View\Modules\Report\CrystalReport\PaySlip\PSreport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PSReport.rpt</DependentUpon>
+      <DependentUpon>PSreport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\Modules\Report\ReportForm.cs">
@@ -390,6 +390,9 @@
     </Compile>
     <Compile Include="View\Modules\Report\ReportPS\PS.Designer.cs">
       <DependentUpon>PS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\ReportPS\WeekPS.cs">
+      <DependentUpon>WeekPS.xsd</DependentUpon>
     </Compile>
     <Compile Include="View\Modules\Report\ReportPS\WeekPS.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -497,9 +500,9 @@
     <EmbeddedResource Include="View\Modules\Report\CrystalReport\PaySlip\FormPaySlip.resx">
       <DependentUpon>FormPaySlip.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Modules\Report\CrystalReport\PaySlip\PSReport.rpt">
+    <EmbeddedResource Include="View\Modules\Report\CrystalReport\PaySlip\PSreport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PSReport.cs</LastGenOutput>
+      <LastGenOutput>PSreport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Report\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
@@ -512,6 +515,7 @@
       <DependentUpon>PS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Report\ReportPS\PSrpt.rdlc" />
+    <EmbeddedResource Include="View\Modules\Report\ReportPS\Report.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

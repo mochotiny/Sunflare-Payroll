@@ -23,14 +23,14 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip
 
         private void FormPaySlip_Load(object sender, EventArgs e)
         {
-            string sqlcmd = "SELECT * FROM Weekly";
-            SqlDataAdapter da = new SqlDataAdapter(sqlcmd, con);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "PaySlipDS");
+            //string sqlcmd = "SELECT * FROM Weekly";
+            //SqlDataAdapter da = new SqlDataAdapter(sqlcmd, con);
+            //DataSet ds = new DataSet();
+            //da.Fill(ds, "PaySlipDS");
 
-            PSReport reportPay = new PSReport();
-            reportPay.SetDataSource(ds);
-            crystalReportViewer1.ReportSource = reportPay;
+            //PSReport reportPay = new PSReport();
+            //reportPay.SetDataSource(ds);
+            //crystalReportViewer1.ReportSource = reportPay;
         }
     }
 }

@@ -30,7 +30,7 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPaySlip));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.ShowBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.End = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -44,7 +44,6 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 62);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.Size = new System.Drawing.Size(1170, 588);
@@ -70,11 +69,11 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip
             this.ShowBtn.ColorContrastOnClick = 45;
             this.ShowBtn.ColorContrastOnHover = 45;
             this.ShowBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.ShowBtn.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ShowBtn.CustomizableEdges = borderEdges2;
             this.ShowBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ShowBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ShowBtn.DisabledFillColor = System.Drawing.Color.Empty;

@@ -325,6 +325,8 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip {
             
             private global::System.Data.DataColumn columnNoOfOT;
             
+            private global::System.Data.DataColumn columnDepartment_Name;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PayslipDTDataTable() {
@@ -544,6 +546,14 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Department_NameColumn {
+                get {
+                    return this.columnDepartment_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -602,7 +612,8 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip {
                         decimal TotalDeductions, 
                         decimal NetSalary, 
                         decimal SSS, 
-                        decimal NoOfOT) {
+                        decimal NoOfOT, 
+                        string Department_Name) {
                 PayslipDTRow rowPayslipDTRow = ((PayslipDTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeName,
@@ -627,7 +638,8 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip {
                         TotalDeductions,
                         NetSalary,
                         SSS,
-                        NoOfOT};
+                        NoOfOT,
+                        Department_Name};
                 rowPayslipDTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPayslipDTRow);
                 return rowPayslipDTRow;
@@ -673,6 +685,7 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip {
                 this.columnNetSalary = base.Columns["NetSalary"];
                 this.columnSSS = base.Columns["SSS"];
                 this.columnNoOfOT = base.Columns["NoOfOT"];
+                this.columnDepartment_Name = base.Columns["Department_Name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -724,6 +737,8 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip {
                 base.Columns.Add(this.columnSSS);
                 this.columnNoOfOT = new global::System.Data.DataColumn("NoOfOT", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNoOfOT);
+                this.columnDepartment_Name = new global::System.Data.DataColumn("Department_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartment_Name);
                 this.columnEmployeeName.AllowDBNull = false;
                 this.columnEmployeeName.MaxLength = 50;
                 this.columnBiometricID.AllowDBNull = false;
@@ -744,6 +759,8 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip {
                 this.columnTotalDeductions.ReadOnly = true;
                 this.columnNetSalary.ReadOnly = true;
                 this.columnNoOfOT.AllowDBNull = false;
+                this.columnDepartment_Name.AllowDBNull = false;
+                this.columnDepartment_Name.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1194,6 +1211,17 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Department_Name {
+                get {
+                    return ((string)(this[this.tablePayslipDT.Department_NameColumn]));
+                }
+                set {
+                    this[this.tablePayslipDT.Department_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsBasicPayNull() {
                 return this.IsNull(this.tablePayslipDT.BasicPayColumn);
             }
@@ -1507,6 +1535,7 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip.PaySlipDSTableAdapte
             tableMapping.ColumnMappings.Add("NetSalary", "NetSalary");
             tableMapping.ColumnMappings.Add("SSS", "SSS");
             tableMapping.ColumnMappings.Add("NoOfOT", "NoOfOT");
+            tableMapping.ColumnMappings.Add("Department_Name", "Department_Name");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1523,11 +1552,12 @@ namespace WFA_APP.View.Modules.Report.CrystalReport.PaySlip.PaySlipDSTableAdapte
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Weekly.EmployeeName, Employees.BiometricID, Jobs.JobTitle, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, Weekly.Holiday, Weekly.Adjustments, 
+            this._commandCollection[0].CommandText = @"SELECT        Weekly.EmployeeName, Employees.BiometricID, Jobs.JobTitle, Departments.Department_Name, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, Weekly.Holiday, Weekly.Adjustments, 
                          Weekly.GrossSalary, Weekly.PhilHealth, Weekly.PagIbig, Weekly.LoanOrCA, Weekly.UnderTime, Weekly.Late, Weekly.Others, Weekly.TotalDeductions, Weekly.NetSalary, Weekly.SSS, Weekly.NoOfOT
 FROM            Weekly INNER JOIN
                          Employees ON Employees.BiometricID = Weekly.BiometricID INNER JOIN
-                         Jobs ON Employees.JobID = Jobs.JobID";
+                         Jobs ON Employees.JobID = Jobs.JobID INNER JOIN
+                         Departments ON Employees.DepartmentID = Departments.DepartmentID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
