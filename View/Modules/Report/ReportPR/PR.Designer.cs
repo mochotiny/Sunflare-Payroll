@@ -31,43 +31,29 @@ namespace WFA_APP.View.Modules.Report.ReportPR
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PR));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.WeeklyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.WeeklyPR = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPR();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Start = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.End = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.ShowBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.WeeklyTableAdapter = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters.WeeklyTableAdapter();
             this.Weekly2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.WeeklyPR = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPR();
+            this.WeeklyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.WeeklyTableAdapter = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters.WeeklyTableAdapter();
             this.Weekly2TableAdapter = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters.Weekly2TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.WeeklyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weekly2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeeklyBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // WeeklyBindingSource
-            // 
-            this.WeeklyBindingSource.DataMember = "Weekly";
-            this.WeeklyBindingSource.DataSource = this.WeeklyPR;
-            // 
-            // WeeklyPR
-            // 
-            this.WeeklyPR.DataSetName = "WeeklyPR";
-            this.WeeklyPR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            reportDataSource1.Name = "WeekPR";
-            reportDataSource1.Value = this.WeeklyBindingSource;
-            reportDataSource2.Name = "WeekPR2";
-            reportDataSource2.Value = this.Weekly2BindingSource;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.Weekly2BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WFA_APP.View.Modules.Report.ReportPR.WeeklyPayrollReport.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WFA_APP.View.Modules.Report.ReportPR.Report.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 62);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -80,6 +66,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Start.BorderColor = System.Drawing.Color.Silver;
             this.Start.BorderRadius = 1;
             this.Start.Color = System.Drawing.Color.Silver;
+            this.Start.CustomFormat = "yyyy-mm-dd";
             this.Start.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.Start.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.Start.DisabledColor = System.Drawing.Color.Gray;
@@ -98,6 +85,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(169, 32);
             this.Start.TabIndex = 1;
+            this.Start.Value = new System.DateTime(2022, 5, 6, 8, 32, 0, 0);
             // 
             // End
             // 
@@ -105,6 +93,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.End.BorderColor = System.Drawing.Color.Silver;
             this.End.BorderRadius = 1;
             this.End.Color = System.Drawing.Color.Silver;
+            this.End.CustomFormat = "yyyy-mm-dd";
             this.End.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.End.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.End.DisabledColor = System.Drawing.Color.Gray;
@@ -216,14 +205,24 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.ShowBtn.UseDefaultRadiusAndThickness = true;
             this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
             // 
-            // WeeklyTableAdapter
-            // 
-            this.WeeklyTableAdapter.ClearBeforeFill = true;
-            // 
             // Weekly2BindingSource
             // 
             this.Weekly2BindingSource.DataMember = "Weekly2";
             this.Weekly2BindingSource.DataSource = this.WeeklyPR;
+            // 
+            // WeeklyPR
+            // 
+            this.WeeklyPR.DataSetName = "WeeklyPR";
+            this.WeeklyPR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // WeeklyBindingSource
+            // 
+            this.WeeklyBindingSource.DataMember = "Weekly";
+            this.WeeklyBindingSource.DataSource = this.WeeklyPR;
+            // 
+            // WeeklyTableAdapter
+            // 
+            this.WeeklyTableAdapter.ClearBeforeFill = true;
             // 
             // Weekly2TableAdapter
             // 
@@ -242,9 +241,9 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Name = "PR";
             this.Text = "PR";
             this.Load += new System.EventHandler(this.PR_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.WeeklyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weekly2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeeklyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

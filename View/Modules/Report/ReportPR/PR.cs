@@ -29,7 +29,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR
 
         private void ShowBtn_Click(object sender, EventArgs e)
         {
-            this.WeeklyTableAdapter.ShowPr(this.WeeklyPR.Weekly, Start.Value.ToString(), End.Value.ToString());
+            //this.WeeklyTableAdapter.ShowPr(this.WeeklyPR.Weekly, Start.Value.ToString(), End.Value.ToString());
+            //this.reportViewer1.RefreshReport();
+
+            this.Weekly2TableAdapter.GetWeeklyReport(this.WeeklyPR.Weekly2, Start.Value.ToString(), End.Value.ToString());
             this.reportViewer1.RefreshReport();
         }
     }

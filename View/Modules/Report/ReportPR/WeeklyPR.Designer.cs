@@ -3082,7 +3082,7 @@ WHERE        (StartAt = @Param1) AND (EndAt = @Param2)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Weekly.EmployeeName, Employees.BiometricID, Departments.Department_Name, Jobs.JobTitle, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, 
@@ -3093,6 +3093,19 @@ FROM            Weekly INNER JOIN
                          Jobs ON Employees.JobID = Jobs.JobID INNER JOIN
                          Departments ON Employees.DepartmentID = Departments.DepartmentID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Weekly.EmployeeName, Employees.BiometricID, Departments.Department_Name, Jobs.JobTitle, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, 
+                         Weekly.Holiday, Weekly.Adjustments, Weekly.GrossSalary, Weekly.PhilHealth, Weekly.PagIbig, Weekly.LoanOrCA, Weekly.UnderTime, Weekly.Late, Weekly.Others, Weekly.TotalDeductions, Weekly.NetSalary, Weekly.SSS, 
+                         Weekly.NoOfOT
+FROM            Weekly INNER JOIN
+                         Employees ON Employees.BiometricID = Weekly.BiometricID INNER JOIN
+                         Jobs ON Employees.JobID = Jobs.JobID INNER JOIN
+                         Departments ON Employees.DepartmentID = Departments.DepartmentID
+WHERE        (Weekly.StartAt = @Param1) AND (Weekly.EndAt = @Param2)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "StartAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param2", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "EndAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3114,6 +3127,54 @@ FROM            Weekly INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual WeeklyPR.Weekly2DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            WeeklyPR.Weekly2DataTable dataTable = new WeeklyPR.Weekly2DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int GetWeeklyReport(WeeklyPR.Weekly2DataTable dataTable, string Param1, string Param2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Param1 == null)) {
+                throw new global::System.ArgumentNullException("Param1");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            if ((Param2 == null)) {
+                throw new global::System.ArgumentNullException("Param2");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual WeeklyPR.Weekly2DataTable GetDataBy(string Param1, string Param2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Param1 == null)) {
+                throw new global::System.ArgumentNullException("Param1");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            if ((Param2 == null)) {
+                throw new global::System.ArgumentNullException("Param2");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
+            }
             WeeklyPR.Weekly2DataTable dataTable = new WeeklyPR.Weekly2DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

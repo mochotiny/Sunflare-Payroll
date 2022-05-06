@@ -510,6 +510,7 @@
     <EmbeddedResource Include="View\Modules\Report\ReportPR\PR.resx">
       <DependentUpon>PR.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Report\ReportPR\Report.rdlc" />
     <EmbeddedResource Include="View\Modules\Report\ReportPR\WeeklyPayrollReport.rdlc" />
     <EmbeddedResource Include="View\Modules\Report\ReportPS\PS.resx">
       <DependentUpon>PS.cs</DependentUpon>
