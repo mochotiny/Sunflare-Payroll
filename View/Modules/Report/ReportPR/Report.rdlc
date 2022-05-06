@@ -242,16 +242,16 @@
                   <Width>1.80704cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.45007cm</Width>
+                  <Width>1.42361cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.53406cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.28207cm</Width>
+                  <Width>1.36145cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.87003cm</Width>
+                  <Width>2.21399cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
@@ -259,13 +259,280 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.558cm</Height>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox86">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox86</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox87">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox87</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <BackgroundColor>#1f4e78</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox88">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox88</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>#1f4e78</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox89">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox89</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>#1f4e78</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox90">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>EARNINGS</Value>
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox90</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>#33cccc</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>8</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox98">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>DEDUCTIONS</Value>
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox98</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Gray</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>8</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox106">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox106</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>#1f4e78</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.98522cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox1">
                           <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
@@ -301,8 +568,25 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Employee Name</Value>
-                                  <Style />
+                                  <Value>Employee </Value>
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Name</Value>
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -313,9 +597,9 @@
                           <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
+                            <BackgroundColor>#1f4e78</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -334,7 +618,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Bio</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -345,7 +632,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>ID</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -359,6 +649,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>#1f4e78</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -376,8 +667,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Day </Value>
-                                  <Style />
+                                  <Value>Day</Value>
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -387,8 +681,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Rate</Value>
-                                  <Style />
+                                  <Value>Rate </Value>
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -402,6 +699,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>#1f4e78</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -420,7 +718,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Days</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -431,7 +732,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Worked</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -463,7 +767,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Basic </Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -474,7 +781,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Pay</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -506,7 +816,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>OT</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -517,7 +830,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Rate</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -549,7 +865,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>No Of </Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -560,7 +879,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>OT</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -592,7 +914,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>OT</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -603,7 +928,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Pay</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -635,7 +963,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Holiday</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -667,7 +998,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Adjust</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -678,7 +1012,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>ments</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -710,7 +1047,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Gross </Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -721,7 +1061,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Salary</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -753,7 +1096,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Phil Health</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -785,7 +1131,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Pag Ibig</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -817,7 +1166,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>SSS</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -849,7 +1201,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Loan Or CA</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -881,7 +1236,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Late</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -913,7 +1271,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Under Time</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -945,7 +1306,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Others</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -977,7 +1341,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Total Deductions</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>#1f4e78</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1008,8 +1375,25 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Net Salary</Value>
-                                  <Style />
+                                  <Value>Net</Value>
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Salary</Value>
+                                  <Style>
+                                    <FontFamily>Inter Black</FontFamily>
+                                    <Color>White</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1023,6 +1407,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>#1f4e78</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1085,7 +1470,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!EmployeeName.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1115,7 +1502,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!BiometricID.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1147,7 +1536,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!DayRate.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1179,7 +1570,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!DaysWorked.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1211,7 +1604,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!BasicPay.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1243,7 +1638,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!OTRate.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1275,7 +1672,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!NoOfOT.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1307,7 +1706,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!OTPay.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1339,7 +1740,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Holiday.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1371,7 +1774,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Adjustments.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1403,7 +1808,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!GrossSalary.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1435,7 +1842,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!PhilHealth.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1467,7 +1876,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!PagIbig.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1499,7 +1910,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!SSS.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1531,7 +1944,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!LoanOrCA.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1563,7 +1978,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Late.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1595,7 +2012,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!UnderTime.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1627,7 +2046,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Others.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1659,7 +2080,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TotalDeductions.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1691,7 +2114,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!NetSalary.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Inter</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1748,6 +2173,9 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
                   <Group Name="Details" />
                 </TablixMember>
               </TablixMembers>
@@ -1755,8 +2183,8 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
             <DataSetName>DataSet1</DataSetName>
             <Top>2.85433cm</Top>
             <Left>0.55245cm</Left>
-            <Height>1.158cm</Height>
-            <Width>38.64847cm</Width>
+            <Height>2.18522cm</Height>
+            <Width>39.04536cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -1765,10 +2193,10 @@ IIf(Fields!Department_Name.Value = "Utility", "Brown", "Black")))))))))</Backgro
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.75827in</Height>
+        <Height>2.10907in</Height>
         <Style />
       </Body>
-      <Width>22.71988in</Width>
+      <Width>15.89118in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
