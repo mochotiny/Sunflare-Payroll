@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.ReportPR = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ReportPS = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PanelBoard = new Bunifu.UI.WinForms.BunifuPanel();
             this.PanelReport = new Bunifu.UI.WinForms.BunifuPanel();
+            this.ReportBonus = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SuspendLayout();
             // 
             // ReportPR
@@ -56,11 +58,11 @@
             this.ReportPR.ColorContrastOnClick = 45;
             this.ReportPR.ColorContrastOnHover = 45;
             this.ReportPR.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.ReportPR.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.ReportPR.CustomizableEdges = borderEdges1;
             this.ReportPR.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ReportPR.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ReportPR.DisabledFillColor = System.Drawing.Color.Empty;
@@ -148,11 +150,11 @@
             this.ReportPS.ColorContrastOnClick = 45;
             this.ReportPS.ColorContrastOnHover = 45;
             this.ReportPS.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.ReportPS.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ReportPS.CustomizableEdges = borderEdges2;
             this.ReportPS.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ReportPS.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ReportPS.DisabledFillColor = System.Drawing.Color.Empty;
@@ -249,11 +251,104 @@
             this.PanelReport.Size = new System.Drawing.Size(1170, 650);
             this.PanelReport.TabIndex = 3;
             // 
+            // ReportBonus
+            // 
+            this.ReportBonus.AllowAnimations = true;
+            this.ReportBonus.AllowMouseEffects = true;
+            this.ReportBonus.AllowToggling = false;
+            this.ReportBonus.AnimationSpeed = 200;
+            this.ReportBonus.AutoGenerateColors = false;
+            this.ReportBonus.AutoRoundBorders = false;
+            this.ReportBonus.AutoSizeLeftIcon = true;
+            this.ReportBonus.AutoSizeRightIcon = true;
+            this.ReportBonus.BackColor = System.Drawing.Color.Transparent;
+            this.ReportBonus.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.ReportBonus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReportBonus.BackgroundImage")));
+            this.ReportBonus.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportBonus.ButtonText = "Monthly";
+            this.ReportBonus.ButtonTextMarginLeft = 0;
+            this.ReportBonus.ColorContrastOnClick = 45;
+            this.ReportBonus.ColorContrastOnHover = 45;
+            this.ReportBonus.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.ReportBonus.CustomizableEdges = borderEdges3;
+            this.ReportBonus.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ReportBonus.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ReportBonus.DisabledFillColor = System.Drawing.Color.Empty;
+            this.ReportBonus.DisabledForecolor = System.Drawing.Color.Empty;
+            this.ReportBonus.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.ReportBonus.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportBonus.ForeColor = System.Drawing.Color.Gray;
+            this.ReportBonus.IconLeft = null;
+            this.ReportBonus.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportBonus.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.ReportBonus.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.ReportBonus.IconMarginLeft = 11;
+            this.ReportBonus.IconPadding = 10;
+            this.ReportBonus.IconRight = null;
+            this.ReportBonus.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ReportBonus.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.ReportBonus.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.ReportBonus.IconSize = 25;
+            this.ReportBonus.IdleBorderColor = System.Drawing.Color.Empty;
+            this.ReportBonus.IdleBorderRadius = 0;
+            this.ReportBonus.IdleBorderThickness = 0;
+            this.ReportBonus.IdleFillColor = System.Drawing.Color.Empty;
+            this.ReportBonus.IdleIconLeftImage = null;
+            this.ReportBonus.IdleIconRightImage = null;
+            this.ReportBonus.IndicateFocus = false;
+            this.ReportBonus.Location = new System.Drawing.Point(238, 12);
+            this.ReportBonus.Name = "ReportBonus";
+            this.ReportBonus.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ReportBonus.OnDisabledState.BorderRadius = 1;
+            this.ReportBonus.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportBonus.OnDisabledState.BorderThickness = 1;
+            this.ReportBonus.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ReportBonus.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ReportBonus.OnDisabledState.IconLeftImage = null;
+            this.ReportBonus.OnDisabledState.IconRightImage = null;
+            this.ReportBonus.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.ReportBonus.onHoverState.BorderRadius = 1;
+            this.ReportBonus.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportBonus.onHoverState.BorderThickness = 1;
+            this.ReportBonus.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.ReportBonus.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.ReportBonus.onHoverState.IconLeftImage = null;
+            this.ReportBonus.onHoverState.IconRightImage = null;
+            this.ReportBonus.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.ReportBonus.OnIdleState.BorderRadius = 1;
+            this.ReportBonus.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportBonus.OnIdleState.BorderThickness = 1;
+            this.ReportBonus.OnIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.ReportBonus.OnIdleState.ForeColor = System.Drawing.Color.Gray;
+            this.ReportBonus.OnIdleState.IconLeftImage = null;
+            this.ReportBonus.OnIdleState.IconRightImage = null;
+            this.ReportBonus.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.ReportBonus.OnPressedState.BorderRadius = 1;
+            this.ReportBonus.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ReportBonus.OnPressedState.BorderThickness = 1;
+            this.ReportBonus.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.ReportBonus.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.ReportBonus.OnPressedState.IconLeftImage = null;
+            this.ReportBonus.OnPressedState.IconRightImage = null;
+            this.ReportBonus.Size = new System.Drawing.Size(110, 40);
+            this.ReportBonus.TabIndex = 4;
+            this.ReportBonus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ReportBonus.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ReportBonus.TextMarginLeft = 0;
+            this.ReportBonus.TextPadding = new System.Windows.Forms.Padding(0);
+            this.ReportBonus.UseDefaultRadiusAndThickness = true;
+            this.ReportBonus.Click += new System.EventHandler(this.ReportBonus_Click);
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1192, 720);
+            this.Controls.Add(this.ReportBonus);
             this.Controls.Add(this.PanelReport);
             this.Controls.Add(this.PanelBoard);
             this.Controls.Add(this.ReportPS);
@@ -273,5 +368,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ReportPS;
         private Bunifu.UI.WinForms.BunifuPanel PanelBoard;
         private Bunifu.UI.WinForms.BunifuPanel PanelReport;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton ReportBonus;
     }
 }

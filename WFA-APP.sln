@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFA-APP", "WFA-APP.csproj", "{253CBBA9-5DEE-496F-B777-ECE76BE209FE}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Sunflare Payroll", "..\Sunflare Payroll\Sunflare Payroll.vdproj", "{F3DFC18A-9FDB-4EA8-A35C-3AE5F129EE84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{253CBBA9-5DEE-496F-B777-ECE76BE209FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{253CBBA9-5DEE-496F-B777-ECE76BE209FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{253CBBA9-5DEE-496F-B777-ECE76BE209FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3DFC18A-9FDB-4EA8-A35C-3AE5F129EE84}.Debug|Any CPU.ActiveCfg = Debug
+		{F3DFC18A-9FDB-4EA8-A35C-3AE5F129EE84}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

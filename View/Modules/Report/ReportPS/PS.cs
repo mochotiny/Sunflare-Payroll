@@ -31,10 +31,10 @@ namespace WFA_APP.View.Modules.Report.ReportPS
 
         private void ShowBtn_Click(object sender, EventArgs e)
         {
-            this.DataTable1TableAdapter.ShowPS(this.WeekPS.DataTable1, Start.Value.ToString("MMM dd"), End.Value.ToString("MMM dd"));
+            this.DataTable1TableAdapter.ShowPS(this.WeekPS.DataTable1, Start.Value.ToString(), End.Value.ToString());
             this.PSReport.RefreshReport();
 
-            this.DataTable1TableAdapter.GetPaySlipByID(this.WeekPS.DataTable1, int.Parse(Dropdown.SelectedValue.ToString()) , Start.Value.ToString("MMM dd")) ;
+            this.DataTable1TableAdapter.GetPaySlipByID(this.WeekPS.DataTable1, int.Parse(Dropdown.SelectedValue.ToString()), Start.Value.ToString()) ;
             this.PSReport.RefreshReport();
         }
 

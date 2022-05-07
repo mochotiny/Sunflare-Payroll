@@ -19,21 +19,22 @@ namespace WFA_APP.View.Modules.Report.ReportPR
 
         private void PR_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'WeeklyPR.Weekly2' table. You can move, or remove it, as needed.
-            this.Weekly2TableAdapter.Fill(this.WeeklyPR.Weekly2);
-            // TODO: This line of code loads data into the 'WeeklyPR.Weekly' table. You can move, or remove it, as needed.
-            this.WeeklyTableAdapter.Fill(this.WeeklyPR.Weekly);
-
-            this.reportViewer1.RefreshReport();
+            // TODO: This line of code loads data into the '_Department_DataSet.Departments' table. You can move, or remove it, as needed.
+            this.departmentsTableAdapter.Fill(this._Department_DataSet.Departments);
+           
+            //this.Weekly2TableAdapter.Fill(this.WeeklyPR.Weekly2);
+            //this.reportViewer1.RefreshReport();
         }
 
         private void ShowBtn_Click(object sender, EventArgs e)
         {
-            //this.WeeklyTableAdapter.ShowPr(this.WeeklyPR.Weekly, Start.Value.ToString(), End.Value.ToString());
+            //this.Weekly2TableAdapter.GetWeeklyReport(this.WeeklyPR.Weekly2, Start.Value.ToString(), End.Value.ToString());
             //this.reportViewer1.RefreshReport();
 
-            this.Weekly2TableAdapter.GetWeeklyReport(this.WeeklyPR.Weekly2, Start.Value.ToString(), End.Value.ToString());
+            this.Weekly2TableAdapter.GetMonthlyReport(this.WeeklyPR.Weekly2, Start.Value.ToString(), End.Value.ToString());
             this.reportViewer1.RefreshReport();
+            
+
         }
     }
 }

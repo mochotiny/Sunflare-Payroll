@@ -68,7 +68,7 @@
             this.User_TB.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.User_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.User_TB.DefaultFont = new System.Drawing.Font("Inter Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.User_TB.DefaultText = "admin";
+            this.User_TB.DefaultText = "";
             this.User_TB.FillColor = System.Drawing.Color.White;
             this.User_TB.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.User_TB.HideSelection = true;
@@ -77,8 +77,7 @@
             this.User_TB.IconPadding = 10;
             this.User_TB.IconRight = null;
             this.User_TB.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.User_TB.Lines = new string[] {
-        "admin"};
+            this.User_TB.Lines = new string[0];
             this.User_TB.Location = new System.Drawing.Point(67, 342);
             this.User_TB.MaxLength = 32767;
             this.User_TB.MinimumSize = new System.Drawing.Size(1, 1);
@@ -113,7 +112,7 @@
             this.User_TB.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.User_TB.SelectedText = "";
             this.User_TB.SelectionLength = 0;
-            this.User_TB.SelectionStart = 5;
+            this.User_TB.SelectionStart = 0;
             this.User_TB.ShortcutsEnabled = true;
             this.User_TB.Size = new System.Drawing.Size(253, 41);
             this.User_TB.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
@@ -145,7 +144,7 @@
             this.Pass_TB.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.Pass_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Pass_TB.DefaultFont = new System.Drawing.Font("Inter Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pass_TB.DefaultText = "admin";
+            this.Pass_TB.DefaultText = "";
             this.Pass_TB.FillColor = System.Drawing.Color.White;
             this.Pass_TB.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Pass_TB.HideSelection = true;
@@ -154,8 +153,7 @@
             this.Pass_TB.IconPadding = 10;
             this.Pass_TB.IconRight = null;
             this.Pass_TB.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Pass_TB.Lines = new string[] {
-        "admin"};
+            this.Pass_TB.Lines = new string[0];
             this.Pass_TB.Location = new System.Drawing.Point(67, 407);
             this.Pass_TB.MaxLength = 32767;
             this.Pass_TB.MinimumSize = new System.Drawing.Size(1, 1);
@@ -183,14 +181,14 @@
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.Pass_TB.OnIdleState = stateProperties8;
             this.Pass_TB.Padding = new System.Windows.Forms.Padding(3);
-            this.Pass_TB.PasswordChar = '*';
+            this.Pass_TB.PasswordChar = '•';
             this.Pass_TB.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.Pass_TB.PlaceholderText = "Password";
             this.Pass_TB.ReadOnly = false;
             this.Pass_TB.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Pass_TB.SelectedText = "";
             this.Pass_TB.SelectionLength = 0;
-            this.Pass_TB.SelectionStart = 5;
+            this.Pass_TB.SelectionStart = 0;
             this.Pass_TB.ShortcutsEnabled = true;
             this.Pass_TB.Size = new System.Drawing.Size(253, 41);
             this.Pass_TB.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;

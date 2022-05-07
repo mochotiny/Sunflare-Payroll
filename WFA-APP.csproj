@@ -392,6 +392,17 @@
       <DependentUpon>PSreport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="View\Modules\Report\Monthly\month.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>month.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Modules\Report\Monthly\MonthlyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modules\Report\Monthly\MonthlyForm.Designer.cs">
+      <DependentUpon>MonthlyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Modules\Report\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -534,6 +545,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PSreport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Modules\Report\Monthly\MonthlyForm.resx">
+      <DependentUpon>MonthlyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Modules\Report\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -578,6 +592,17 @@
     </None>
     <None Include="View\Modules\Report\CrystalReport\PaySlip\PaySlipDS.xss">
       <DependentUpon>PaySlipDS.xsd</DependentUpon>
+    </None>
+    <None Include="View\Modules\Report\Monthly\month.xsc">
+      <DependentUpon>month.xsd</DependentUpon>
+    </None>
+    <None Include="View\Modules\Report\Monthly\month.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>month.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\Modules\Report\Monthly\month.xss">
+      <DependentUpon>month.xsd</DependentUpon>
     </None>
     <None Include="View\Modules\Report\ReportPR\WeeklyPR.xsc">
       <DependentUpon>WeeklyPR.xsd</DependentUpon>

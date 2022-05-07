@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WFA_APP.View.Modules.Report.ReportPR {
+namespace WFA_APP.View.Modules.Report.Monthly {
     
     
     /// <summary>
@@ -20,17 +20,19 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("WeeklyPR")]
+    [global::System.Xml.Serialization.XmlRootAttribute("month")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class WeeklyPR : global::System.Data.DataSet {
+    public partial class month : global::System.Data.DataSet {
         
-        private Weekly2DataTable tableWeekly2;
+        private WeeklyDataTable tableWeekly;
+        
+        private MonthlyDataTable tableMonthly;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public WeeklyPR() {
+        public month() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +43,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected WeeklyPR(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected month(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +56,11 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Weekly2"] != null)) {
-                    base.Tables.Add(new Weekly2DataTable(ds.Tables["Weekly2"]));
+                if ((ds.Tables["Weekly"] != null)) {
+                    base.Tables.Add(new WeeklyDataTable(ds.Tables["Weekly"]));
+                }
+                if ((ds.Tables["Monthly"] != null)) {
+                    base.Tables.Add(new MonthlyDataTable(ds.Tables["Monthly"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +84,19 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Weekly2DataTable Weekly2 {
+        public WeeklyDataTable Weekly {
             get {
-                return this.tableWeekly2;
+                return this.tableWeekly;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public MonthlyDataTable Monthly {
+            get {
+                return this.tableMonthly;
             }
         }
         
@@ -127,7 +142,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            WeeklyPR cln = ((WeeklyPR)(base.Clone()));
+            month cln = ((month)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +167,11 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Weekly2"] != null)) {
-                    base.Tables.Add(new Weekly2DataTable(ds.Tables["Weekly2"]));
+                if ((ds.Tables["Weekly"] != null)) {
+                    base.Tables.Add(new WeeklyDataTable(ds.Tables["Weekly"]));
+                }
+                if ((ds.Tables["Monthly"] != null)) {
+                    base.Tables.Add(new MonthlyDataTable(ds.Tables["Monthly"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +206,16 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableWeekly2 = ((Weekly2DataTable)(base.Tables["Weekly2"]));
+            this.tableWeekly = ((WeeklyDataTable)(base.Tables["Weekly"]));
             if ((initTable == true)) {
-                if ((this.tableWeekly2 != null)) {
-                    this.tableWeekly2.InitVars();
+                if ((this.tableWeekly != null)) {
+                    this.tableWeekly.InitVars();
+                }
+            }
+            this.tableMonthly = ((MonthlyDataTable)(base.Tables["Monthly"]));
+            if ((initTable == true)) {
+                if ((this.tableMonthly != null)) {
+                    this.tableMonthly.InitVars();
                 }
             }
         }
@@ -199,18 +223,26 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "WeeklyPR";
+            this.DataSetName = "month";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/WeeklyPR.xsd";
+            this.Namespace = "http://tempuri.org/month.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableWeekly2 = new Weekly2DataTable();
-            base.Tables.Add(this.tableWeekly2);
+            this.tableWeekly = new WeeklyDataTable();
+            base.Tables.Add(this.tableWeekly);
+            this.tableMonthly = new MonthlyDataTable();
+            base.Tables.Add(this.tableMonthly);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeWeekly2() {
+        private bool ShouldSerializeWeekly() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeMonthly() {
             return false;
         }
         
@@ -225,7 +257,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            WeeklyPR ds = new WeeklyPR();
+            month ds = new month();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +302,17 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void Weekly2RowChangeEventHandler(object sender, Weekly2RowChangeEvent e);
+        public delegate void WeeklyRowChangeEventHandler(object sender, WeeklyRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void MonthlyRowChangeEventHandler(object sender, MonthlyRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Weekly2DataTable : global::System.Data.TypedTableBase<Weekly2Row> {
+        public partial class WeeklyDataTable : global::System.Data.TypedTableBase<WeeklyRow> {
             
             private global::System.Data.DataColumn columnEmployeeName;
             
@@ -329,8 +364,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Weekly2DataTable() {
-                this.TableName = "Weekly2";
+            public WeeklyDataTable() {
+                this.TableName = "Weekly";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -338,7 +373,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal Weekly2DataTable(global::System.Data.DataTable table) {
+            internal WeeklyDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -355,7 +390,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected Weekly2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected WeeklyDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -563,33 +598,33 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Weekly2Row this[int index] {
+            public WeeklyRow this[int index] {
                 get {
-                    return ((Weekly2Row)(this.Rows[index]));
+                    return ((WeeklyRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Weekly2RowChangeEventHandler Weekly2RowChanging;
+            public event WeeklyRowChangeEventHandler WeeklyRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Weekly2RowChangeEventHandler Weekly2RowChanged;
+            public event WeeklyRowChangeEventHandler WeeklyRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Weekly2RowChangeEventHandler Weekly2RowDeleting;
+            public event WeeklyRowChangeEventHandler WeeklyRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Weekly2RowChangeEventHandler Weekly2RowDeleted;
+            public event WeeklyRowChangeEventHandler WeeklyRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddWeekly2Row(Weekly2Row row) {
+            public void AddWeeklyRow(WeeklyRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Weekly2Row AddWeekly2Row(
+            public WeeklyRow AddWeeklyRow(
                         string EmployeeName, 
                         int BiometricID, 
                         string Department_Name, 
@@ -614,7 +649,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                         decimal NetSalary, 
                         decimal SSS, 
                         decimal NoOfOT) {
-                Weekly2Row rowWeekly2Row = ((Weekly2Row)(this.NewRow()));
+                WeeklyRow rowWeeklyRow = ((WeeklyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeName,
                         BiometricID,
@@ -640,15 +675,15 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                         NetSalary,
                         SSS,
                         NoOfOT};
-                rowWeekly2Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowWeekly2Row);
-                return rowWeekly2Row;
+                rowWeeklyRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowWeeklyRow);
+                return rowWeeklyRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Weekly2DataTable cln = ((Weekly2DataTable)(base.Clone()));
+                WeeklyDataTable cln = ((WeeklyDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -656,7 +691,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Weekly2DataTable();
+                return new WeeklyDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -765,28 +800,28 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Weekly2Row NewWeekly2Row() {
-                return ((Weekly2Row)(this.NewRow()));
+            public WeeklyRow NewWeeklyRow() {
+                return ((WeeklyRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Weekly2Row(builder);
+                return new WeeklyRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Weekly2Row);
+                return typeof(WeeklyRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Weekly2RowChanged != null)) {
-                    this.Weekly2RowChanged(this, new Weekly2RowChangeEvent(((Weekly2Row)(e.Row)), e.Action));
+                if ((this.WeeklyRowChanged != null)) {
+                    this.WeeklyRowChanged(this, new WeeklyRowChangeEvent(((WeeklyRow)(e.Row)), e.Action));
                 }
             }
             
@@ -794,8 +829,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Weekly2RowChanging != null)) {
-                    this.Weekly2RowChanging(this, new Weekly2RowChangeEvent(((Weekly2Row)(e.Row)), e.Action));
+                if ((this.WeeklyRowChanging != null)) {
+                    this.WeeklyRowChanging(this, new WeeklyRowChangeEvent(((WeeklyRow)(e.Row)), e.Action));
                 }
             }
             
@@ -803,8 +838,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Weekly2RowDeleted != null)) {
-                    this.Weekly2RowDeleted(this, new Weekly2RowChangeEvent(((Weekly2Row)(e.Row)), e.Action));
+                if ((this.WeeklyRowDeleted != null)) {
+                    this.WeeklyRowDeleted(this, new WeeklyRowChangeEvent(((WeeklyRow)(e.Row)), e.Action));
                 }
             }
             
@@ -812,14 +847,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Weekly2RowDeleting != null)) {
-                    this.Weekly2RowDeleting(this, new Weekly2RowChangeEvent(((Weekly2Row)(e.Row)), e.Action));
+                if ((this.WeeklyRowDeleting != null)) {
+                    this.WeeklyRowDeleting(this, new WeeklyRowChangeEvent(((WeeklyRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveWeekly2Row(Weekly2Row row) {
+            public void RemoveWeeklyRow(WeeklyRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -828,7 +863,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                WeeklyPR ds = new WeeklyPR();
+                month ds = new month();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -846,7 +881,555 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Weekly2DataTable";
+                attribute2.FixedValue = "WeeklyDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class MonthlyDataTable : global::System.Data.TypedTableBase<MonthlyRow> {
+            
+            private global::System.Data.DataColumn columnEmployeeName;
+            
+            private global::System.Data.DataColumn columnBiometricID;
+            
+            private global::System.Data.DataColumn columnDayRate;
+            
+            private global::System.Data.DataColumn columnStartAt;
+            
+            private global::System.Data.DataColumn columnEndAt;
+            
+            private global::System.Data.DataColumn columnDaysWorked;
+            
+            private global::System.Data.DataColumn columnBasicPay;
+            
+            private global::System.Data.DataColumn columnHoliday;
+            
+            private global::System.Data.DataColumn columnAdjustments;
+            
+            private global::System.Data.DataColumn columnGrossSalary;
+            
+            private global::System.Data.DataColumn columnPhilHealth;
+            
+            private global::System.Data.DataColumn columnPagIbig;
+            
+            private global::System.Data.DataColumn columnSSS;
+            
+            private global::System.Data.DataColumn columnLoanOrCA;
+            
+            private global::System.Data.DataColumn columnUnderTime;
+            
+            private global::System.Data.DataColumn columnLate;
+            
+            private global::System.Data.DataColumn columnOthers;
+            
+            private global::System.Data.DataColumn columnTotalDeductions;
+            
+            private global::System.Data.DataColumn columnNetSalary;
+            
+            private global::System.Data.DataColumn columnCreated_At;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public MonthlyDataTable() {
+                this.TableName = "Monthly";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal MonthlyDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected MonthlyDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EmployeeNameColumn {
+                get {
+                    return this.columnEmployeeName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BiometricIDColumn {
+                get {
+                    return this.columnBiometricID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DayRateColumn {
+                get {
+                    return this.columnDayRate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StartAtColumn {
+                get {
+                    return this.columnStartAt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EndAtColumn {
+                get {
+                    return this.columnEndAt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DaysWorkedColumn {
+                get {
+                    return this.columnDaysWorked;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BasicPayColumn {
+                get {
+                    return this.columnBasicPay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HolidayColumn {
+                get {
+                    return this.columnHoliday;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AdjustmentsColumn {
+                get {
+                    return this.columnAdjustments;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GrossSalaryColumn {
+                get {
+                    return this.columnGrossSalary;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PhilHealthColumn {
+                get {
+                    return this.columnPhilHealth;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PagIbigColumn {
+                get {
+                    return this.columnPagIbig;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SSSColumn {
+                get {
+                    return this.columnSSS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LoanOrCAColumn {
+                get {
+                    return this.columnLoanOrCA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn UnderTimeColumn {
+                get {
+                    return this.columnUnderTime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LateColumn {
+                get {
+                    return this.columnLate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OthersColumn {
+                get {
+                    return this.columnOthers;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TotalDeductionsColumn {
+                get {
+                    return this.columnTotalDeductions;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NetSalaryColumn {
+                get {
+                    return this.columnNetSalary;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Created_AtColumn {
+                get {
+                    return this.columnCreated_At;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public MonthlyRow this[int index] {
+                get {
+                    return ((MonthlyRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event MonthlyRowChangeEventHandler MonthlyRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event MonthlyRowChangeEventHandler MonthlyRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event MonthlyRowChangeEventHandler MonthlyRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event MonthlyRowChangeEventHandler MonthlyRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddMonthlyRow(MonthlyRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public MonthlyRow AddMonthlyRow(
+                        string EmployeeName, 
+                        int BiometricID, 
+                        decimal DayRate, 
+                        System.DateTime StartAt, 
+                        System.DateTime EndAt, 
+                        decimal DaysWorked, 
+                        decimal BasicPay, 
+                        decimal Holiday, 
+                        decimal Adjustments, 
+                        decimal GrossSalary, 
+                        decimal PhilHealth, 
+                        decimal PagIbig, 
+                        decimal SSS, 
+                        decimal LoanOrCA, 
+                        decimal UnderTime, 
+                        decimal Late, 
+                        decimal Others, 
+                        decimal TotalDeductions, 
+                        decimal NetSalary, 
+                        System.DateTime Created_At) {
+                MonthlyRow rowMonthlyRow = ((MonthlyRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        EmployeeName,
+                        BiometricID,
+                        DayRate,
+                        StartAt,
+                        EndAt,
+                        DaysWorked,
+                        BasicPay,
+                        Holiday,
+                        Adjustments,
+                        GrossSalary,
+                        PhilHealth,
+                        PagIbig,
+                        SSS,
+                        LoanOrCA,
+                        UnderTime,
+                        Late,
+                        Others,
+                        TotalDeductions,
+                        NetSalary,
+                        Created_At};
+                rowMonthlyRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMonthlyRow);
+                return rowMonthlyRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                MonthlyDataTable cln = ((MonthlyDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MonthlyDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnEmployeeName = base.Columns["EmployeeName"];
+                this.columnBiometricID = base.Columns["BiometricID"];
+                this.columnDayRate = base.Columns["DayRate"];
+                this.columnStartAt = base.Columns["StartAt"];
+                this.columnEndAt = base.Columns["EndAt"];
+                this.columnDaysWorked = base.Columns["DaysWorked"];
+                this.columnBasicPay = base.Columns["BasicPay"];
+                this.columnHoliday = base.Columns["Holiday"];
+                this.columnAdjustments = base.Columns["Adjustments"];
+                this.columnGrossSalary = base.Columns["GrossSalary"];
+                this.columnPhilHealth = base.Columns["PhilHealth"];
+                this.columnPagIbig = base.Columns["PagIbig"];
+                this.columnSSS = base.Columns["SSS"];
+                this.columnLoanOrCA = base.Columns["LoanOrCA"];
+                this.columnUnderTime = base.Columns["UnderTime"];
+                this.columnLate = base.Columns["Late"];
+                this.columnOthers = base.Columns["Others"];
+                this.columnTotalDeductions = base.Columns["TotalDeductions"];
+                this.columnNetSalary = base.Columns["NetSalary"];
+                this.columnCreated_At = base.Columns["Created_At"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnEmployeeName = new global::System.Data.DataColumn("EmployeeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeName);
+                this.columnBiometricID = new global::System.Data.DataColumn("BiometricID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBiometricID);
+                this.columnDayRate = new global::System.Data.DataColumn("DayRate", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDayRate);
+                this.columnStartAt = new global::System.Data.DataColumn("StartAt", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStartAt);
+                this.columnEndAt = new global::System.Data.DataColumn("EndAt", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEndAt);
+                this.columnDaysWorked = new global::System.Data.DataColumn("DaysWorked", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDaysWorked);
+                this.columnBasicPay = new global::System.Data.DataColumn("BasicPay", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBasicPay);
+                this.columnHoliday = new global::System.Data.DataColumn("Holiday", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHoliday);
+                this.columnAdjustments = new global::System.Data.DataColumn("Adjustments", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdjustments);
+                this.columnGrossSalary = new global::System.Data.DataColumn("GrossSalary", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrossSalary);
+                this.columnPhilHealth = new global::System.Data.DataColumn("PhilHealth", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhilHealth);
+                this.columnPagIbig = new global::System.Data.DataColumn("PagIbig", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPagIbig);
+                this.columnSSS = new global::System.Data.DataColumn("SSS", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSSS);
+                this.columnLoanOrCA = new global::System.Data.DataColumn("LoanOrCA", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLoanOrCA);
+                this.columnUnderTime = new global::System.Data.DataColumn("UnderTime", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUnderTime);
+                this.columnLate = new global::System.Data.DataColumn("Late", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLate);
+                this.columnOthers = new global::System.Data.DataColumn("Others", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOthers);
+                this.columnTotalDeductions = new global::System.Data.DataColumn("TotalDeductions", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalDeductions);
+                this.columnNetSalary = new global::System.Data.DataColumn("NetSalary", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNetSalary);
+                this.columnCreated_At = new global::System.Data.DataColumn("Created_At", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCreated_At);
+                this.columnEmployeeName.AllowDBNull = false;
+                this.columnEmployeeName.MaxLength = 50;
+                this.columnDayRate.AllowDBNull = false;
+                this.columnStartAt.AllowDBNull = false;
+                this.columnEndAt.AllowDBNull = false;
+                this.columnDaysWorked.AllowDBNull = false;
+                this.columnBasicPay.ReadOnly = true;
+                this.columnGrossSalary.ReadOnly = true;
+                this.columnLoanOrCA.AllowDBNull = false;
+                this.columnUnderTime.AllowDBNull = false;
+                this.columnLate.AllowDBNull = false;
+                this.columnOthers.AllowDBNull = false;
+                this.columnTotalDeductions.ReadOnly = true;
+                this.columnNetSalary.ReadOnly = true;
+                this.columnCreated_At.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public MonthlyRow NewMonthlyRow() {
+                return ((MonthlyRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MonthlyRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(MonthlyRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MonthlyRowChanged != null)) {
+                    this.MonthlyRowChanged(this, new MonthlyRowChangeEvent(((MonthlyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MonthlyRowChanging != null)) {
+                    this.MonthlyRowChanging(this, new MonthlyRowChangeEvent(((MonthlyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MonthlyRowDeleted != null)) {
+                    this.MonthlyRowDeleted(this, new MonthlyRowChangeEvent(((MonthlyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MonthlyRowDeleting != null)) {
+                    this.MonthlyRowDeleting(this, new MonthlyRowChangeEvent(((MonthlyRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveMonthlyRow(MonthlyRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                month ds = new month();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MonthlyDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -890,25 +1473,25 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Weekly2Row : global::System.Data.DataRow {
+        public partial class WeeklyRow : global::System.Data.DataRow {
             
-            private Weekly2DataTable tableWeekly2;
+            private WeeklyDataTable tableWeekly;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal Weekly2Row(global::System.Data.DataRowBuilder rb) : 
+            internal WeeklyRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableWeekly2 = ((Weekly2DataTable)(this.Table));
+                this.tableWeekly = ((WeeklyDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string EmployeeName {
                 get {
-                    return ((string)(this[this.tableWeekly2.EmployeeNameColumn]));
+                    return ((string)(this[this.tableWeekly.EmployeeNameColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.EmployeeNameColumn] = value;
+                    this[this.tableWeekly.EmployeeNameColumn] = value;
                 }
             }
             
@@ -916,10 +1499,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int BiometricID {
                 get {
-                    return ((int)(this[this.tableWeekly2.BiometricIDColumn]));
+                    return ((int)(this[this.tableWeekly.BiometricIDColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.BiometricIDColumn] = value;
+                    this[this.tableWeekly.BiometricIDColumn] = value;
                 }
             }
             
@@ -927,10 +1510,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Department_Name {
                 get {
-                    return ((string)(this[this.tableWeekly2.Department_NameColumn]));
+                    return ((string)(this[this.tableWeekly.Department_NameColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.Department_NameColumn] = value;
+                    this[this.tableWeekly.Department_NameColumn] = value;
                 }
             }
             
@@ -938,10 +1521,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string JobTitle {
                 get {
-                    return ((string)(this[this.tableWeekly2.JobTitleColumn]));
+                    return ((string)(this[this.tableWeekly.JobTitleColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.JobTitleColumn] = value;
+                    this[this.tableWeekly.JobTitleColumn] = value;
                 }
             }
             
@@ -949,10 +1532,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal DayRate {
                 get {
-                    return ((decimal)(this[this.tableWeekly2.DayRateColumn]));
+                    return ((decimal)(this[this.tableWeekly.DayRateColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.DayRateColumn] = value;
+                    this[this.tableWeekly.DayRateColumn] = value;
                 }
             }
             
@@ -960,10 +1543,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime StartAt {
                 get {
-                    return ((global::System.DateTime)(this[this.tableWeekly2.StartAtColumn]));
+                    return ((global::System.DateTime)(this[this.tableWeekly.StartAtColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.StartAtColumn] = value;
+                    this[this.tableWeekly.StartAtColumn] = value;
                 }
             }
             
@@ -971,10 +1554,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime EndAt {
                 get {
-                    return ((global::System.DateTime)(this[this.tableWeekly2.EndAtColumn]));
+                    return ((global::System.DateTime)(this[this.tableWeekly.EndAtColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.EndAtColumn] = value;
+                    this[this.tableWeekly.EndAtColumn] = value;
                 }
             }
             
@@ -982,10 +1565,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal DaysWorked {
                 get {
-                    return ((decimal)(this[this.tableWeekly2.DaysWorkedColumn]));
+                    return ((decimal)(this[this.tableWeekly.DaysWorkedColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.DaysWorkedColumn] = value;
+                    this[this.tableWeekly.DaysWorkedColumn] = value;
                 }
             }
             
@@ -994,14 +1577,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal BasicPay {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.BasicPayColumn]));
+                        return ((decimal)(this[this.tableWeekly.BasicPayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BasicPay\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'BasicPay\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.BasicPayColumn] = value;
+                    this[this.tableWeekly.BasicPayColumn] = value;
                 }
             }
             
@@ -1010,14 +1593,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal OTRate {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.OTRateColumn]));
+                        return ((decimal)(this[this.tableWeekly.OTRateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OTRate\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'OTRate\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.OTRateColumn] = value;
+                    this[this.tableWeekly.OTRateColumn] = value;
                 }
             }
             
@@ -1026,14 +1609,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal OTPay {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.OTPayColumn]));
+                        return ((decimal)(this[this.tableWeekly.OTPayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OTPay\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'OTPay\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.OTPayColumn] = value;
+                    this[this.tableWeekly.OTPayColumn] = value;
                 }
             }
             
@@ -1042,14 +1625,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal Holiday {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.HolidayColumn]));
+                        return ((decimal)(this[this.tableWeekly.HolidayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Holiday\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Holiday\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.HolidayColumn] = value;
+                    this[this.tableWeekly.HolidayColumn] = value;
                 }
             }
             
@@ -1058,14 +1641,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal Adjustments {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.AdjustmentsColumn]));
+                        return ((decimal)(this[this.tableWeekly.AdjustmentsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Adjustments\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Adjustments\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.AdjustmentsColumn] = value;
+                    this[this.tableWeekly.AdjustmentsColumn] = value;
                 }
             }
             
@@ -1074,14 +1657,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal GrossSalary {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.GrossSalaryColumn]));
+                        return ((decimal)(this[this.tableWeekly.GrossSalaryColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'GrossSalary\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'GrossSalary\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.GrossSalaryColumn] = value;
+                    this[this.tableWeekly.GrossSalaryColumn] = value;
                 }
             }
             
@@ -1090,14 +1673,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal PhilHealth {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.PhilHealthColumn]));
+                        return ((decimal)(this[this.tableWeekly.PhilHealthColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PhilHealth\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PhilHealth\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.PhilHealthColumn] = value;
+                    this[this.tableWeekly.PhilHealthColumn] = value;
                 }
             }
             
@@ -1106,14 +1689,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal PagIbig {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.PagIbigColumn]));
+                        return ((decimal)(this[this.tableWeekly.PagIbigColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PagIbig\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PagIbig\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.PagIbigColumn] = value;
+                    this[this.tableWeekly.PagIbigColumn] = value;
                 }
             }
             
@@ -1121,10 +1704,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal LoanOrCA {
                 get {
-                    return ((decimal)(this[this.tableWeekly2.LoanOrCAColumn]));
+                    return ((decimal)(this[this.tableWeekly.LoanOrCAColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.LoanOrCAColumn] = value;
+                    this[this.tableWeekly.LoanOrCAColumn] = value;
                 }
             }
             
@@ -1132,10 +1715,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal UnderTime {
                 get {
-                    return ((decimal)(this[this.tableWeekly2.UnderTimeColumn]));
+                    return ((decimal)(this[this.tableWeekly.UnderTimeColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.UnderTimeColumn] = value;
+                    this[this.tableWeekly.UnderTimeColumn] = value;
                 }
             }
             
@@ -1143,10 +1726,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal Late {
                 get {
-                    return ((decimal)(this[this.tableWeekly2.LateColumn]));
+                    return ((decimal)(this[this.tableWeekly.LateColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.LateColumn] = value;
+                    this[this.tableWeekly.LateColumn] = value;
                 }
             }
             
@@ -1154,10 +1737,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal Others {
                 get {
-                    return ((decimal)(this[this.tableWeekly2.OthersColumn]));
+                    return ((decimal)(this[this.tableWeekly.OthersColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.OthersColumn] = value;
+                    this[this.tableWeekly.OthersColumn] = value;
                 }
             }
             
@@ -1166,14 +1749,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal TotalDeductions {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.TotalDeductionsColumn]));
+                        return ((decimal)(this[this.tableWeekly.TotalDeductionsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalDeductions\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalDeductions\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.TotalDeductionsColumn] = value;
+                    this[this.tableWeekly.TotalDeductionsColumn] = value;
                 }
             }
             
@@ -1182,14 +1765,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal NetSalary {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.NetSalaryColumn]));
+                        return ((decimal)(this[this.tableWeekly.NetSalaryColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NetSalary\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NetSalary\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.NetSalaryColumn] = value;
+                    this[this.tableWeekly.NetSalaryColumn] = value;
                 }
             }
             
@@ -1198,14 +1781,14 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             public decimal SSS {
                 get {
                     try {
-                        return ((decimal)(this[this.tableWeekly2.SSSColumn]));
+                        return ((decimal)(this[this.tableWeekly.SSSColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SSS\' in table \'Weekly2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SSS\' in table \'Weekly\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWeekly2.SSSColumn] = value;
+                    this[this.tableWeekly.SSSColumn] = value;
                 }
             }
             
@@ -1213,143 +1796,548 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal NoOfOT {
                 get {
-                    return ((decimal)(this[this.tableWeekly2.NoOfOTColumn]));
+                    return ((decimal)(this[this.tableWeekly.NoOfOTColumn]));
                 }
                 set {
-                    this[this.tableWeekly2.NoOfOTColumn] = value;
+                    this[this.tableWeekly.NoOfOTColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsBasicPayNull() {
-                return this.IsNull(this.tableWeekly2.BasicPayColumn);
+                return this.IsNull(this.tableWeekly.BasicPayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetBasicPayNull() {
-                this[this.tableWeekly2.BasicPayColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.BasicPayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsOTRateNull() {
-                return this.IsNull(this.tableWeekly2.OTRateColumn);
+                return this.IsNull(this.tableWeekly.OTRateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetOTRateNull() {
-                this[this.tableWeekly2.OTRateColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.OTRateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsOTPayNull() {
-                return this.IsNull(this.tableWeekly2.OTPayColumn);
+                return this.IsNull(this.tableWeekly.OTPayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetOTPayNull() {
-                this[this.tableWeekly2.OTPayColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.OTPayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsHolidayNull() {
-                return this.IsNull(this.tableWeekly2.HolidayColumn);
+                return this.IsNull(this.tableWeekly.HolidayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetHolidayNull() {
-                this[this.tableWeekly2.HolidayColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.HolidayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsAdjustmentsNull() {
-                return this.IsNull(this.tableWeekly2.AdjustmentsColumn);
+                return this.IsNull(this.tableWeekly.AdjustmentsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetAdjustmentsNull() {
-                this[this.tableWeekly2.AdjustmentsColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.AdjustmentsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsGrossSalaryNull() {
-                return this.IsNull(this.tableWeekly2.GrossSalaryColumn);
+                return this.IsNull(this.tableWeekly.GrossSalaryColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetGrossSalaryNull() {
-                this[this.tableWeekly2.GrossSalaryColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.GrossSalaryColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPhilHealthNull() {
-                return this.IsNull(this.tableWeekly2.PhilHealthColumn);
+                return this.IsNull(this.tableWeekly.PhilHealthColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPhilHealthNull() {
-                this[this.tableWeekly2.PhilHealthColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.PhilHealthColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPagIbigNull() {
-                return this.IsNull(this.tableWeekly2.PagIbigColumn);
+                return this.IsNull(this.tableWeekly.PagIbigColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPagIbigNull() {
-                this[this.tableWeekly2.PagIbigColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.PagIbigColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalDeductionsNull() {
-                return this.IsNull(this.tableWeekly2.TotalDeductionsColumn);
+                return this.IsNull(this.tableWeekly.TotalDeductionsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalDeductionsNull() {
-                this[this.tableWeekly2.TotalDeductionsColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.TotalDeductionsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNetSalaryNull() {
-                return this.IsNull(this.tableWeekly2.NetSalaryColumn);
+                return this.IsNull(this.tableWeekly.NetSalaryColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNetSalaryNull() {
-                this[this.tableWeekly2.NetSalaryColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.NetSalaryColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSSSNull() {
-                return this.IsNull(this.tableWeekly2.SSSColumn);
+                return this.IsNull(this.tableWeekly.SSSColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSSSNull() {
-                this[this.tableWeekly2.SSSColumn] = global::System.Convert.DBNull;
+                this[this.tableWeekly.SSSColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class MonthlyRow : global::System.Data.DataRow {
+            
+            private MonthlyDataTable tableMonthly;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal MonthlyRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMonthly = ((MonthlyDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string EmployeeName {
+                get {
+                    return ((string)(this[this.tableMonthly.EmployeeNameColumn]));
+                }
+                set {
+                    this[this.tableMonthly.EmployeeNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BiometricID {
+                get {
+                    try {
+                        return ((int)(this[this.tableMonthly.BiometricIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BiometricID\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.BiometricIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal DayRate {
+                get {
+                    return ((decimal)(this[this.tableMonthly.DayRateColumn]));
+                }
+                set {
+                    this[this.tableMonthly.DayRateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime StartAt {
+                get {
+                    return ((global::System.DateTime)(this[this.tableMonthly.StartAtColumn]));
+                }
+                set {
+                    this[this.tableMonthly.StartAtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime EndAt {
+                get {
+                    return ((global::System.DateTime)(this[this.tableMonthly.EndAtColumn]));
+                }
+                set {
+                    this[this.tableMonthly.EndAtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal DaysWorked {
+                get {
+                    return ((decimal)(this[this.tableMonthly.DaysWorkedColumn]));
+                }
+                set {
+                    this[this.tableMonthly.DaysWorkedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal BasicPay {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMonthly.BasicPayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BasicPay\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.BasicPayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Holiday {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMonthly.HolidayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Holiday\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.HolidayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Adjustments {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMonthly.AdjustmentsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Adjustments\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.AdjustmentsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal GrossSalary {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMonthly.GrossSalaryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GrossSalary\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.GrossSalaryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal PhilHealth {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMonthly.PhilHealthColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PhilHealth\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.PhilHealthColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal PagIbig {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMonthly.PagIbigColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PagIbig\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.PagIbigColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal SSS {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMonthly.SSSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SSS\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.SSSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal LoanOrCA {
+                get {
+                    return ((decimal)(this[this.tableMonthly.LoanOrCAColumn]));
+                }
+                set {
+                    this[this.tableMonthly.LoanOrCAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal UnderTime {
+                get {
+                    return ((decimal)(this[this.tableMonthly.UnderTimeColumn]));
+                }
+                set {
+                    this[this.tableMonthly.UnderTimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Late {
+                get {
+                    return ((decimal)(this[this.tableMonthly.LateColumn]));
+                }
+                set {
+                    this[this.tableMonthly.LateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Others {
+                get {
+                    return ((decimal)(this[this.tableMonthly.OthersColumn]));
+                }
+                set {
+                    this[this.tableMonthly.OthersColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal TotalDeductions {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMonthly.TotalDeductionsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalDeductions\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.TotalDeductionsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal NetSalary {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMonthly.NetSalaryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NetSalary\' in table \'Monthly\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonthly.NetSalaryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Created_At {
+                get {
+                    return ((global::System.DateTime)(this[this.tableMonthly.Created_AtColumn]));
+                }
+                set {
+                    this[this.tableMonthly.Created_AtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBiometricIDNull() {
+                return this.IsNull(this.tableMonthly.BiometricIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBiometricIDNull() {
+                this[this.tableMonthly.BiometricIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBasicPayNull() {
+                return this.IsNull(this.tableMonthly.BasicPayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBasicPayNull() {
+                this[this.tableMonthly.BasicPayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHolidayNull() {
+                return this.IsNull(this.tableMonthly.HolidayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHolidayNull() {
+                this[this.tableMonthly.HolidayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAdjustmentsNull() {
+                return this.IsNull(this.tableMonthly.AdjustmentsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAdjustmentsNull() {
+                this[this.tableMonthly.AdjustmentsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGrossSalaryNull() {
+                return this.IsNull(this.tableMonthly.GrossSalaryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGrossSalaryNull() {
+                this[this.tableMonthly.GrossSalaryColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPhilHealthNull() {
+                return this.IsNull(this.tableMonthly.PhilHealthColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPhilHealthNull() {
+                this[this.tableMonthly.PhilHealthColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPagIbigNull() {
+                return this.IsNull(this.tableMonthly.PagIbigColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPagIbigNull() {
+                this[this.tableMonthly.PagIbigColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSSSNull() {
+                return this.IsNull(this.tableMonthly.SSSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSSSNull() {
+                this[this.tableMonthly.SSSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTotalDeductionsNull() {
+                return this.IsNull(this.tableMonthly.TotalDeductionsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTotalDeductionsNull() {
+                this[this.tableMonthly.TotalDeductionsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNetSalaryNull() {
+                return this.IsNull(this.tableMonthly.NetSalaryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNetSalaryNull() {
+                this[this.tableMonthly.NetSalaryColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1357,22 +2345,56 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class Weekly2RowChangeEvent : global::System.EventArgs {
+        public class WeeklyRowChangeEvent : global::System.EventArgs {
             
-            private Weekly2Row eventRow;
+            private WeeklyRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Weekly2RowChangeEvent(Weekly2Row row, global::System.Data.DataRowAction action) {
+            public WeeklyRowChangeEvent(WeeklyRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Weekly2Row Row {
+            public WeeklyRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class MonthlyRowChangeEvent : global::System.EventArgs {
+            
+            private MonthlyRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public MonthlyRowChangeEvent(MonthlyRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public MonthlyRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1388,7 +2410,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR {
         }
     }
 }
-namespace WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters {
+namespace WFA_APP.View.Modules.Report.Monthly.monthTableAdapters {
     
     
     /// <summary>
@@ -1400,7 +2422,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Weekly2TableAdapter : global::System.ComponentModel.Component {
+    public partial class WeeklyTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1414,7 +2436,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public Weekly2TableAdapter() {
+        public WeeklyTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1511,7 +2533,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Weekly2";
+            tableMapping.DataSetTable = "Weekly";
             tableMapping.ColumnMappings.Add("EmployeeName", "EmployeeName");
             tableMapping.ColumnMappings.Add("BiometricID", "BiometricID");
             tableMapping.ColumnMappings.Add("Department_Name", "Department_Name");
@@ -1549,7 +2571,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Weekly.EmployeeName, Employees.BiometricID, Departments.Department_Name, Jobs.JobTitle, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, 
@@ -1560,26 +2582,13 @@ FROM            Weekly INNER JOIN
                          Jobs ON Employees.JobID = Jobs.JobID INNER JOIN
                          Departments ON Employees.DepartmentID = Departments.DepartmentID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        Weekly.EmployeeName, Employees.BiometricID, Departments.Department_Name, Jobs.JobTitle, Weekly.DayRate, Weekly.StartAt, Weekly.EndAt, Weekly.DaysWorked, Weekly.BasicPay, Weekly.OTRate, Weekly.OTPay, 
-                         Weekly.Holiday, Weekly.Adjustments, Weekly.GrossSalary, Weekly.PhilHealth, Weekly.PagIbig, Weekly.LoanOrCA, Weekly.UnderTime, Weekly.Late, Weekly.Others, Weekly.TotalDeductions, Weekly.NetSalary, Weekly.SSS, 
-                         Weekly.NoOfOT
-FROM            Weekly INNER JOIN
-                         Employees ON Employees.BiometricID = Weekly.BiometricID INNER JOIN
-                         Jobs ON Employees.JobID = Jobs.JobID INNER JOIN
-                         Departments ON Employees.DepartmentID = Departments.DepartmentID
-WHERE        (Weekly.StartAt = @Param1) AND (Weekly.EndAt = @Param2)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "StartAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param2", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "EndAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(WeeklyPR.Weekly2DataTable dataTable) {
+        public virtual int Fill(month.WeeklyDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1592,31 +2601,186 @@ WHERE        (Weekly.StartAt = @Param1) AND (Weekly.EndAt = @Param2)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual WeeklyPR.Weekly2DataTable GetData() {
+        public virtual month.WeeklyDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            WeeklyPR.Weekly2DataTable dataTable = new WeeklyPR.Weekly2DataTable();
+            month.WeeklyDataTable dataTable = new month.WeeklyDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class MonthlyTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public MonthlyTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Monthly";
+            tableMapping.ColumnMappings.Add("EmployeeName", "EmployeeName");
+            tableMapping.ColumnMappings.Add("BiometricID", "BiometricID");
+            tableMapping.ColumnMappings.Add("DayRate", "DayRate");
+            tableMapping.ColumnMappings.Add("StartAt", "StartAt");
+            tableMapping.ColumnMappings.Add("EndAt", "EndAt");
+            tableMapping.ColumnMappings.Add("DaysWorked", "DaysWorked");
+            tableMapping.ColumnMappings.Add("BasicPay", "BasicPay");
+            tableMapping.ColumnMappings.Add("Holiday", "Holiday");
+            tableMapping.ColumnMappings.Add("Adjustments", "Adjustments");
+            tableMapping.ColumnMappings.Add("GrossSalary", "GrossSalary");
+            tableMapping.ColumnMappings.Add("PhilHealth", "PhilHealth");
+            tableMapping.ColumnMappings.Add("PagIbig", "PagIbig");
+            tableMapping.ColumnMappings.Add("SSS", "SSS");
+            tableMapping.ColumnMappings.Add("LoanOrCA", "LoanOrCA");
+            tableMapping.ColumnMappings.Add("UnderTime", "UnderTime");
+            tableMapping.ColumnMappings.Add("Late", "Late");
+            tableMapping.ColumnMappings.Add("Others", "Others");
+            tableMapping.ColumnMappings.Add("TotalDeductions", "TotalDeductions");
+            tableMapping.ColumnMappings.Add("NetSalary", "NetSalary");
+            tableMapping.ColumnMappings.Add("Created_At", "Created_At");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::WFA_APP.Properties.Settings.Default.pr_appConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        Monthly.EmployeeName, Monthly.BiometricID, Monthly.DayRate, Monthly.StartAt, Monthly.EndAt, Monthly.DaysWorked, Monthly.BasicPay, Monthly.Holiday, Monthly.Adjustments, Monthly.GrossSalary, Monthly.PhilHealth, 
+                         Monthly.PagIbig, Monthly.SSS, Monthly.LoanOrCA, Monthly.UnderTime, Monthly.Late, Monthly.Others, Monthly.TotalDeductions, Monthly.NetSalary, Monthly.Created_At
+FROM            Monthly INNER JOIN
+                         Employees ON Employees.BiometricID = Monthly.BiometricID INNER JOIN
+                         Jobs ON Employees.JobID = Jobs.JobID INNER JOIN
+                         Departments ON Employees.DepartmentID = Departments.DepartmentID";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int GetWeeklyReport(WeeklyPR.Weekly2DataTable dataTable, string Param1, string Param2) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Param1 == null)) {
-                throw new global::System.ArgumentNullException("Param1");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
-            }
-            if ((Param2 == null)) {
-                throw new global::System.ArgumentNullException("Param2");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
-            }
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(month.MonthlyDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1627,22 +2791,10 @@ WHERE        (Weekly.StartAt = @Param1) AND (Weekly.EndAt = @Param2)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual WeeklyPR.Weekly2DataTable GetDataBy(string Param1, string Param2) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Param1 == null)) {
-                throw new global::System.ArgumentNullException("Param1");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
-            }
-            if ((Param2 == null)) {
-                throw new global::System.ArgumentNullException("Param2");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
-            }
-            WeeklyPR.Weekly2DataTable dataTable = new WeeklyPR.Weekly2DataTable();
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual month.MonthlyDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            month.MonthlyDataTable dataTable = new month.MonthlyDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1716,7 +2868,7 @@ WHERE        (Weekly.StartAt = @Param1) AND (Weekly.EndAt = @Param2)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(WeeklyPR dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(month dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1726,7 +2878,7 @@ WHERE        (Weekly.StartAt = @Param1) AND (Weekly.EndAt = @Param2)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(WeeklyPR dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(month dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1736,7 +2888,7 @@ WHERE        (Weekly.StartAt = @Param1) AND (Weekly.EndAt = @Param2)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(WeeklyPR dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(month dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1770,7 +2922,7 @@ WHERE        (Weekly.StartAt = @Param1) AND (Weekly.EndAt = @Param2)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(WeeklyPR dataSet) {
+        public virtual int UpdateAll(month dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

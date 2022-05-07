@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using WFA_APP.View.Modules.Report.ReportPR;
 using WFA_APP.View.Modules.Report.ReportPS;
+using WFA_APP.View.Modules.Report.Monthly;
 using WFA_APP.View.Modules.Report.CrystalReport.PaySlip;
 
 namespace WFA_APP.View.Modules.Report
@@ -48,6 +49,16 @@ namespace WFA_APP.View.Modules.Report
             ps.FormBorderStyle = FormBorderStyle.None;
             this.PanelReport.Controls.Add(ps);
             ps.Show();
+        }
+
+        private void ReportBonus_Click(object sender, EventArgs e)
+        {
+            PanelBoard.Location = new Point(238, 50);
+            this.PanelReport.Controls.Clear();
+            MonthlyForm mon = new MonthlyForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            mon.FormBorderStyle = FormBorderStyle.None;
+            this.PanelReport.Controls.Add(mon);
+            mon.Show();
         }
     }
 }

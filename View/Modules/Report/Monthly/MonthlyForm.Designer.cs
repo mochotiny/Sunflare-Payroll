@@ -1,7 +1,7 @@
 ﻿
-namespace WFA_APP.View.Modules.Report.ReportPS
+namespace WFA_APP.View.Modules.Report.Monthly
 {
-    partial class PS
+    partial class MonthlyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,49 +29,22 @@ namespace WFA_APP.View.Modules.Report.ReportPS
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PS));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonthlyForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.WeekPS = new WFA_APP.View.Modules.Report.ReportPS.WeekPS();
-            this.PSReport = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.End = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.Start = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.DataTable1TableAdapter = new WFA_APP.View.Modules.Report.ReportPS.WeekPSTableAdapters.DataTable1TableAdapter();
             this.ShowBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Employee_DataSet = new WFA_APP._Employee_DataSet();
-            this.employeesTableAdapter = new WFA_APP._Employee_DataSetTableAdapters.EmployeesTableAdapter();
-            this.Dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeekPS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataTable1BindingSource
+            // reportViewer1
             // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.WeekPS;
-            // 
-            // WeekPS
-            // 
-            this.WeekPS.DataSetName = "WeekPS";
-            this.WeekPS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // PSReport
-            // 
-            this.PSReport.Dock = System.Windows.Forms.DockStyle.Bottom;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable1BindingSource;
-            this.PSReport.LocalReport.DataSources.Add(reportDataSource1);
-            this.PSReport.LocalReport.ReportEmbeddedResource = "WFA_APP.View.Modules.Report.ReportPS.Report.rdlc";
-            this.PSReport.Location = new System.Drawing.Point(0, 62);
-            this.PSReport.Name = "PSReport";
-            this.PSReport.ServerReport.BearerToken = null;
-            this.PSReport.Size = new System.Drawing.Size(1170, 588);
-            this.PSReport.TabIndex = 0;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 62);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1170, 588);
+            this.reportViewer1.TabIndex = 0;
             // 
             // End
             // 
@@ -96,7 +69,7 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.End.MinimumSize = new System.Drawing.Size(4, 32);
             this.End.Name = "End";
             this.End.Size = new System.Drawing.Size(169, 32);
-            this.End.TabIndex = 5;
+            this.End.TabIndex = 7;
             // 
             // Start
             // 
@@ -121,11 +94,7 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.Start.MinimumSize = new System.Drawing.Size(4, 32);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(169, 32);
-            this.Start.TabIndex = 4;
-            // 
-            // DataTable1TableAdapter
-            // 
-            this.DataTable1TableAdapter.ClearBeforeFill = true;
+            this.Start.TabIndex = 6;
             // 
             // ShowBtn
             // 
@@ -176,7 +145,7 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.ShowBtn.IdleIconLeftImage = null;
             this.ShowBtn.IdleIconRightImage = null;
             this.ShowBtn.IndicateFocus = false;
-            this.ShowBtn.Location = new System.Drawing.Point(536, 12);
+            this.ShowBtn.Location = new System.Drawing.Point(362, 12);
             this.ShowBtn.Name = "ShowBtn";
             this.ShowBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ShowBtn.OnDisabledState.BorderRadius = 1;
@@ -211,108 +180,35 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.ShowBtn.OnPressedState.IconLeftImage = null;
             this.ShowBtn.OnPressedState.IconRightImage = null;
             this.ShowBtn.Size = new System.Drawing.Size(92, 32);
-            this.ShowBtn.TabIndex = 6;
+            this.ShowBtn.TabIndex = 8;
             this.ShowBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ShowBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.ShowBtn.TextMarginLeft = 0;
             this.ShowBtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.ShowBtn.UseDefaultRadiusAndThickness = true;
-            this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
             // 
-            // employeesBindingSource
-            // 
-            this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this._Employee_DataSet;
-            // 
-            // _Employee_DataSet
-            // 
-            this._Employee_DataSet.DataSetName = "_Employee_DataSet";
-            this._Employee_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeesTableAdapter
-            // 
-            this.employeesTableAdapter.ClearBeforeFill = true;
-            // 
-            // Dropdown
-            // 
-            this.Dropdown.BackColor = System.Drawing.Color.Transparent;
-            this.Dropdown.BackgroundColor = System.Drawing.Color.White;
-            this.Dropdown.BorderColor = System.Drawing.Color.Silver;
-            this.Dropdown.BorderRadius = 1;
-            this.Dropdown.Color = System.Drawing.Color.Silver;
-            this.Dropdown.DataSource = this.employeesBindingSource;
-            this.Dropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.Dropdown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Dropdown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.Dropdown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Dropdown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Dropdown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.Dropdown.DisplayMember = "Employee_Name";
-            this.Dropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Dropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.Dropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Dropdown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.Dropdown.FillDropDown = true;
-            this.Dropdown.FillIndicator = false;
-            this.Dropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Dropdown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Dropdown.ForeColor = System.Drawing.Color.Black;
-            this.Dropdown.FormattingEnabled = true;
-            this.Dropdown.Icon = null;
-            this.Dropdown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.Dropdown.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.Dropdown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.Dropdown.IndicatorThickness = 2;
-            this.Dropdown.IsDropdownOpened = false;
-            this.Dropdown.ItemBackColor = System.Drawing.Color.White;
-            this.Dropdown.ItemBorderColor = System.Drawing.Color.White;
-            this.Dropdown.ItemForeColor = System.Drawing.Color.Black;
-            this.Dropdown.ItemHeight = 26;
-            this.Dropdown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.Dropdown.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.Dropdown.ItemTopMargin = 3;
-            this.Dropdown.Location = new System.Drawing.Point(362, 12);
-            this.Dropdown.Name = "Dropdown";
-            this.Dropdown.Size = new System.Drawing.Size(168, 32);
-            this.Dropdown.TabIndex = 7;
-            this.Dropdown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.Dropdown.TextLeftMargin = 5;
-            this.Dropdown.ValueMember = "BiometricID";
-            // 
-            // PS
+            // Monthly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 650);
-            this.Controls.Add(this.Dropdown);
             this.Controls.Add(this.ShowBtn);
             this.Controls.Add(this.End);
             this.Controls.Add(this.Start);
-            this.Controls.Add(this.PSReport);
+            this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PS";
-            this.Text = "PS";
-            this.Load += new System.EventHandler(this.PS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeekPS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).EndInit();
+            this.Name = "Monthly";
+            this.Text = "Monthly";
+            this.Load += new System.EventHandler(this.Monthly_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer PSReport;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private Bunifu.UI.WinForms.BunifuDatePicker End;
         private Bunifu.UI.WinForms.BunifuDatePicker Start;
-        private System.Windows.Forms.BindingSource DataTable1BindingSource;
-        private WeekPS WeekPS;
-        private WeekPSTableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ShowBtn;
-        private _Employee_DataSet _Employee_DataSet;
-        private System.Windows.Forms.BindingSource employeesBindingSource;
-        private _Employee_DataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
-        private Bunifu.UI.WinForms.BunifuDropdown Dropdown;
     }
 }

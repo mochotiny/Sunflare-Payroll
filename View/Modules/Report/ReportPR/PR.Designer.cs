@@ -33,19 +33,32 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PR));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            this.Weekly2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.WeeklyPR = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPR();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Start = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.End = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.ShowBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.Weekly2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.WeeklyPR = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPR();
-            this.WeeklyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.WeeklyTableAdapter = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters.WeeklyTableAdapter();
             this.Weekly2TableAdapter = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters.Weekly2TableAdapter();
+            this.Dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.departmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Department_DataSet = new WFA_APP._Department_DataSet();
+            this.departmentsTableAdapter = new WFA_APP._Department_DataSetTableAdapters.DepartmentsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Weekly2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeeklyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Department_DataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Weekly2BindingSource
+            // 
+            this.Weekly2BindingSource.DataMember = "Weekly2";
+            this.Weekly2BindingSource.DataSource = this.WeeklyPR;
+            // 
+            // WeeklyPR
+            // 
+            this.WeeklyPR.DataSetName = "WeeklyPR";
+            this.WeeklyPR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -107,7 +120,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.End.IconColor = System.Drawing.Color.Gray;
             this.End.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.End.LeftTextMargin = 5;
-            this.End.Location = new System.Drawing.Point(197, 12);
+            this.End.Location = new System.Drawing.Point(187, 12);
             this.End.MinimumSize = new System.Drawing.Size(4, 32);
             this.End.Name = "End";
             this.End.Size = new System.Drawing.Size(169, 32);
@@ -162,7 +175,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.ShowBtn.IdleIconLeftImage = null;
             this.ShowBtn.IdleIconRightImage = null;
             this.ShowBtn.IndicateFocus = false;
-            this.ShowBtn.Location = new System.Drawing.Point(382, 12);
+            this.ShowBtn.Location = new System.Drawing.Point(536, 12);
             this.ShowBtn.Name = "ShowBtn";
             this.ShowBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ShowBtn.OnDisabledState.BorderRadius = 1;
@@ -205,34 +218,77 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.ShowBtn.UseDefaultRadiusAndThickness = true;
             this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
             // 
-            // Weekly2BindingSource
-            // 
-            this.Weekly2BindingSource.DataMember = "Weekly2";
-            this.Weekly2BindingSource.DataSource = this.WeeklyPR;
-            // 
-            // WeeklyPR
-            // 
-            this.WeeklyPR.DataSetName = "WeeklyPR";
-            this.WeeklyPR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // WeeklyBindingSource
-            // 
-            this.WeeklyBindingSource.DataMember = "Weekly";
-            this.WeeklyBindingSource.DataSource = this.WeeklyPR;
-            // 
-            // WeeklyTableAdapter
-            // 
-            this.WeeklyTableAdapter.ClearBeforeFill = true;
-            // 
             // Weekly2TableAdapter
             // 
             this.Weekly2TableAdapter.ClearBeforeFill = true;
+            // 
+            // Dropdown
+            // 
+            this.Dropdown.BackColor = System.Drawing.Color.Transparent;
+            this.Dropdown.BackgroundColor = System.Drawing.Color.White;
+            this.Dropdown.BorderColor = System.Drawing.Color.Silver;
+            this.Dropdown.BorderRadius = 1;
+            this.Dropdown.Color = System.Drawing.Color.Silver;
+            this.Dropdown.DataSource = this.departmentsBindingSource;
+            this.Dropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.Dropdown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Dropdown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.Dropdown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Dropdown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Dropdown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.Dropdown.DisplayMember = "Department_Name";
+            this.Dropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Dropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.Dropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Dropdown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.Dropdown.FillDropDown = true;
+            this.Dropdown.FillIndicator = false;
+            this.Dropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dropdown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Dropdown.ForeColor = System.Drawing.Color.Black;
+            this.Dropdown.FormattingEnabled = true;
+            this.Dropdown.Icon = null;
+            this.Dropdown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.Dropdown.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.Dropdown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.Dropdown.IndicatorThickness = 2;
+            this.Dropdown.IsDropdownOpened = false;
+            this.Dropdown.ItemBackColor = System.Drawing.Color.White;
+            this.Dropdown.ItemBorderColor = System.Drawing.Color.White;
+            this.Dropdown.ItemForeColor = System.Drawing.Color.Black;
+            this.Dropdown.ItemHeight = 26;
+            this.Dropdown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.Dropdown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.Dropdown.ItemTopMargin = 3;
+            this.Dropdown.Location = new System.Drawing.Point(362, 12);
+            this.Dropdown.Name = "Dropdown";
+            this.Dropdown.Size = new System.Drawing.Size(168, 32);
+            this.Dropdown.TabIndex = 8;
+            this.Dropdown.Text = null;
+            this.Dropdown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.Dropdown.TextLeftMargin = 5;
+            this.Dropdown.ValueMember = "Department_Name";
+            // 
+            // departmentsBindingSource
+            // 
+            this.departmentsBindingSource.DataMember = "Departments";
+            this.departmentsBindingSource.DataSource = this._Department_DataSet;
+            // 
+            // _Department_DataSet
+            // 
+            this._Department_DataSet.DataSetName = "_Department_DataSet";
+            this._Department_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // departmentsTableAdapter
+            // 
+            this.departmentsTableAdapter.ClearBeforeFill = true;
             // 
             // PR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 650);
+            this.Controls.Add(this.Dropdown);
             this.Controls.Add(this.ShowBtn);
             this.Controls.Add(this.End);
             this.Controls.Add(this.Start);
@@ -243,7 +299,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Load += new System.EventHandler(this.PR_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Weekly2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeeklyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Department_DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,13 +308,15 @@ namespace WFA_APP.View.Modules.Report.ReportPR
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource WeeklyBindingSource;
         private WeeklyPR WeeklyPR;
-        private WeeklyPRTableAdapters.WeeklyTableAdapter WeeklyTableAdapter;
         private Bunifu.UI.WinForms.BunifuDatePicker Start;
         private Bunifu.UI.WinForms.BunifuDatePicker End;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ShowBtn;
         private System.Windows.Forms.BindingSource Weekly2BindingSource;
         private WeeklyPRTableAdapters.Weekly2TableAdapter Weekly2TableAdapter;
+        private Bunifu.UI.WinForms.BunifuDropdown Dropdown;
+        private _Department_DataSet _Department_DataSet;
+        private System.Windows.Forms.BindingSource departmentsBindingSource;
+        private _Department_DataSetTableAdapters.DepartmentsTableAdapter departmentsTableAdapter;
     }
 }
