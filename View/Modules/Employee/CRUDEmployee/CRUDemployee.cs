@@ -101,7 +101,13 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 cmd.Parameters.AddWithValue("@Weekly", Weekly.Checked);
 
                 cmd.ExecuteNonQuery();
+
+                cmd = new SqlCommand("INSERT INTO Balance (BiometricID, Balance, Pay) VALUES ('" + BioID.Text + "', '" + 0.00 + "', '" + 0.00 + "')", con);
+                cmd.ExecuteNonQuery();
+
                 MessageBox.Show("Saved.");
+
+
 
                 sda = new SqlDataAdapter("SELECT * FROM Employees", con);
                 DataSet ds = new DataSet();
@@ -176,7 +182,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved.");
 
-                sda = new SqlDataAdapter("SELECT * FROM Employees", con);
+                sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID", con);
                 DataSet ds = new DataSet();
                 sda.Fill(ds, "Employees");
                 EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;

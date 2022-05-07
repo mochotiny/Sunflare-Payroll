@@ -32,6 +32,8 @@ namespace WFA_APP.View.App
             home.FormBorderStyle = FormBorderStyle.None;
             this.PanelForm.Controls.Add(home);
             home.Show();
+
+            BtnSetting.Visible = false;
         }
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
@@ -89,6 +91,10 @@ namespace WFA_APP.View.App
             this.PanelForm.Controls.Add(rp);
             rp.Show();
         }
+        private void BtnSetting_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
@@ -96,5 +102,6 @@ namespace WFA_APP.View.App
             LogForm log = new LogForm();
             log.Show();
         }
+
     }
 }

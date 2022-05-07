@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(App));
             this.PanelForm = new Bunifu.UI.WinForms.BunifuPanel();
             this.SidePanelBar = new Bunifu.UI.WinForms.BunifuPanel();
+            this.BtnSetting = new System.Windows.Forms.Button();
             this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnReports = new System.Windows.Forms.Button();
             this.BtnPayroll = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             this.SidePanelBar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(25)))), ((int)(((byte)(35)))));
             this.SidePanelBar.BorderRadius = 3;
             this.SidePanelBar.BorderThickness = 0;
+            this.SidePanelBar.Controls.Add(this.BtnSetting);
             this.SidePanelBar.Controls.Add(this.BtnLogout);
             this.SidePanelBar.Controls.Add(this.BtnReports);
             this.SidePanelBar.Controls.Add(this.BtnPayroll);
@@ -75,6 +77,24 @@
             this.SidePanelBar.ShowBorders = true;
             this.SidePanelBar.Size = new System.Drawing.Size(88, 720);
             this.SidePanelBar.TabIndex = 0;
+            // 
+            // BtnSetting
+            // 
+            this.BtnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(25)))), ((int)(((byte)(35)))));
+            this.BtnSetting.BackgroundImage = global::WFA_APP.Properties.Resources.settings;
+            this.BtnSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSetting.FlatAppearance.BorderSize = 0;
+            this.BtnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSetting.Font = new System.Drawing.Font("Inter Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BtnSetting.Location = new System.Drawing.Point(0, 300);
+            this.BtnSetting.Name = "BtnSetting";
+            this.BtnSetting.Size = new System.Drawing.Size(88, 60);
+            this.BtnSetting.TabIndex = 8;
+            this.BtnSetting.Text = "Settings";
+            this.BtnSetting.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnSetting.UseVisualStyleBackColor = false;
+            this.BtnSetting.Click += new System.EventHandler(this.BtnSetting_Click);
             // 
             // BtnLogout
             // 
@@ -102,7 +122,7 @@
             this.BtnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnReports.Font = new System.Drawing.Font("Inter Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BtnReports.Location = new System.Drawing.Point(-1, 240);
+            this.BtnReports.Location = new System.Drawing.Point(0, 240);
             this.BtnReports.Name = "BtnReports";
             this.BtnReports.Size = new System.Drawing.Size(88, 60);
             this.BtnReports.TabIndex = 6;
@@ -196,7 +216,7 @@
             this.MaximizeBox = false;
             this.Name = "App";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "App";
+            this.Text = "APP";
             this.SidePanelBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -212,5 +232,6 @@
         private System.Windows.Forms.Button BtnEmployee;
         private Bunifu.UI.WinForms.BunifuPanel PanelForm;
         private System.Windows.Forms.Button BtnLogout;
+        private System.Windows.Forms.Button BtnSetting;
     }
 }
