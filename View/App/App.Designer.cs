@@ -81,8 +81,8 @@
             // BtnSetting
             // 
             this.BtnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(25)))), ((int)(((byte)(35)))));
-            this.BtnSetting.BackgroundImage = global::WFA_APP.Properties.Resources.settings;
-            this.BtnSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSetting.BackgroundImage = global::WFA_APP.Properties.Resources._1420666496;
+            this.BtnSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnSetting.FlatAppearance.BorderSize = 0;
             this.BtnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSetting.Font = new System.Drawing.Font("Inter Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,7 +91,7 @@
             this.BtnSetting.Name = "BtnSetting";
             this.BtnSetting.Size = new System.Drawing.Size(88, 60);
             this.BtnSetting.TabIndex = 8;
-            this.BtnSetting.Text = "Settings";
+            this.BtnSetting.Text = "Project";
             this.BtnSetting.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnSetting.UseVisualStyleBackColor = false;
             this.BtnSetting.Click += new System.EventHandler(this.BtnSetting_Click);

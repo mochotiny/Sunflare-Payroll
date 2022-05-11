@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BtnDeleteEmp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnDeleteProj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIMAAAAmCAYAAADnTCg7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVHhe7dwpAcAwAATBakj9K6uACIiAPmRRHWTAoKOL
@@ -126,7 +126,7 @@
         RAxEDEQMRAxEDEQMRAxEDEQMRAxEDEQM5Dv4Wn8DmxljPbP7zzqpVDrBAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="BtnUpdateEmp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnUpdateProj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIMAAAAmCAYAAADnTCg7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVHhe7dIxAcMwAMCwcGowBWYGZDAKYOvlqwyiQ5df
@@ -134,12 +134,40 @@
         mIGYgZiBmIGYgZiBmIGYgZiBmIGYgZiBjLXn/RY4zJ73H2yDlW5eEMz/AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="BtnCreateEmp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnCreateProj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIMAAAAmCAYAAADnTCg7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB9SURBVHhe7dKhAYAwAMAwLtnL8B9n4DdQVXywiKjaHuOa
         97jWYnfz/mb4C+zIDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzE
         DMQMxAzEDMQMxAzEDMQMxAzEDMQM5BjnfP4Cmznn8wJN8vcwRK+OwwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ProjID.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMQAAAAnCAYAAABQdudHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVHhe7dOxDQIxAARB91/Vv1wGZVAALwsHCy14Rrrk
+        8h3Anznn67quj9mpWw3sHMZYB5xsNbBzEAQIAkIQEIKAEASEICAEASEICEFACAJCEBCCgBAEhCAgBAEh
+        CAhBQAgCQhAQgoAQBIQgIAQBIQgIQUAIAkIQEIKAEASEICAEASEICEFACALiJ4j7vt/rMDt1q4GdA/A1
+        xgPmL2vhJiYsnAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ProjName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAZUAAAAnCAYAAADHLtXxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVHhe7dWxDQIxAARB91+VXy6DMigAZMkJqdlwRrrk
+        GtgBAKm11mvO+TEzM7vZ7shJyhj7AIBbuyMnKaICwH9EBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoA
+        ZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGRE
+        BYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMxPVJ7nee/DzMzsZrsjJykAUBjjC7uHmWxyBCI8
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Projectname.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMQAAAAnCAYAAABQdudHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVHhe7dOxDQIxAARB91/Vv1wGZVAALwsHCy14Rrrk
+        8h3Anznn67quj9mpWw3sHMZYB5xsNbBzEAQIAkIQEIKAEASEICAEASEICEFACAJCEBCCgBAEhCAgBAEh
+        CAhBQAgCQhAQgoAQBIQgIAQBIQgIQUAIAkIQEIKAEASEICAEASEICEFACALiJ4j7vt/rMDt1q4GdA/A1
+        xgPmL2vhJiYsnAAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

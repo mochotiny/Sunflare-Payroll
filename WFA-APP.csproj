@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>Payroll App Demo</ProductName>
     <PublisherName>Mocho</PublisherName>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -457,6 +457,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_Job_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_Project_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Project_DataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -670,6 +675,17 @@
     <None Include="_Job_DataSet.xss">
       <DependentUpon>_Job_DataSet.xsd</DependentUpon>
     </None>
+    <None Include="_Project_DataSet.xsc">
+      <DependentUpon>_Project_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Project_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Project_DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Project_DataSet.xss">
+      <DependentUpon>_Project_DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -737,6 +753,7 @@
     <Folder Include="View\Modules\Settings\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1420666496.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

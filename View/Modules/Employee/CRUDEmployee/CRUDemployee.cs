@@ -51,6 +51,8 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
 
         private void CRUDemployee_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.
+            this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
             // TODO: This line of code loads data into the '_Job_DataSet.Jobs' table. You can move, or remove it, as needed.
             this.jobsTableAdapter.Fill(this._Job_DataSet.Jobs);
             // TODO: This line of code loads data into the '_Department_DataSet.Departments' table. You can move, or remove it, as needed.
@@ -84,10 +86,12 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             {
                 con.Open();
                 //cmd = new SqlCommand("INSERT INTO Employees (Biometric_Id, Dept_Name, Contact, Address, Department_Id, Job_Id) VALUES( '" + BioID.Text + "','" + EmpName.Text + "','" + EmpContact.Text + "','" + EmpAddress.Text + "','" + DeptDrop.SelectedValue.ToString() + "','" + JobDrop.SelectedValue.ToString() + "' )", con);
-                
 
-                cmd = new SqlCommand("proc_CreateEmployee", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd = new SqlCommand("proc_CreateEmployee", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 cmd.Parameters.AddWithValue("@BiometricID", BioID.Text);
                 cmd.Parameters.AddWithValue("@EmployeeName", EmpName.Text);
                 cmd.Parameters.AddWithValue("@EmployeeContact", EmpContact.Text);

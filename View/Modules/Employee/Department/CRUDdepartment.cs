@@ -72,8 +72,10 @@ namespace WFA_APP.View.Modules.Department
                 con.Open();
                 //cmd = new SqlCommand("INSERT INTO Employees (Biometric_Id, Dept_Name, Contact, Address, Department_Id, Job_Id) VALUES( '" + BioID.Text + "','" + EmpName.Text + "','" + EmpContact.Text + "','" + EmpAddress.Text + "','" + DeptDrop.SelectedValue.ToString() + "','" + JobDrop.SelectedValue.ToString() + "' )", con);
                 //cmd = new SqlCommand("INSERT INTO Departments (Department_Name) VALUES ("+ DeptName.Text +")", con);
-                cmd = new SqlCommand("proc_CreateDepartment", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd = new SqlCommand("proc_CreateDepartment", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 cmd.Parameters.AddWithValue("@DepartmentName", DeptName.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Created.");
@@ -106,8 +108,10 @@ namespace WFA_APP.View.Modules.Department
             {
                 con.Open();
                 //cmd = new SqlCommand("UPDATE Departments SET Department_Name = '"+ DeptName.Text +"' WHERE DepartmentID = '"+ DeptID.Text +"' ", db.con);
-                cmd = new SqlCommand("proc_UpdateDepartment", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd = new SqlCommand("proc_UpdateDepartment", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 cmd.Parameters.AddWithValue("@DepartmentID", DeptID.Text);
                 cmd.Parameters.AddWithValue("@DepartmentName", DeptName.Text);
 

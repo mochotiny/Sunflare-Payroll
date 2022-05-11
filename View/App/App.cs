@@ -12,6 +12,7 @@ using WFA_APP.View.Modules.Attendance;
 using WFA_APP.View.Modules.Employee;
 using WFA_APP.View.Modules.Home;
 using WFA_APP.View.Modules.Payroll;
+using WFA_APP.View.Modules.Projects;
 using WFA_APP.View.Modules.Report;
 
 namespace WFA_APP.View.App
@@ -33,7 +34,7 @@ namespace WFA_APP.View.App
             this.PanelForm.Controls.Add(home);
             home.Show();
 
-            BtnSetting.Visible = false;
+            
         }
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
@@ -93,7 +94,11 @@ namespace WFA_APP.View.App
         }
         private void BtnSetting_Click(object sender, EventArgs e)
         {
-
+            this.PanelForm.Controls.Clear();
+            FormProject rp = new FormProject() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            rp.FormBorderStyle = FormBorderStyle.None;
+            this.PanelForm.Controls.Add(rp);
+            rp.Show();
         }
 
         private void BtnLogout_Click(object sender, EventArgs e)

@@ -63,6 +63,16 @@ namespace WFA_APP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1420666496 {
+            get {
+                object obj = ResourceManager.GetObject("1420666496", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Attendance {
             get {
                 object obj = ResourceManager.GetObject("Attendance", resourceCulture);
