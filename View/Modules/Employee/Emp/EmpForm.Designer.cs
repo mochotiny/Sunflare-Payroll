@@ -44,10 +44,10 @@
             this.PanelEmp.BorderColor = System.Drawing.Color.Transparent;
             this.PanelEmp.BorderRadius = 25;
             this.PanelEmp.BorderThickness = 1;
-            this.PanelEmp.Location = new System.Drawing.Point(3, 82);
+            this.PanelEmp.Location = new System.Drawing.Point(3, 54);
             this.PanelEmp.Name = "PanelEmp";
             this.PanelEmp.ShowBorders = true;
-            this.PanelEmp.Size = new System.Drawing.Size(1086, 489);
+            this.PanelEmp.Size = new System.Drawing.Size(1164, 586);
             this.PanelEmp.TabIndex = 0;
             // 
             // BtnEmp
@@ -99,7 +99,7 @@
             this.BtnEmp.IdleIconLeftImage = null;
             this.BtnEmp.IdleIconRightImage = null;
             this.BtnEmp.IndicateFocus = false;
-            this.BtnEmp.Location = new System.Drawing.Point(3, 37);
+            this.BtnEmp.Location = new System.Drawing.Point(3, 8);
             this.BtnEmp.Name = "BtnEmp";
             this.BtnEmp.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnEmp.OnDisabledState.BorderRadius = 1;
@@ -191,7 +191,7 @@
             this.BtnAccount.IdleIconLeftImage = null;
             this.BtnAccount.IdleIconRightImage = null;
             this.BtnAccount.IndicateFocus = false;
-            this.BtnAccount.Location = new System.Drawing.Point(109, 37);
+            this.BtnAccount.Location = new System.Drawing.Point(109, 8);
             this.BtnAccount.Name = "BtnAccount";
             this.BtnAccount.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnAccount.OnDisabledState.BorderRadius = 1;
@@ -238,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1092, 575);
+            this.ClientSize = new System.Drawing.Size(1168, 652);
             this.Controls.Add(this.BtnAccount);
             this.Controls.Add(this.BtnEmp);
             this.Controls.Add(this.PanelEmp);

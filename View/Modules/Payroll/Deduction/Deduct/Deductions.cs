@@ -46,7 +46,7 @@ namespace WFA_APP.View.Modules.Payroll.Deduction
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Start", Startat.Value.Date.ToString("dd-MMM-yyyy"));
             cmd.Parameters.AddWithValue("@End", Endat.Value.Date.ToString("dd-MMM-yyyy"));
-
+            cmd.Parameters.AddWithValue("@ProjectID", ProjDrop.SelectedValue.ToString());
             
             cmd.ExecuteNonQuery();
 
@@ -54,6 +54,7 @@ namespace WFA_APP.View.Modules.Payroll.Deduction
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Start", Startat.Value.Date.ToString("dd-MMM-yyyy"));
             cmd.Parameters.AddWithValue("@End", Endat.Value.Date.ToString("dd-MMM-yyyy"));
+            cmd.Parameters.AddWithValue("@ProjectID", ProjDrop.SelectedValue.ToString());
 
             cmd.ExecuteNonQuery();
 
@@ -63,6 +64,13 @@ namespace WFA_APP.View.Modules.Payroll.Deduction
             sda.Fill(ds, "Deductions");
             DeductDgv.DataSource = ds.Tables["Deductions"].DefaultView;
             con.Close();
+        }
+
+        private void Deductions_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.
+            this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
+
         }
     }
 }

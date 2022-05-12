@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,7 +38,13 @@
             this.DeductBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Startat = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.Endat = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.ProjDrop = new Bunifu.UI.WinForms.BunifuDropdown();
+            this._Project_DataSet = new WFA_APP._Project_DataSet();
+            this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectsTableAdapter = new WFA_APP._Project_DataSetTableAdapters.ProjectsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DeductDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DeductDgv
@@ -242,12 +249,74 @@
             this.Endat.Size = new System.Drawing.Size(178, 32);
             this.Endat.TabIndex = 3;
             // 
+            // ProjDrop
+            // 
+            this.ProjDrop.BackColor = System.Drawing.Color.Transparent;
+            this.ProjDrop.BackgroundColor = System.Drawing.Color.White;
+            this.ProjDrop.BorderColor = System.Drawing.Color.Silver;
+            this.ProjDrop.BorderRadius = 1;
+            this.ProjDrop.Color = System.Drawing.Color.Silver;
+            this.ProjDrop.DataSource = this.projectsBindingSource;
+            this.ProjDrop.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.ProjDrop.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ProjDrop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ProjDrop.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ProjDrop.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ProjDrop.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.ProjDrop.DisplayMember = "ProjName";
+            this.ProjDrop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ProjDrop.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.ProjDrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProjDrop.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ProjDrop.FillDropDown = true;
+            this.ProjDrop.FillIndicator = false;
+            this.ProjDrop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjDrop.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ProjDrop.ForeColor = System.Drawing.Color.Black;
+            this.ProjDrop.FormattingEnabled = true;
+            this.ProjDrop.Icon = null;
+            this.ProjDrop.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ProjDrop.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.ProjDrop.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ProjDrop.IndicatorThickness = 2;
+            this.ProjDrop.IsDropdownOpened = false;
+            this.ProjDrop.ItemBackColor = System.Drawing.Color.White;
+            this.ProjDrop.ItemBorderColor = System.Drawing.Color.White;
+            this.ProjDrop.ItemForeColor = System.Drawing.Color.Black;
+            this.ProjDrop.ItemHeight = 26;
+            this.ProjDrop.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.ProjDrop.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.ProjDrop.ItemTopMargin = 3;
+            this.ProjDrop.Location = new System.Drawing.Point(573, 27);
+            this.ProjDrop.Name = "ProjDrop";
+            this.ProjDrop.Size = new System.Drawing.Size(177, 32);
+            this.ProjDrop.TabIndex = 4;
+            this.ProjDrop.Text = null;
+            this.ProjDrop.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ProjDrop.TextLeftMargin = 5;
+            this.ProjDrop.ValueMember = "ProjectID";
+            // 
+            // _Project_DataSet
+            // 
+            this._Project_DataSet.DataSetName = "_Project_DataSet";
+            this._Project_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // projectsBindingSource
+            // 
+            this.projectsBindingSource.DataMember = "Projects";
+            this.projectsBindingSource.DataSource = this._Project_DataSet;
+            // 
+            // projectsTableAdapter
+            // 
+            this.projectsTableAdapter.ClearBeforeFill = true;
+            // 
             // Deductions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1144, 575);
+            this.Controls.Add(this.ProjDrop);
             this.Controls.Add(this.Endat);
             this.Controls.Add(this.Startat);
             this.Controls.Add(this.DeductBtn);
@@ -255,7 +324,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Deductions";
             this.Text = "Deductions";
+            this.Load += new System.EventHandler(this.Deductions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DeductDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,5 +338,9 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton DeductBtn;
         private Bunifu.UI.WinForms.BunifuDatePicker Startat;
         private Bunifu.UI.WinForms.BunifuDatePicker Endat;
+        private Bunifu.UI.WinForms.BunifuDropdown ProjDrop;
+        private _Project_DataSet _Project_DataSet;
+        private System.Windows.Forms.BindingSource projectsBindingSource;
+        private _Project_DataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
     }
 }

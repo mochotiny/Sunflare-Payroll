@@ -61,7 +61,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             {
                 using (db.con)
                 {
-                    sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID", db.con);
+                    sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly, ProjName FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID INNER JOIN Projects AS P ON Employees.ProjectID = P.ProjectID", db.con);
                     DataSet ds = new DataSet();
                     sda.Fill(ds, "Employees");
                     EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;
@@ -84,10 +84,10 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             }
             else
             {
-                con.Open();
+
                 //cmd = new SqlCommand("INSERT INTO Employees (Biometric_Id, Dept_Name, Contact, Address, Department_Id, Job_Id) VALUES( '" + BioID.Text + "','" + EmpName.Text + "','" + EmpContact.Text + "','" + EmpAddress.Text + "','" + DeptDrop.SelectedValue.ToString() + "','" + JobDrop.SelectedValue.ToString() + "' )", con);
 
-
+                con.Open();
                 cmd = new SqlCommand("proc_CreateEmployee", con)
                 {
                     CommandType = CommandType.StoredProcedure
@@ -104,6 +104,8 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 cmd.Parameters.AddWithValue("@SSS", SSS.Checked);
                 cmd.Parameters.AddWithValue("@Weekly", Weekly.Checked);
 
+                cmd.Parameters.AddWithValue("@ProjectID", DropProject.SelectedValue.ToString());
+
                 cmd.ExecuteNonQuery();
 
                 cmd = new SqlCommand("INSERT INTO Balance (BiometricID, Balance, Pay) VALUES ('" + BioID.Text + "', '" + 0.00 + "', '" + 0.00 + "')", con);
@@ -111,20 +113,21 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
 
                 MessageBox.Show("Saved.");
 
-
-
-                sda = new SqlDataAdapter("SELECT * FROM Employees", con);
+                sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly, ProjName FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID INNER JOIN Projects AS P ON Employees.ProjectID = P.ProjectID", con);
                 DataSet ds = new DataSet();
                 sda.Fill(ds, "Employees");
                 EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;
 
                 con.Close();
-                BioID.Clear();
-                EmpName.Clear();
-                EmpContact.Clear();
-                EmpAddress.Clear();
             }
-            
+            BioID.Clear();
+            EmpName.Clear();
+            EmpContact.Clear();
+            EmpAddress.Clear();
+            this.jobsTableAdapter.Fill(this._Job_DataSet.Jobs);
+            this.departmentsTableAdapter.Fill(this._Department_DataSet.Departments);
+            this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
+
         }
 
         private void BioID_KeyPress(object sender, KeyPressEventArgs e)
@@ -151,6 +154,8 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             SSS.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[9].Value);
             Weekly.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[10].Value);
 
+            DropProject.Text = this.EmpDgv.CurrentRow.Cells[11].Value.ToString();
+
             CheckBtn.Visible = true;
         }
 
@@ -158,7 +163,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
             
-            if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "" )
+            if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "" || DropProject.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
                 this.Close();
@@ -183,10 +188,12 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 cmd.Parameters.AddWithValue("@SSS", SSS.Checked);
                 cmd.Parameters.AddWithValue("@Weekly", Weekly.Checked);
 
+                cmd.Parameters.AddWithValue("@ProjectID", DropProject.SelectedValue.ToString());
+
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved.");
 
-                sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID", con);
+                sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly, ProjName FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID INNER JOIN Projects AS P ON Employees.ProjectID = P.ProjectID", con);
                 DataSet ds = new DataSet();
                 sda.Fill(ds, "Employees");
                 EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;

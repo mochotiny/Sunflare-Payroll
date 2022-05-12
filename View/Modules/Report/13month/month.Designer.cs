@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WFA_APP.View.Modules.Report.Monthly {
+namespace WFA_APP.View.Modules.Report._13month {
     
     
     /// <summary>
@@ -2410,7 +2410,7 @@ namespace WFA_APP.View.Modules.Report.Monthly {
         }
     }
 }
-namespace WFA_APP.View.Modules.Report.Monthly.monthTableAdapters {
+namespace WFA_APP.View.Modules.Report._13month.monthTableAdapters {
     
     
     /// <summary>

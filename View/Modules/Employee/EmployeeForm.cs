@@ -29,8 +29,8 @@ namespace WFA_APP.View.Modules.Employee
 
         private void BtnEmployee_Click(object sender, EventArgs e)
         {
-            PanelDeck.Location = new Point (50, 97);
-            PanelDeck.Size = new Size(1092, 2);
+            PanelDeck.Location = new Point (12, 50);
+            PanelDeck.Size = new Size(92, 2);
 
             this.PanelEmployee.Controls.Clear();
             EmpForm emp = new EmpForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -41,8 +41,8 @@ namespace WFA_APP.View.Modules.Employee
 
         private void BtnDepartment_Click(object sender, EventArgs e)
         {
-            PanelDeck.Location = new Point(167, 97);
-            PanelDeck.Size = new Size(975, 2);
+            PanelDeck.Location = new Point(129, 50);
+            PanelDeck.Size = new Size(113, 2);
 
             this.PanelEmployee.Controls.Clear();
             CRUDdepartment dept = new CRUDdepartment() { Dock = DockStyle.Right, TopLevel = false, TopMost = true };
@@ -53,8 +53,8 @@ namespace WFA_APP.View.Modules.Employee
 
         private void BtnJob_Click(object sender, EventArgs e)
         {
-            PanelDeck.Location = new Point(305, 97);
-            PanelDeck.Size = new Size(838, 2);
+            PanelDeck.Location = new Point(267, 50);
+            PanelDeck.Size = new Size(36, 2);
 
             this.PanelEmployee.Controls.Clear();
             CRUDjob job = new CRUDjob() { Dock = DockStyle.Right, TopLevel = false, TopMost = true };

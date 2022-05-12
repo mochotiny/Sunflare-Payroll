@@ -50,6 +50,7 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
             cmd.Parameters.AddWithValue("@PhilHealth", Week_PhilHealth.Checked);
             cmd.Parameters.AddWithValue("@PagIbig", Week_PagIbig.Checked);
             cmd.Parameters.AddWithValue("@SSS", Week_SSS.Checked);
+            cmd.Parameters.AddWithValue("@ProjectID", DropProj.SelectedValue.ToString());
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("Created.");
@@ -83,8 +84,10 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
 
         private void Week_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.
+            this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
             // TODO: This line of code loads data into the '_Holiday_DataSet.TblHoliday' table. You can move, or remove it, as needed.
-            this.tblHolidayTableAdapter.Fill(this._Holiday_DataSet.TblHoliday);
+            //this.tblHolidayTableAdapter.Fill(this._Holiday_DataSet.TblHoliday);
 
 
         }

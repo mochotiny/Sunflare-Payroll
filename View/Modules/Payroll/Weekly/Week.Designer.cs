@@ -45,14 +45,15 @@
             this.SSS = new Bunifu.UI.WinForms.BunifuLabel();
             this.BtnWeeklyPayroll = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.FilterBtn = new Bunifu.UI.WinForms.BunifuLabel();
-            this.tblHolidayBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Holiday_DataSet = new WFA_APP._Holiday_DataSet();
-            this.tblHolidayTableAdapter = new WFA_APP._Holiday_DataSetTableAdapters.TblHolidayTableAdapter();
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
+            this.DropProj = new Bunifu.UI.WinForms.BunifuDropdown();
+            this._Project_DataSet = new WFA_APP._Project_DataSet();
+            this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectsTableAdapter = new WFA_APP._Project_DataSetTableAdapters.ProjectsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.WeekDgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblHolidayBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Holiday_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // WeekDgv
@@ -480,20 +481,6 @@
             this.FilterBtn.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.FilterBtn.Click += new System.EventHandler(this.FilterBtn_Click);
             // 
-            // tblHolidayBindingSource
-            // 
-            this.tblHolidayBindingSource.DataMember = "TblHoliday";
-            this.tblHolidayBindingSource.DataSource = this._Holiday_DataSet;
-            // 
-            // _Holiday_DataSet
-            // 
-            this._Holiday_DataSet.DataSetName = "_Holiday_DataSet";
-            this._Holiday_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblHolidayTableAdapter
-            // 
-            this.tblHolidayTableAdapter.ClearBeforeFill = true;
-            // 
             // DeleteBtn
             // 
             this.DeleteBtn.Image = global::WFA_APP.Properties.Resources.delete;
@@ -505,12 +492,73 @@
             this.DeleteBtn.TabStop = false;
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
+            // DropProj
+            // 
+            this.DropProj.BackColor = System.Drawing.Color.Transparent;
+            this.DropProj.BackgroundColor = System.Drawing.Color.White;
+            this.DropProj.BorderColor = System.Drawing.Color.Silver;
+            this.DropProj.BorderRadius = 1;
+            this.DropProj.Color = System.Drawing.Color.Silver;
+            this.DropProj.DataSource = this.projectsBindingSource;
+            this.DropProj.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.DropProj.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DropProj.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.DropProj.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DropProj.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DropProj.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.DropProj.DisplayMember = "ProjName";
+            this.DropProj.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DropProj.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.DropProj.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DropProj.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DropProj.FillDropDown = true;
+            this.DropProj.FillIndicator = false;
+            this.DropProj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DropProj.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DropProj.ForeColor = System.Drawing.Color.Black;
+            this.DropProj.FormattingEnabled = true;
+            this.DropProj.Icon = null;
+            this.DropProj.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DropProj.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.DropProj.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DropProj.IndicatorThickness = 2;
+            this.DropProj.IsDropdownOpened = false;
+            this.DropProj.ItemBackColor = System.Drawing.Color.White;
+            this.DropProj.ItemBorderColor = System.Drawing.Color.White;
+            this.DropProj.ItemForeColor = System.Drawing.Color.Black;
+            this.DropProj.ItemHeight = 26;
+            this.DropProj.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.DropProj.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.DropProj.ItemTopMargin = 3;
+            this.DropProj.Location = new System.Drawing.Point(717, 43);
+            this.DropProj.Name = "DropProj";
+            this.DropProj.Size = new System.Drawing.Size(200, 32);
+            this.DropProj.TabIndex = 14;
+            this.DropProj.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DropProj.TextLeftMargin = 5;
+            this.DropProj.ValueMember = "ProjectID";
+            // 
+            // _Project_DataSet
+            // 
+            this._Project_DataSet.DataSetName = "_Project_DataSet";
+            this._Project_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // projectsBindingSource
+            // 
+            this.projectsBindingSource.DataMember = "Projects";
+            this.projectsBindingSource.DataSource = this._Project_DataSet;
+            // 
+            // projectsTableAdapter
+            // 
+            this.projectsTableAdapter.ClearBeforeFill = true;
+            // 
             // Week
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1168, 657);
+            this.Controls.Add(this.DropProj);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.FilterBtn);
             this.Controls.Add(this.BtnWeeklyPayroll);
@@ -528,9 +576,9 @@
             this.Text = "Weekly";
             this.Load += new System.EventHandler(this.Week_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WeekDgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblHolidayBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Holiday_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,9 +597,10 @@
         private Bunifu.UI.WinForms.BunifuLabel SSS;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnWeeklyPayroll;
         private Bunifu.UI.WinForms.BunifuLabel FilterBtn;
-        private _Holiday_DataSet _Holiday_DataSet;
-        private System.Windows.Forms.BindingSource tblHolidayBindingSource;
-        private _Holiday_DataSetTableAdapters.TblHolidayTableAdapter tblHolidayTableAdapter;
         private System.Windows.Forms.PictureBox DeleteBtn;
+        private Bunifu.UI.WinForms.BunifuDropdown DropProj;
+        private _Project_DataSet _Project_DataSet;
+        private System.Windows.Forms.BindingSource projectsBindingSource;
+        private _Project_DataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
     }
 }
