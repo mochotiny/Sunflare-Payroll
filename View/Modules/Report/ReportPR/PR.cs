@@ -20,10 +20,13 @@ namespace WFA_APP.View.Modules.Report.ReportPR
 
         private void PR_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.
+            this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
             // TODO: This line of code loads data into the '_Department_DataSet.Departments' table. You can move, or remove it, as needed.
             this.departmentsTableAdapter.Fill(this._Department_DataSet.Departments);
             BtnDepartment.Visible = false;
             Btn3Param.Visible = false;
+            Btn4Params.Visible = false;
 
            
             //this.Weekly2TableAdapter.Fill(this.WeeklyPR.Weekly2);
@@ -39,7 +42,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR
         private void Dropdown_SelectedValueChanged(object sender, EventArgs e)
         {
             BtnDepartment.Visible = true;
-
         }
 
         private void BtnDepartment_Click(object sender, EventArgs e)
@@ -64,6 +66,17 @@ namespace WFA_APP.View.Modules.Report.ReportPR
         {
             this.Weekly2TableAdapter.GetBy3Params(this.WeeklyPR.Weekly2, Start.Value.ToString(), End.Value.ToString(), int.Parse(Dropdown.SelectedValue.ToString()));
             this.reportViewer1.RefreshReport();
+        }
+
+        private void Btn4Params_Click(object sender, EventArgs e)
+        {
+            this.Weekly2TableAdapter.GetBy4Params(this.WeeklyPR.Weekly2, Start.Value.ToString(), End.Value.ToString(), int.Parse(Dropdown.SelectedValue.ToString()), int.Parse(DropProj.SelectedValue.ToString()));
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void DropProj_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Btn4Params.Visible = true;
         }
     }
 }

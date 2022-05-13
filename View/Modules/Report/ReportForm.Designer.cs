@@ -265,7 +265,7 @@
             this.ReportBonus.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.ReportBonus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReportBonus.BackgroundImage")));
             this.ReportBonus.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ReportBonus.ButtonText = "Monthly";
+            this.ReportBonus.ButtonText = "Bonus";
             this.ReportBonus.ButtonTextMarginLeft = 0;
             this.ReportBonus.ColorContrastOnClick = 45;
             this.ReportBonus.ColorContrastOnHover = 45;

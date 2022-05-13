@@ -35,6 +35,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.Weekly2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.WeeklyPR = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPR();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -49,10 +50,17 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.BtnDepartment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Btn3Param = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Check = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.DropProj = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Project_DataSet = new WFA_APP._Project_DataSet();
+            this.projectsTableAdapter = new WFA_APP._Project_DataSetTableAdapters.ProjectsTableAdapter();
+            this.Btn4Params = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.Weekly2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Department_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // Weekly2BindingSource
@@ -180,7 +188,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.ShowBtn.IdleIconLeftImage = null;
             this.ShowBtn.IdleIconRightImage = null;
             this.ShowBtn.IndicateFocus = false;
-            this.ShowBtn.Location = new System.Drawing.Point(536, 12);
+            this.ShowBtn.Location = new System.Drawing.Point(710, 12);
             this.ShowBtn.Name = "ShowBtn";
             this.ShowBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ShowBtn.OnDisabledState.BorderRadius = 1;
@@ -338,7 +346,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.BtnDepartment.IdleIconLeftImage = null;
             this.BtnDepartment.IdleIconRightImage = null;
             this.BtnDepartment.IndicateFocus = false;
-            this.BtnDepartment.Location = new System.Drawing.Point(536, 12);
+            this.BtnDepartment.Location = new System.Drawing.Point(710, 12);
             this.BtnDepartment.Name = "BtnDepartment";
             this.BtnDepartment.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnDepartment.OnDisabledState.BorderRadius = 1;
@@ -430,7 +438,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Btn3Param.IdleIconLeftImage = null;
             this.Btn3Param.IdleIconRightImage = null;
             this.Btn3Param.IndicateFocus = false;
-            this.Btn3Param.Location = new System.Drawing.Point(536, 12);
+            this.Btn3Param.Location = new System.Drawing.Point(710, 12);
             this.Btn3Param.Name = "Btn3Param";
             this.Btn3Param.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Btn3Param.OnDisabledState.BorderRadius = 1;
@@ -491,7 +499,7 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Check.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Check.Cursor = System.Windows.Forms.Cursors.Default;
             this.Check.CustomCheckmarkImage = null;
-            this.Check.Location = new System.Drawing.Point(634, 18);
+            this.Check.Location = new System.Drawing.Point(808, 18);
             this.Check.MinimumSize = new System.Drawing.Size(17, 17);
             this.Check.Name = "Check";
             this.Check.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -527,11 +535,167 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Check.ToolTipText = null;
             this.Check.CheckStateChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.Check_CheckStateChanged);
             // 
+            // DropProj
+            // 
+            this.DropProj.BackColor = System.Drawing.Color.Transparent;
+            this.DropProj.BackgroundColor = System.Drawing.Color.White;
+            this.DropProj.BorderColor = System.Drawing.Color.Silver;
+            this.DropProj.BorderRadius = 1;
+            this.DropProj.Color = System.Drawing.Color.Silver;
+            this.DropProj.DataSource = this.projectsBindingSource;
+            this.DropProj.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.DropProj.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DropProj.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.DropProj.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DropProj.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DropProj.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.DropProj.DisplayMember = "ProjName";
+            this.DropProj.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DropProj.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.DropProj.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DropProj.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DropProj.FillDropDown = true;
+            this.DropProj.FillIndicator = false;
+            this.DropProj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DropProj.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DropProj.ForeColor = System.Drawing.Color.Black;
+            this.DropProj.FormattingEnabled = true;
+            this.DropProj.Icon = null;
+            this.DropProj.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DropProj.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.DropProj.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DropProj.IndicatorThickness = 2;
+            this.DropProj.IsDropdownOpened = false;
+            this.DropProj.ItemBackColor = System.Drawing.Color.White;
+            this.DropProj.ItemBorderColor = System.Drawing.Color.White;
+            this.DropProj.ItemForeColor = System.Drawing.Color.Black;
+            this.DropProj.ItemHeight = 26;
+            this.DropProj.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.DropProj.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.DropProj.ItemTopMargin = 3;
+            this.DropProj.Location = new System.Drawing.Point(534, 12);
+            this.DropProj.Name = "DropProj";
+            this.DropProj.Size = new System.Drawing.Size(168, 32);
+            this.DropProj.TabIndex = 12;
+            this.DropProj.Text = null;
+            this.DropProj.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DropProj.TextLeftMargin = 5;
+            this.DropProj.ValueMember = "ProjectID";
+            this.DropProj.SelectedValueChanged += new System.EventHandler(this.DropProj_SelectedValueChanged);
+            // 
+            // projectsBindingSource
+            // 
+            this.projectsBindingSource.DataMember = "Projects";
+            this.projectsBindingSource.DataSource = this._Project_DataSet;
+            // 
+            // _Project_DataSet
+            // 
+            this._Project_DataSet.DataSetName = "_Project_DataSet";
+            this._Project_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // projectsTableAdapter
+            // 
+            this.projectsTableAdapter.ClearBeforeFill = true;
+            // 
+            // Btn4Params
+            // 
+            this.Btn4Params.AllowAnimations = true;
+            this.Btn4Params.AllowMouseEffects = true;
+            this.Btn4Params.AllowToggling = false;
+            this.Btn4Params.AnimationSpeed = 200;
+            this.Btn4Params.AutoGenerateColors = false;
+            this.Btn4Params.AutoRoundBorders = false;
+            this.Btn4Params.AutoSizeLeftIcon = true;
+            this.Btn4Params.AutoSizeRightIcon = true;
+            this.Btn4Params.BackColor = System.Drawing.Color.Transparent;
+            this.Btn4Params.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.Btn4Params.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn4Params.BackgroundImage")));
+            this.Btn4Params.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Btn4Params.ButtonText = "Show";
+            this.Btn4Params.ButtonTextMarginLeft = 0;
+            this.Btn4Params.ColorContrastOnClick = 45;
+            this.Btn4Params.ColorContrastOnHover = 45;
+            this.Btn4Params.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.Btn4Params.CustomizableEdges = borderEdges4;
+            this.Btn4Params.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Btn4Params.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.Btn4Params.DisabledFillColor = System.Drawing.Color.Empty;
+            this.Btn4Params.DisabledForecolor = System.Drawing.Color.Empty;
+            this.Btn4Params.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.Btn4Params.Font = new System.Drawing.Font("Inter", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn4Params.ForeColor = System.Drawing.Color.White;
+            this.Btn4Params.IconLeft = null;
+            this.Btn4Params.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn4Params.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.Btn4Params.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.Btn4Params.IconMarginLeft = 11;
+            this.Btn4Params.IconPadding = 10;
+            this.Btn4Params.IconRight = null;
+            this.Btn4Params.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Btn4Params.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.Btn4Params.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.Btn4Params.IconSize = 25;
+            this.Btn4Params.IdleBorderColor = System.Drawing.Color.Empty;
+            this.Btn4Params.IdleBorderRadius = 0;
+            this.Btn4Params.IdleBorderThickness = 0;
+            this.Btn4Params.IdleFillColor = System.Drawing.Color.Empty;
+            this.Btn4Params.IdleIconLeftImage = null;
+            this.Btn4Params.IdleIconRightImage = null;
+            this.Btn4Params.IndicateFocus = false;
+            this.Btn4Params.Location = new System.Drawing.Point(710, 12);
+            this.Btn4Params.Name = "Btn4Params";
+            this.Btn4Params.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.Btn4Params.OnDisabledState.BorderRadius = 1;
+            this.Btn4Params.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Btn4Params.OnDisabledState.BorderThickness = 1;
+            this.Btn4Params.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.Btn4Params.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.Btn4Params.OnDisabledState.IconLeftImage = null;
+            this.Btn4Params.OnDisabledState.IconRightImage = null;
+            this.Btn4Params.onHoverState.BorderColor = System.Drawing.Color.DarkCyan;
+            this.Btn4Params.onHoverState.BorderRadius = 1;
+            this.Btn4Params.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Btn4Params.onHoverState.BorderThickness = 1;
+            this.Btn4Params.onHoverState.FillColor = System.Drawing.Color.DarkCyan;
+            this.Btn4Params.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.Btn4Params.onHoverState.IconLeftImage = null;
+            this.Btn4Params.onHoverState.IconRightImage = null;
+            this.Btn4Params.OnIdleState.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.Btn4Params.OnIdleState.BorderRadius = 1;
+            this.Btn4Params.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Btn4Params.OnIdleState.BorderThickness = 1;
+            this.Btn4Params.OnIdleState.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.Btn4Params.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.Btn4Params.OnIdleState.IconLeftImage = null;
+            this.Btn4Params.OnIdleState.IconRightImage = null;
+            this.Btn4Params.OnPressedState.BorderColor = System.Drawing.Color.DimGray;
+            this.Btn4Params.OnPressedState.BorderRadius = 1;
+            this.Btn4Params.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Btn4Params.OnPressedState.BorderThickness = 1;
+            this.Btn4Params.OnPressedState.FillColor = System.Drawing.Color.DimGray;
+            this.Btn4Params.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.Btn4Params.OnPressedState.IconLeftImage = null;
+            this.Btn4Params.OnPressedState.IconRightImage = null;
+            this.Btn4Params.Size = new System.Drawing.Size(92, 32);
+            this.Btn4Params.TabIndex = 13;
+            this.Btn4Params.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Btn4Params.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btn4Params.TextMarginLeft = 0;
+            this.Btn4Params.TextPadding = new System.Windows.Forms.Padding(0);
+            this.Btn4Params.UseDefaultRadiusAndThickness = true;
+            this.Btn4Params.Click += new System.EventHandler(this.Btn4Params_Click);
+            // 
             // PR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 650);
+            this.Controls.Add(this.Btn4Params);
+            this.Controls.Add(this.DropProj);
             this.Controls.Add(this.Check);
             this.Controls.Add(this.Btn3Param);
             this.Controls.Add(this.BtnDepartment);
@@ -548,6 +712,8 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Department_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -568,5 +734,10 @@ namespace WFA_APP.View.Modules.Report.ReportPR
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnDepartment;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Btn3Param;
         private Bunifu.UI.WinForms.BunifuCheckBox Check;
+        private Bunifu.UI.WinForms.BunifuDropdown DropProj;
+        private _Project_DataSet _Project_DataSet;
+        private System.Windows.Forms.BindingSource projectsBindingSource;
+        private _Project_DataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton Btn4Params;
     }
 }
