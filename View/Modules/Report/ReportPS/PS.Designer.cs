@@ -263,6 +263,7 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.Dropdown.IndicatorColor = System.Drawing.Color.DarkGray;
             this.Dropdown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
             this.Dropdown.IndicatorThickness = 2;
+            this.Dropdown.IntegralHeight = false;
             this.Dropdown.IsDropdownOpened = false;
             this.Dropdown.ItemBackColor = System.Drawing.Color.White;
             this.Dropdown.ItemBorderColor = System.Drawing.Color.White;
@@ -272,9 +273,11 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.Dropdown.ItemHighLightForeColor = System.Drawing.Color.White;
             this.Dropdown.ItemTopMargin = 3;
             this.Dropdown.Location = new System.Drawing.Point(362, 12);
+            this.Dropdown.MaxDropDownItems = 15;
             this.Dropdown.Name = "Dropdown";
             this.Dropdown.Size = new System.Drawing.Size(168, 32);
             this.Dropdown.TabIndex = 7;
+            this.Dropdown.Text = null;
             this.Dropdown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.Dropdown.TextLeftMargin = 5;
             this.Dropdown.ValueMember = "BiometricID";

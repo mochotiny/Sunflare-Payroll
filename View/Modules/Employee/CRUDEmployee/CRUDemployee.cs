@@ -13,10 +13,10 @@ using WFA_APP.DB;
 
 namespace WFA_APP.View.Modules.Employee.CRUDEmployee
 {
-    
+
     public partial class CRUDemployee : Form
     {
-        Connection db = new Connection();
+        readonly Connection db = new Connection();
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
 
@@ -76,11 +76,11 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
         private void BtnCreateEmp_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
-            
+
             if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
-                
+
             }
             else
             {
@@ -140,14 +140,14 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
 
         private void BtnUpdateEmp_Click(object sender, EventArgs e)
         {
-           
+
             BioID.Text = this.EmpDgv.CurrentRow.Cells[1].Value.ToString();
             EmpName.Text = this.EmpDgv.CurrentRow.Cells[2].Value.ToString();
             EmpContact.Text = this.EmpDgv.CurrentRow.Cells[3].Value.ToString();
             EmpAddress.Text = this.EmpDgv.CurrentRow.Cells[4].Value.ToString();
             DeptDrop.Text = this.EmpDgv.CurrentRow.Cells[5].Value.ToString();
             JobDrop.Text = this.EmpDgv.CurrentRow.Cells[6].Value.ToString();
-            
+
 
             PhilHealth.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[7].Value);
             PagIbig.Checked = Convert.ToBoolean(this.EmpDgv.CurrentRow.Cells[8].Value);
@@ -162,7 +162,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
         private void CheckBtn_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
-            
+
             if (BioID.Text == "" || EmpName.Text == "" || EmpAddress.Text == "" || EmpContact.Text == "" || DeptDrop.Text == "" || JobDrop.Text == "" || DropProject.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
@@ -172,9 +172,11 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
             {
                 con.Open();
                 //cmd = new SqlCommand("UPDATE Employees SET (Biometric_Id, Employee_Name, Employee_Contact, Employee_Address, DepartmentID, JobID) VALUES ( '" + BioID.Text + "','" + EmpName.Text + "','" + EmpContact.Text + "','" + EmpAddress.Text + "','" + DeptDrop.SelectedValue.ToString() + "','" + JobDrop.SelectedValue.ToString() + "' )", con);
-                
-                cmd = new SqlCommand("proc_UpdateEmployee", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd = new SqlCommand("proc_UpdateEmployee", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 cmd.Parameters.AddWithValue("@EmployeeId", EmpDgv.CurrentRow.Cells[0].Value.ToString());
                 cmd.Parameters.AddWithValue("@BiometricId", BioID.Text);
                 cmd.Parameters.AddWithValue("@EmployeeName", EmpName.Text);
@@ -182,7 +184,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 cmd.Parameters.AddWithValue("@EmployeeAddress", EmpAddress.Text);
                 cmd.Parameters.AddWithValue("@DepartmentId", DeptDrop.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@JobID", JobDrop.SelectedValue.ToString());
-                
+
                 cmd.Parameters.AddWithValue("@PhilHealth", PhilHealth.Checked);
                 cmd.Parameters.AddWithValue("@PagIbig", PagIbig.Checked);
                 cmd.Parameters.AddWithValue("@SSS", SSS.Checked);
@@ -199,7 +201,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
                 EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;
 
                 con.Close();
-                
+
             }
             CheckBtn.Visible = false;
             BioID.Clear();
@@ -221,51 +223,62 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
             try
+            {
+                if (EmpDgv.Rows.Count > 1)
                 {
-                    if (EmpDgv.Rows.Count > 1)
+                    if (EmpDgv.CurrentRow.Index == EmpDgv.Rows.Count - 1)
                     {
-                        if (EmpDgv.CurrentRow.Index == EmpDgv.Rows.Count - 1)
-                        {
-                            MessageBox.Show("Please select data to be deleted.");
-                        }
-                        else
-                        {
-                            if (MessageBox.Show("Do you want to delete this data?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                            {
-                                string del = EmpDgv.CurrentRow.Cells[0].Value.ToString();
-                                con.Open();
-                                cmd = new SqlCommand("DELETE FROM Employees WHERE EmployeeID = '" + del + "' ", con);
-                                cmd.ExecuteNonQuery();
-                                MessageBox.Show("Data has been deleted");
-
-
-                                string query = "SELECT * FROM Employees";
-                                SqlDataAdapter da = new SqlDataAdapter(query, con);
-                                DataSet ds = new DataSet();
-                                da.Fill(ds, "Employees");
-                                EmpDgv.DataSource = ds;
-                                EmpDgv.DataMember = "Employees";
-                                EmpDgv.DataSource = EmpDgv.DataSource;
-                                con.Close();
-                                BioID.Clear();
-                                this.Refresh();
-                                DeleteBtn.Visible = false;
-                            }
-
-                        }
-
-
+                        MessageBox.Show("Please select data to be deleted.");
                     }
                     else
                     {
-                        MessageBox.Show("No more data to be deleted");
+                        if (MessageBox.Show("Do you want to delete this data?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                        {
+                            string del = EmpDgv.CurrentRow.Cells[0].Value.ToString();
+                            con.Open();
+                            cmd = new SqlCommand("DELETE FROM Employees WHERE EmployeeID = '" + del + "' ", con);
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Data has been deleted");
+
+
+                            string query = "SELECT * FROM Employees";
+                            SqlDataAdapter da = new SqlDataAdapter(query, con);
+                            DataSet ds = new DataSet();
+                            da.Fill(ds, "Employees");
+                            EmpDgv.DataSource = ds;
+                            EmpDgv.DataMember = "Employees";
+                            EmpDgv.DataSource = EmpDgv.DataSource;
+                            con.Close();
+                            BioID.Clear();
+                            this.Refresh();
+                            DeleteBtn.Visible = false;
+                        }
+
                     }
+
+
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("No more data to be deleted");
                 }
-            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void FilterLabel_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+            con.Open();
+
+            sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly, ProjName FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID INNER JOIN Projects AS P ON Employees.ProjectID = P.ProjectID WHERE Department_Name = '"+FilterDrop.SelectedValue.ToString()+"'", con);
+            DataSet ds = new DataSet();
+            sda.Fill(ds, "Employees");
+            EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;
         }
     }
 }

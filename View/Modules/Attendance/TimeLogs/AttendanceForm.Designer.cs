@@ -142,6 +142,7 @@
             this.EmpDrop.IndicatorColor = System.Drawing.Color.DarkGray;
             this.EmpDrop.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
             this.EmpDrop.IndicatorThickness = 2;
+            this.EmpDrop.IntegralHeight = false;
             this.EmpDrop.IsDropdownOpened = false;
             this.EmpDrop.ItemBackColor = System.Drawing.Color.White;
             this.EmpDrop.ItemBorderColor = System.Drawing.Color.White;
@@ -151,6 +152,7 @@
             this.EmpDrop.ItemHighLightForeColor = System.Drawing.Color.White;
             this.EmpDrop.ItemTopMargin = 3;
             this.EmpDrop.Location = new System.Drawing.Point(12, 72);
+            this.EmpDrop.MaxDropDownItems = 15;
             this.EmpDrop.Name = "EmpDrop";
             this.EmpDrop.Size = new System.Drawing.Size(260, 32);
             this.EmpDrop.TabIndex = 1;
