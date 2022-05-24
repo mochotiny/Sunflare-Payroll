@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using WFA_APP.DB;
 
 namespace WFA_APP.View.Modules.Employee.Account
 {
     public partial class AccountForm : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+        //readonly Connection db = new Connection();
+        SqlConnection con = new SqlConnection(DbConnection.Connect());
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
 
@@ -77,7 +79,6 @@ namespace WFA_APP.View.Modules.Employee.Account
 
         private void CheckBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
             if (EmpDrop.Text == "" || CA.Text == "" || Pay.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
@@ -90,16 +91,13 @@ namespace WFA_APP.View.Modules.Employee.Account
                 MessageBox.Show("Updated.");
                 this.Refresh();
                 con.Close();
-                CheckBtn.Visible=false;
+                CheckBtn.Visible = false;
 
                 sda = new SqlDataAdapter("SELECT E.Employee_Name, Balance, Pay FROM Balance INNER JOIN Employees AS E ON Balance.BiometricID = E.BiometricID", con);
                 DataSet ds = new DataSet();
                 sda.Fill(ds, "Balance");
                 AccountDgv.DataSource = ds.Tables["Balance"].DefaultView;
             }
-
         }
-
-       
     }
 }

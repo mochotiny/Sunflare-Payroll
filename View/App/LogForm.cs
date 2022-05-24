@@ -16,7 +16,8 @@ namespace WFA_APP.View.App
 {
     public partial class LogForm : Form
     {
-        Connection mycon = new Connection();
+        //Connection mycon = new Connection();
+        SqlConnection con = new SqlConnection(DbConnection.Connect());
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -55,11 +56,11 @@ namespace WFA_APP.View.App
             //}          
             try
             {
-                using (mycon.con)
+                using (con)
                 {
-                    SqlCommand cmd = new SqlCommand("proc_Login", mycon.con);
+                    SqlCommand cmd = new SqlCommand("proc_Login", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    mycon.con.Open();
+                    con.Open();
                     cmd.Parameters.AddWithValue("@Uname", User_TB.Text);
                     cmd.Parameters.AddWithValue("@Upass", Pass_TB.Text);
 

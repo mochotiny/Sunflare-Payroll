@@ -15,9 +15,9 @@ namespace WFA_APP.View.Modules.Attendance
 {
     public partial class AttendanceForm : Form
     {
-        Connection db = new Connection();
+        //Connection db = new Connection();
         SqlDataAdapter sda = new SqlDataAdapter();
-        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+        SqlConnection con = new SqlConnection(DbConnection.Connect());
 
         public AttendancePresenter Presenter { get; set; }
         public AttendanceForm()
@@ -35,9 +35,9 @@ namespace WFA_APP.View.Modules.Attendance
 
         void FillData()
         {
-            using (db.con)
+            using (con)
             {
-                sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BioID", db.con);
+                sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BioID", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 AttDgv.DataSource = dt;
@@ -46,16 +46,15 @@ namespace WFA_APP.View.Modules.Attendance
         }
         void FilterData()
         {
-            connect = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
-            connect.Open();
+            con.Open();
             string sql = ("SELECT AttendanceID, BioID, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances WHERE BioID = @EmployeeId AND WorkedDay BETWEEN @Start AND @End");
             DataTable dt = new DataTable();
-            SqlDataAdapter sda = new SqlDataAdapter(sql, connect);
+            SqlDataAdapter sda = new SqlDataAdapter(sql, con);
             sda.SelectCommand.Parameters.AddWithValue("@EmployeeId", EmpDrop.SelectedValue.ToString());
             sda.SelectCommand.Parameters.AddWithValue("@Start", StartAt.Value.Date);
             sda.SelectCommand.Parameters.AddWithValue("@End", EndAt.Value.Date);
             sda.Fill(dt);
-            connect.Close();
+            con.Close();
             AttDgv.DataSource = dt;
             this.Refresh();
             
@@ -86,8 +85,8 @@ namespace WFA_APP.View.Modules.Attendance
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            connect = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
-            sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BioID", connect);
+           
+            sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BioID", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             AttDgv.DataSource = dt;

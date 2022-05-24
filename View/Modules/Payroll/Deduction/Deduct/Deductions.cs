@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using WFA_APP.DB;
 
 namespace WFA_APP.View.Modules.Payroll.Deduction
 {
     public partial class Deductions : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+        SqlConnection con = new SqlConnection(DbConnection.Connect());
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
 
@@ -68,9 +69,10 @@ namespace WFA_APP.View.Modules.Payroll.Deduction
 
         private void Deductions_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_Project_Dataset.Projects' table. You can move, or remove it, as needed.
+            //this.projectsTableAdapter1.Fill(this.dB_Project_Dataset.Projects);
             // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.
-            this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
-
+            //this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
         }
     }
 }

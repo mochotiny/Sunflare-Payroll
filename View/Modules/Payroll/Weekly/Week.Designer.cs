@@ -47,13 +47,22 @@
             this.FilterBtn = new Bunifu.UI.WinForms.BunifuLabel();
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
             this.DropProj = new Bunifu.UI.WinForms.BunifuDropdown();
-            this._Project_DataSet = new WFA_APP._Project_DataSet();
             this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Project_DataSet = new WFA_APP._Project_DataSet();
             this.projectsTableAdapter = new WFA_APP._Project_DataSetTableAdapters.ProjectsTableAdapter();
+            //this.dB_Project_Dataset = new WFA_APP.DB_Project_Dataset();
+            this.projectsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            //this.projectsTableAdapter1 = new WFA_APP.DB_Project_DatasetTableAdapters.ProjectsTableAdapter();
+            this.projectsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.IsWeekly = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.LabelWeek = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.WeekDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.dB_Project_Dataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // WeekDgv
@@ -185,7 +194,7 @@
             this.Week_PhilHealth.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Week_PhilHealth.Cursor = System.Windows.Forms.Cursors.Default;
             this.Week_PhilHealth.CustomCheckmarkImage = null;
-            this.Week_PhilHealth.Location = new System.Drawing.Point(438, 49);
+            this.Week_PhilHealth.Location = new System.Drawing.Point(422, 49);
             this.Week_PhilHealth.MinimumSize = new System.Drawing.Size(17, 17);
             this.Week_PhilHealth.Name = "Week_PhilHealth";
             this.Week_PhilHealth.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -238,7 +247,7 @@
             this.Week_PagIbig.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Week_PagIbig.Cursor = System.Windows.Forms.Cursors.Default;
             this.Week_PagIbig.CustomCheckmarkImage = null;
-            this.Week_PagIbig.Location = new System.Drawing.Point(530, 49);
+            this.Week_PagIbig.Location = new System.Drawing.Point(514, 49);
             this.Week_PagIbig.MinimumSize = new System.Drawing.Size(17, 17);
             this.Week_PagIbig.Name = "Week_PagIbig";
             this.Week_PagIbig.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -291,7 +300,7 @@
             this.Week_SSS.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.Week_SSS.Cursor = System.Windows.Forms.Cursors.Default;
             this.Week_SSS.CustomCheckmarkImage = null;
-            this.Week_SSS.Location = new System.Drawing.Point(622, 49);
+            this.Week_SSS.Location = new System.Drawing.Point(588, 49);
             this.Week_SSS.MinimumSize = new System.Drawing.Size(17, 17);
             this.Week_SSS.Name = "Week_SSS";
             this.Week_SSS.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -333,7 +342,7 @@
             this.PhilHealth.Cursor = System.Windows.Forms.Cursors.Default;
             this.PhilHealth.CursorType = System.Windows.Forms.Cursors.Default;
             this.PhilHealth.Font = new System.Drawing.Font("Inter", 9.75F);
-            this.PhilHealth.Location = new System.Drawing.Point(462, 52);
+            this.PhilHealth.Location = new System.Drawing.Point(446, 52);
             this.PhilHealth.Name = "PhilHealth";
             this.PhilHealth.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PhilHealth.Size = new System.Drawing.Size(63, 16);
@@ -348,7 +357,7 @@
             this.PagIbig.AutoEllipsis = false;
             this.PagIbig.CursorType = null;
             this.PagIbig.Font = new System.Drawing.Font("Inter", 9.75F);
-            this.PagIbig.Location = new System.Drawing.Point(554, 52);
+            this.PagIbig.Location = new System.Drawing.Point(538, 52);
             this.PagIbig.Name = "PagIbig";
             this.PagIbig.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PagIbig.Size = new System.Drawing.Size(45, 16);
@@ -363,7 +372,7 @@
             this.SSS.AutoEllipsis = false;
             this.SSS.CursorType = null;
             this.SSS.Font = new System.Drawing.Font("Inter", 9.75F);
-            this.SSS.Location = new System.Drawing.Point(646, 52);
+            this.SSS.Location = new System.Drawing.Point(612, 52);
             this.SSS.Name = "SSS";
             this.SSS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SSS.Size = new System.Drawing.Size(24, 16);
@@ -499,7 +508,7 @@
             this.DropProj.BorderColor = System.Drawing.Color.Silver;
             this.DropProj.BorderRadius = 1;
             this.DropProj.Color = System.Drawing.Color.Silver;
-            this.DropProj.DataSource = this.projectsBindingSource;
+            this.DropProj.DataSource = this.projectsBindingSource2;
             this.DropProj.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.DropProj.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DropProj.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -534,23 +543,111 @@
             this.DropProj.Name = "DropProj";
             this.DropProj.Size = new System.Drawing.Size(200, 32);
             this.DropProj.TabIndex = 14;
+            this.DropProj.Text = null;
             this.DropProj.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.DropProj.TextLeftMargin = 5;
             this.DropProj.ValueMember = "ProjectID";
-            // 
-            // _Project_DataSet
-            // 
-            this._Project_DataSet.DataSetName = "_Project_DataSet";
-            this._Project_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // projectsBindingSource
             // 
             this.projectsBindingSource.DataMember = "Projects";
             this.projectsBindingSource.DataSource = this._Project_DataSet;
             // 
+            // _Project_DataSet
+            // 
+            this._Project_DataSet.DataSetName = "_Project_DataSet";
+            this._Project_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // projectsTableAdapter
             // 
             this.projectsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dB_Project_Dataset
+            // 
+            //this.dB_Project_Dataset.DataSetName = "DB_Project_Dataset";
+            //this.dB_Project_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // projectsBindingSource1
+            // 
+            this.projectsBindingSource1.DataMember = "Projects";
+            //this.projectsBindingSource1.DataSource = this.dB_Project_Dataset;
+            // 
+            // projectsTableAdapter1
+            // 
+            //this.projectsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // projectsBindingSource2
+            // 
+            this.projectsBindingSource2.DataMember = "Projects";
+            //this.projectsBindingSource2.DataSource = this.dB_Project_Dataset;
+            // 
+            // IsWeekly
+            // 
+            this.IsWeekly.AllowBindingControlAnimation = true;
+            this.IsWeekly.AllowBindingControlColorChanges = false;
+            this.IsWeekly.AllowBindingControlLocation = true;
+            this.IsWeekly.AllowCheckBoxAnimation = false;
+            this.IsWeekly.AllowCheckmarkAnimation = true;
+            this.IsWeekly.AllowOnHoverStates = true;
+            this.IsWeekly.AutoCheck = true;
+            this.IsWeekly.BackColor = System.Drawing.Color.Transparent;
+            this.IsWeekly.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IsWeekly.BackgroundImage")));
+            this.IsWeekly.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IsWeekly.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.IsWeekly.BorderRadius = 12;
+            this.IsWeekly.Checked = false;
+            this.IsWeekly.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.IsWeekly.Cursor = System.Windows.Forms.Cursors.Default;
+            this.IsWeekly.CustomCheckmarkImage = null;
+            this.IsWeekly.Location = new System.Drawing.Point(650, 49);
+            this.IsWeekly.MinimumSize = new System.Drawing.Size(17, 17);
+            this.IsWeekly.Name = "IsWeekly";
+            this.IsWeekly.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.IsWeekly.OnCheck.BorderRadius = 12;
+            this.IsWeekly.OnCheck.BorderThickness = 2;
+            this.IsWeekly.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.IsWeekly.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.IsWeekly.OnCheck.CheckmarkThickness = 2;
+            this.IsWeekly.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.IsWeekly.OnDisable.BorderRadius = 12;
+            this.IsWeekly.OnDisable.BorderThickness = 2;
+            this.IsWeekly.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.IsWeekly.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.IsWeekly.OnDisable.CheckmarkThickness = 2;
+            this.IsWeekly.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.IsWeekly.OnHoverChecked.BorderRadius = 12;
+            this.IsWeekly.OnHoverChecked.BorderThickness = 2;
+            this.IsWeekly.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.IsWeekly.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.IsWeekly.OnHoverChecked.CheckmarkThickness = 2;
+            this.IsWeekly.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.IsWeekly.OnHoverUnchecked.BorderRadius = 12;
+            this.IsWeekly.OnHoverUnchecked.BorderThickness = 1;
+            this.IsWeekly.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.IsWeekly.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.IsWeekly.OnUncheck.BorderRadius = 12;
+            this.IsWeekly.OnUncheck.BorderThickness = 1;
+            this.IsWeekly.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.IsWeekly.Size = new System.Drawing.Size(21, 21);
+            this.IsWeekly.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.IsWeekly.TabIndex = 15;
+            this.IsWeekly.ThreeState = false;
+            this.IsWeekly.ToolTipText = null;
+            // 
+            // LabelWeek
+            // 
+            this.LabelWeek.AllowParentOverrides = false;
+            this.LabelWeek.AutoEllipsis = false;
+            this.LabelWeek.CursorType = null;
+            this.LabelWeek.Font = new System.Drawing.Font("Inter", 9.75F);
+            this.LabelWeek.Location = new System.Drawing.Point(677, 52);
+            this.LabelWeek.Name = "LabelWeek";
+            this.LabelWeek.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelWeek.Size = new System.Drawing.Size(35, 16);
+            this.LabelWeek.TabIndex = 16;
+            this.LabelWeek.Text = "Week";
+            this.LabelWeek.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelWeek.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // Week
             // 
@@ -558,6 +655,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1168, 657);
+            this.Controls.Add(this.LabelWeek);
+            this.Controls.Add(this.IsWeekly);
             this.Controls.Add(this.DropProj);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.FilterBtn);
@@ -577,8 +676,11 @@
             this.Load += new System.EventHandler(this.Week_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WeekDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.dB_Project_Dataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -602,5 +704,11 @@
         private _Project_DataSet _Project_DataSet;
         private System.Windows.Forms.BindingSource projectsBindingSource;
         private _Project_DataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
+        //private DB_Project_Dataset dB_Project_Dataset;
+        private System.Windows.Forms.BindingSource projectsBindingSource1;
+        //private DB_Project_DatasetTableAdapters.ProjectsTableAdapter projectsTableAdapter1;
+        private System.Windows.Forms.BindingSource projectsBindingSource2;
+        private Bunifu.UI.WinForms.BunifuCheckBox IsWeekly;
+        private Bunifu.UI.WinForms.BunifuLabel LabelWeek;
     }
 }

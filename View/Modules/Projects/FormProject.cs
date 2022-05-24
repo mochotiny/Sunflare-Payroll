@@ -25,8 +25,8 @@ namespace WFA_APP.View.Modules.Projects
             int nWidthEllipse,
             int nHeightEllipse
         );
-        Connection db = new Connection();
-        
+        //Connection db = new Connection();
+        SqlConnection con = new SqlConnection(DbConnection.Connect());
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
         public FormProject()
@@ -40,9 +40,9 @@ namespace WFA_APP.View.Modules.Projects
         {
             try
             {
-                using (db.con)
+                using (con)
                 {
-                    sda = new SqlDataAdapter("SELECT * FROM Projects", db.con);
+                    sda = new SqlDataAdapter("SELECT * FROM Projects", con);
                     DataSet ds = new DataSet();
                     sda.Fill(ds, "Projects");
                     ProjectDgv.DataSource = ds.Tables["Projects"].DefaultView;
@@ -56,8 +56,7 @@ namespace WFA_APP.View.Modules.Projects
 
         private void BtnCreateProj_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
-          
+
             if (ProjName.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
@@ -97,7 +96,6 @@ namespace WFA_APP.View.Modules.Projects
         }
         private void CheckBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
             if (ProjID.Text == "" || Projectname.Text == "")
             {
                 MessageBox.Show("Fill up all fields");
@@ -138,7 +136,7 @@ namespace WFA_APP.View.Modules.Projects
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+            
             try
             {
                 if (ProjectDgv.Rows.Count > 1)

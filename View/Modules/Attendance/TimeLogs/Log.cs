@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using WFA_APP.DB;
 
 namespace WFA_APP.View.Modules.Attendance
 {
     public partial class Log : Form
     {
-        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+        SqlConnection con = new SqlConnection(DbConnection.Connect());
         SqlCommand cmd = new SqlCommand();
         public Log()
         {
@@ -34,14 +35,14 @@ namespace WFA_APP.View.Modules.Attendance
 
         private void PunchLog_Click(object sender, EventArgs e)
         {
-            connect.Open();
+            con.Open();
             //payrollVB
-            cmd = new SqlCommand(" INSERT INTO Attendances (BioID, WorkedDay, StartAt, EndAt, NoOfOvertime) VALUES ('" + EmpDrop.SelectedValue.ToString() + "', '" + DayWork.Value.Date.ToString("dd-MMM-yyyy") + "', '" + TimeIn.Value.ToString("HH:mm") + "', '" + TimeOut.Value.ToString("HH:mm") + "', '"+ Overtime.Text.ToString() +"' ) ", connect);
+            cmd = new SqlCommand(" INSERT INTO Attendances (BioID, WorkedDay, StartAt, EndAt, NoOfOvertime) VALUES ('" + EmpDrop.SelectedValue.ToString() + "', '" + DayWork.Value.Date.ToString("dd-MMM-yyyy") + "', '" + TimeIn.Value.ToString("HH:mm") + "', '" + TimeOut.Value.ToString("HH:mm") + "', '"+ Overtime.Text.ToString() +"' ) ", con);
             cmd.ExecuteNonQuery();
-            cmd = new SqlCommand("UPDATE Att SET IsHoliday = CASE When WorkedDay = Hol.Day AND Hol.Type = 1 THEN 1 WHEN WorkedDay = Hol.Day AND Hol.Type IS NULL THEN 2 ELSE 0 END FROM Attendances AS Att LEFT JOIN Holidays AS Hol ON Att.WorkedDay = Hol.day", connect);
+            cmd = new SqlCommand("UPDATE Att SET IsHoliday = CASE When WorkedDay = Hol.Day AND Hol.Type = 1 THEN 1 WHEN WorkedDay = Hol.Day AND Hol.Type IS NULL THEN 2 ELSE 0 END FROM Attendances AS Att LEFT JOIN Holidays AS Hol ON Att.WorkedDay = Hol.day", con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Logged.");
-            connect.Close();
+            con.Close();
             
             this.Close();
 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using WFA_APP.DB;
 
 namespace WFA_APP.View.Modules.Payroll.Weekly
 {
@@ -24,7 +25,7 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
             int nWidthEllipse,
             int nHeightEllipse
         );
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(DbConnection.Connect());
         SqlDataAdapter sda = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         public Week()
@@ -32,7 +33,7 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             DeleteBtn.Visible = false;
-            sda = new SqlDataAdapter("SELECT * FROM Weekly", conn);
+            sda = new SqlDataAdapter("SELECT * FROM PayRoll WHERE Weekly = 1", conn);
             DataSet ds = new DataSet();
             sda.Fill(ds, "Weekly");
             WeekDgv.DataSource = ds.Tables["Weekly"].DefaultView;
@@ -42,8 +43,7 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
         private void BtnWeeklyPayroll_Click(object sender, EventArgs e)
         {
             conn.Open();
-            
-            cmd = new SqlCommand("proc_Weekly", conn);
+            cmd = new SqlCommand("proc_PayRoll", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Start", StartAt.Value.Date);
             cmd.Parameters.AddWithValue("@End", EndAt.Value.Date);
@@ -51,13 +51,14 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
             cmd.Parameters.AddWithValue("@PagIbig", Week_PagIbig.Checked);
             cmd.Parameters.AddWithValue("@SSS", Week_SSS.Checked);
             cmd.Parameters.AddWithValue("@ProjectID", DropProj.SelectedValue.ToString());
+            cmd.Parameters.AddWithValue("@Weekly", IsWeekly.Checked);
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("Created.");
             conn.Close();
 
             DeleteBtn.Visible = true;
-            sda = new SqlDataAdapter("SELECT * FROM Weekly", conn);
+            sda = new SqlDataAdapter("SELECT * FROM PayRoll WHERE Weekly = 1", conn);
             DataSet ds = new DataSet();
             sda.Fill(ds, "Weekly");
             WeekDgv.DataSource = ds.Tables["Weekly"].DefaultView;
@@ -65,7 +66,7 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
         void FilterData()
         {
             conn.Open();
-            string sql = ("SELECT * FROM Weekly WHERE  StartAt = @Start AND EndAt = @End");
+            string sql = ("SELECT * FROM Weekly WHERE Weekly = 1 AND StartAt = @Start AND EndAt = @End");
             DataTable dt = new DataTable();
             SqlDataAdapter sda = new SqlDataAdapter(sql, conn);
             sda.SelectCommand.Parameters.AddWithValue("@Start", StartAt.Value.Date);
@@ -74,7 +75,6 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
             conn.Close();
             WeekDgv.DataSource = dt;
             this.Refresh();
-
         }
 
         private void FilterBtn_Click(object sender, EventArgs e)
@@ -84,12 +84,12 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
 
         private void Week_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_Project_Dataset.Projects' table. You can move, or remove it, as needed.
+            
             // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.
             this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
             // TODO: This line of code loads data into the '_Holiday_DataSet.TblHoliday' table. You can move, or remove it, as needed.
             //this.tblHolidayTableAdapter.Fill(this._Holiday_DataSet.TblHoliday);
-
-
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)

@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using WFA_APP.DB;
 
 namespace WFA_APP.View.Modules.Attendance.TimeSheet
 {
     public partial class Sheet : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+        SqlConnection con = new SqlConnection(DbConnection.Connect());
         SqlDataAdapter sda = new SqlDataAdapter();
         public Sheet()
         {

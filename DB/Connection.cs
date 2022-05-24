@@ -13,7 +13,7 @@ namespace WFA_APP.DB
         public SqlConnection con;
         public Connection()
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["CC"].ConnectionString);          
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConString"].ConnectionString);          
         }
         public static string type;
     }

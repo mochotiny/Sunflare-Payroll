@@ -14,7 +14,7 @@ namespace WFA_APP.View.Modules.Payroll.Monthly
 {
     public partial class Month : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Dibfiles\source\repo\WFA-APP\Database.mdf;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
 
