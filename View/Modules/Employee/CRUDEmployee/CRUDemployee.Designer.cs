@@ -58,16 +58,13 @@
             this.EmpAddress = new Bunifu.UI.WinForms.BunifuTextBox();
             this.DeptDrop = new Bunifu.UI.WinForms.BunifuDropdown();
             this.departmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Department_DataSet = new WFA_APP._Department_DataSet();
+            this._pr_appDataSet = new WFA_APP._pr_appDataSet();
             this.JobDrop = new Bunifu.UI.WinForms.BunifuDropdown();
             this.jobsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Job_DataSet = new WFA_APP._Job_DataSet();
             this.BioID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.BtnCreateEmp = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.BtnUpdateEmp = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.BtnDeleteEmp = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.departmentsTableAdapter = new WFA_APP._Department_DataSetTableAdapters.DepartmentsTableAdapter();
-            this.jobsTableAdapter = new WFA_APP._Job_DataSetTableAdapters.JobsTableAdapter();
             this.CheckBtn = new System.Windows.Forms.PictureBox();
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
             this.Weekly = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -80,19 +77,18 @@
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.DropProject = new Bunifu.UI.WinForms.BunifuDropdown();
             this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Project_DataSet = new WFA_APP._Project_DataSet();
-            this.projectsTableAdapter = new WFA_APP._Project_DataSetTableAdapters.ProjectsTableAdapter();
             this.FilterDrop = new Bunifu.UI.WinForms.BunifuDropdown();
             this.FilterLabel = new Bunifu.UI.WinForms.BunifuLabel();
+            this.departmentsTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.DepartmentsTableAdapter();
+            this.jobsTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.JobsTableAdapter();
+            this.projectsTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.ProjectsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.EmpDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Department_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Job_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // EmpDgv
@@ -387,12 +383,14 @@
             this.DeptDrop.BorderColor = System.Drawing.Color.Silver;
             this.DeptDrop.BorderRadius = 1;
             this.DeptDrop.Color = System.Drawing.Color.Silver;
+            this.DeptDrop.DataSource = this.departmentsBindingSource;
             this.DeptDrop.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.DeptDrop.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DeptDrop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.DeptDrop.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DeptDrop.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.DeptDrop.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.DeptDrop.DisplayMember = "Department_Name";
             this.DeptDrop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.DeptDrop.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
             this.DeptDrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -423,16 +421,17 @@
             this.DeptDrop.Text = null;
             this.DeptDrop.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.DeptDrop.TextLeftMargin = 5;
+            this.DeptDrop.ValueMember = "DepartmentID";
             // 
             // departmentsBindingSource
             // 
             this.departmentsBindingSource.DataMember = "Departments";
-            this.departmentsBindingSource.DataSource = this._Department_DataSet;
+            this.departmentsBindingSource.DataSource = this._pr_appDataSet;
             // 
-            // _Department_DataSet
+            // _pr_appDataSet
             // 
-            this._Department_DataSet.DataSetName = "_Department_DataSet";
-            this._Department_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this._pr_appDataSet.DataSetName = "_pr_appDataSet";
+            this._pr_appDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // JobDrop
             // 
@@ -441,12 +440,14 @@
             this.JobDrop.BorderColor = System.Drawing.Color.Silver;
             this.JobDrop.BorderRadius = 1;
             this.JobDrop.Color = System.Drawing.Color.Silver;
+            this.JobDrop.DataSource = this.jobsBindingSource;
             this.JobDrop.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.JobDrop.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.JobDrop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.JobDrop.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.JobDrop.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.JobDrop.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.JobDrop.DisplayMember = "JobTitle";
             this.JobDrop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.JobDrop.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
             this.JobDrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -484,12 +485,7 @@
             // jobsBindingSource
             // 
             this.jobsBindingSource.DataMember = "Jobs";
-            this.jobsBindingSource.DataSource = this._Job_DataSet;
-            // 
-            // _Job_DataSet
-            // 
-            this._Job_DataSet.DataSetName = "_Job_DataSet";
-            this._Job_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.jobsBindingSource.DataSource = this._pr_appDataSet;
             // 
             // BioID
             // 
@@ -843,14 +839,6 @@
             this.BtnDeleteEmp.UseDefaultRadiusAndThickness = true;
             this.BtnDeleteEmp.Click += new System.EventHandler(this.BtnDeleteEmp_Click);
             // 
-            // departmentsTableAdapter
-            // 
-            this.departmentsTableAdapter.ClearBeforeFill = true;
-            // 
-            // jobsTableAdapter
-            // 
-            this.jobsTableAdapter.ClearBeforeFill = true;
-            // 
             // CheckBtn
             // 
             this.CheckBtn.Image = global::WFA_APP.Properties.Resources.check;
@@ -1153,12 +1141,14 @@
             this.DropProject.BorderColor = System.Drawing.Color.Silver;
             this.DropProject.BorderRadius = 1;
             this.DropProject.Color = System.Drawing.Color.Silver;
+            this.DropProject.DataSource = this.projectsBindingSource;
             this.DropProject.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.DropProject.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DropProject.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.DropProject.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DropProject.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.DropProject.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.DropProject.DisplayMember = "ProjName";
             this.DropProject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.DropProject.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
             this.DropProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1194,16 +1184,7 @@
             // projectsBindingSource
             // 
             this.projectsBindingSource.DataMember = "Projects";
-            this.projectsBindingSource.DataSource = this._Project_DataSet;
-            // 
-            // _Project_DataSet
-            // 
-            this._Project_DataSet.DataSetName = "_Project_DataSet";
-            this._Project_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // projectsTableAdapter
-            // 
-            this.projectsTableAdapter.ClearBeforeFill = true;
+            this.projectsBindingSource.DataSource = this._pr_appDataSet;
             // 
             // FilterDrop
             // 
@@ -1212,12 +1193,14 @@
             this.FilterDrop.BorderColor = System.Drawing.Color.Silver;
             this.FilterDrop.BorderRadius = 1;
             this.FilterDrop.Color = System.Drawing.Color.Silver;
+            this.FilterDrop.DataSource = this.departmentsBindingSource;
             this.FilterDrop.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.FilterDrop.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.FilterDrop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.FilterDrop.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.FilterDrop.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.FilterDrop.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.FilterDrop.DisplayMember = "Department_Name";
             this.FilterDrop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.FilterDrop.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
             this.FilterDrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1267,6 +1250,18 @@
             this.FilterLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.FilterLabel.Click += new System.EventHandler(this.FilterLabel_Click);
             // 
+            // departmentsTableAdapter
+            // 
+            this.departmentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // jobsTableAdapter
+            // 
+            this.jobsTableAdapter.ClearBeforeFill = true;
+            // 
+            // projectsTableAdapter
+            // 
+            this.projectsTableAdapter.ClearBeforeFill = true;
+            // 
             // CRUDemployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1302,13 +1297,11 @@
             this.Load += new System.EventHandler(this.CRUDemployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EmpDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Department_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Job_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1326,12 +1319,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnCreateEmp;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnUpdateEmp;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnDeleteEmp;
-        private _Department_DataSet _Department_DataSet;
-        private System.Windows.Forms.BindingSource departmentsBindingSource;
-        private _Department_DataSetTableAdapters.DepartmentsTableAdapter departmentsTableAdapter;
-        private _Job_DataSet _Job_DataSet;
-        private System.Windows.Forms.BindingSource jobsBindingSource;
-        private _Job_DataSetTableAdapters.JobsTableAdapter jobsTableAdapter;
         private System.Windows.Forms.PictureBox CheckBtn;
         private System.Windows.Forms.PictureBox DeleteBtn;
         private Bunifu.UI.WinForms.BunifuCheckBox Weekly;
@@ -1343,11 +1330,15 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuDropdown DropProject;
-        private _Project_DataSet _Project_DataSet;
-        private System.Windows.Forms.BindingSource projectsBindingSource;
-        private _Project_DataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
         private Bunifu.UI.WinForms.BunifuDropdown FilterDrop;
         private Bunifu.UI.WinForms.BunifuLabel FilterLabel;
+        private _pr_appDataSet _pr_appDataSet;
+        private System.Windows.Forms.BindingSource departmentsBindingSource;
+        private _pr_appDataSetTableAdapters.DepartmentsTableAdapter departmentsTableAdapter;
+        private System.Windows.Forms.BindingSource jobsBindingSource;
+        private _pr_appDataSetTableAdapters.JobsTableAdapter jobsTableAdapter;
+        private System.Windows.Forms.BindingSource projectsBindingSource;
+        private _pr_appDataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
         //private DB_Filter_Department_DatasetTableAdapters.DepartmentsTableAdapter departmentsTableAdapter2;
     }
 }

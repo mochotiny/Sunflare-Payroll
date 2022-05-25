@@ -14,7 +14,7 @@ namespace WFA_APP.View.Modules.Attendance
 {
     public partial class Log : Form
     {
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
         SqlCommand cmd = new SqlCommand();
         public Log()
         {
@@ -28,8 +28,9 @@ namespace WFA_APP.View.Modules.Attendance
 
         private void Log_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_Employee_DataSet.Employees' table. You can move, or remove it, as needed.
-            this.employeesTableAdapter.Fill(this._Employee_DataSet.Employees);
+            // TODO: This line of code loads data into the '_pr_appDataSet.Employees' table. You can move, or remove it, as needed.
+            this.employeesTableAdapter.Fill(this._pr_appDataSet.Employees);
+
 
         }
 

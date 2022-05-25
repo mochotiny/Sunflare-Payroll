@@ -387,7 +387,7 @@ namespace WFA_APP.View.Modules.Projects
             this.ProjectDgv.EnableHeadersVisualStyles = false;
             this.ProjectDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.ProjectDgv.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.ProjectDgv.HeaderBgColor = System.Drawing.Color.Empty;
+            //this.ProjectDgv.HeaderBgColor = System.Drawing.Color.Empty;
             this.ProjectDgv.HeaderForeColor = System.Drawing.Color.White;
             this.ProjectDgv.Location = new System.Drawing.Point(12, 93);
             this.ProjectDgv.Name = "ProjectDgv";

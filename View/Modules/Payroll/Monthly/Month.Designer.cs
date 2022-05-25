@@ -188,7 +188,7 @@
             this.MonthDgv.EnableHeadersVisualStyles = false;
             this.MonthDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.MonthDgv.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.MonthDgv.HeaderBgColor = System.Drawing.Color.Empty;
+            //this.MonthDgv.HeaderBgColor = System.Drawing.Color.Empty;
             this.MonthDgv.HeaderForeColor = System.Drawing.Color.White;
             this.MonthDgv.Location = new System.Drawing.Point(12, 98);
             this.MonthDgv.Name = "MonthDgv";

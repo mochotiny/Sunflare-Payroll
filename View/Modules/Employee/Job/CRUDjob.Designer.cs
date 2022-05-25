@@ -109,7 +109,7 @@
             this.JobDgv.EnableHeadersVisualStyles = false;
             this.JobDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.JobDgv.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.JobDgv.HeaderBgColor = System.Drawing.Color.Empty;
+            //this.JobDgv.HeaderBgColor = System.Drawing.Color.Empty;
             this.JobDgv.HeaderForeColor = System.Drawing.Color.White;
             this.JobDgv.Location = new System.Drawing.Point(370, 36);
             this.JobDgv.Name = "JobDgv";

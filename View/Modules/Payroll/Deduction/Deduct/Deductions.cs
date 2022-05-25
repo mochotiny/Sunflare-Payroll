@@ -15,7 +15,7 @@ namespace WFA_APP.View.Modules.Payroll.Deduction
 {
     public partial class Deductions : Form
     {
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
 
@@ -69,6 +69,8 @@ namespace WFA_APP.View.Modules.Payroll.Deduction
 
         private void Deductions_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_pr_appDataSet.Projects' table. You can move, or remove it, as needed.
+            this.projectsTableAdapter.Fill(this._pr_appDataSet.Projects);
             // TODO: This line of code loads data into the 'dB_Project_Dataset.Projects' table. You can move, or remove it, as needed.
             //this.projectsTableAdapter1.Fill(this.dB_Project_Dataset.Projects);
             // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.

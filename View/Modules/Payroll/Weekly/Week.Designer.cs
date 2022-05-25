@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Week));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.WeekDgv = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.StartAt = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.EndAt = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -47,22 +47,15 @@
             this.FilterBtn = new Bunifu.UI.WinForms.BunifuLabel();
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
             this.DropProj = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Project_DataSet = new WFA_APP._Project_DataSet();
-            this.projectsTableAdapter = new WFA_APP._Project_DataSetTableAdapters.ProjectsTableAdapter();
-            //this.dB_Project_Dataset = new WFA_APP.DB_Project_Dataset();
-            this.projectsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            //this.projectsTableAdapter1 = new WFA_APP.DB_Project_DatasetTableAdapters.ProjectsTableAdapter();
-            this.projectsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.IsWeekly = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.LabelWeek = new Bunifu.UI.WinForms.BunifuLabel();
+            this._pr_appDataSet = new WFA_APP._pr_appDataSet();
+            this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectsTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.ProjectsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.WeekDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dB_Project_Dataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // WeekDgv
@@ -70,21 +63,21 @@
             this.WeekDgv.AllowCustomTheming = false;
             this.WeekDgv.AllowUserToResizeColumns = false;
             this.WeekDgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.WeekDgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.WeekDgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.WeekDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.WeekDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.WeekDgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.WeekDgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.WeekDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.WeekDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.WeekDgv.ColumnHeadersHeight = 40;
             this.WeekDgv.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.WeekDgv.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -104,14 +97,14 @@
             this.WeekDgv.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.WeekDgv.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.WeekDgv.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.WeekDgv.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.WeekDgv.DefaultCellStyle = dataGridViewCellStyle6;
             this.WeekDgv.EnableHeadersVisualStyles = false;
             this.WeekDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.WeekDgv.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -400,11 +393,11 @@
             this.BtnWeeklyPayroll.ColorContrastOnClick = 45;
             this.BtnWeeklyPayroll.ColorContrastOnHover = 45;
             this.BtnWeeklyPayroll.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.BtnWeeklyPayroll.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.BtnWeeklyPayroll.CustomizableEdges = borderEdges2;
             this.BtnWeeklyPayroll.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnWeeklyPayroll.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnWeeklyPayroll.DisabledFillColor = System.Drawing.Color.Empty;
@@ -508,7 +501,7 @@
             this.DropProj.BorderColor = System.Drawing.Color.Silver;
             this.DropProj.BorderRadius = 1;
             this.DropProj.Color = System.Drawing.Color.Silver;
-            this.DropProj.DataSource = this.projectsBindingSource2;
+            this.DropProj.DataSource = this.projectsBindingSource;
             this.DropProj.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.DropProj.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DropProj.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -547,39 +540,6 @@
             this.DropProj.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.DropProj.TextLeftMargin = 5;
             this.DropProj.ValueMember = "ProjectID";
-            // 
-            // projectsBindingSource
-            // 
-            this.projectsBindingSource.DataMember = "Projects";
-            this.projectsBindingSource.DataSource = this._Project_DataSet;
-            // 
-            // _Project_DataSet
-            // 
-            this._Project_DataSet.DataSetName = "_Project_DataSet";
-            this._Project_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // projectsTableAdapter
-            // 
-            this.projectsTableAdapter.ClearBeforeFill = true;
-            // 
-            // dB_Project_Dataset
-            // 
-            //this.dB_Project_Dataset.DataSetName = "DB_Project_Dataset";
-            //this.dB_Project_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // projectsBindingSource1
-            // 
-            this.projectsBindingSource1.DataMember = "Projects";
-            //this.projectsBindingSource1.DataSource = this.dB_Project_Dataset;
-            // 
-            // projectsTableAdapter1
-            // 
-            //this.projectsTableAdapter1.ClearBeforeFill = true;
-            // 
-            // projectsBindingSource2
-            // 
-            this.projectsBindingSource2.DataMember = "Projects";
-            //this.projectsBindingSource2.DataSource = this.dB_Project_Dataset;
             // 
             // IsWeekly
             // 
@@ -649,6 +609,20 @@
             this.LabelWeek.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.LabelWeek.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // _pr_appDataSet
+            // 
+            this._pr_appDataSet.DataSetName = "_pr_appDataSet";
+            this._pr_appDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // projectsBindingSource
+            // 
+            this.projectsBindingSource.DataMember = "Projects";
+            this.projectsBindingSource.DataSource = this._pr_appDataSet;
+            // 
+            // projectsTableAdapter
+            // 
+            this.projectsTableAdapter.ClearBeforeFill = true;
+            // 
             // Week
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,11 +650,8 @@
             this.Load += new System.EventHandler(this.Week_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WeekDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dB_Project_Dataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -701,14 +672,10 @@
         private Bunifu.UI.WinForms.BunifuLabel FilterBtn;
         private System.Windows.Forms.PictureBox DeleteBtn;
         private Bunifu.UI.WinForms.BunifuDropdown DropProj;
-        private _Project_DataSet _Project_DataSet;
-        private System.Windows.Forms.BindingSource projectsBindingSource;
-        private _Project_DataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
-        //private DB_Project_Dataset dB_Project_Dataset;
-        private System.Windows.Forms.BindingSource projectsBindingSource1;
-        //private DB_Project_DatasetTableAdapters.ProjectsTableAdapter projectsTableAdapter1;
-        private System.Windows.Forms.BindingSource projectsBindingSource2;
         private Bunifu.UI.WinForms.BunifuCheckBox IsWeekly;
         private Bunifu.UI.WinForms.BunifuLabel LabelWeek;
+        private _pr_appDataSet _pr_appDataSet;
+        private System.Windows.Forms.BindingSource projectsBindingSource;
+        private _pr_appDataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
     }
 }

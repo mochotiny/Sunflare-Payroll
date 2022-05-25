@@ -30,12 +30,12 @@ namespace WFA_APP.View.Modules.Report.ReportPR
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PR));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.Weekly2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.WeeklyPR = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPR();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -44,23 +44,21 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.ShowBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Weekly2TableAdapter = new WFA_APP.View.Modules.Report.ReportPR.WeeklyPRTableAdapters.Weekly2TableAdapter();
             this.Dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.departmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Department_DataSet = new WFA_APP._Department_DataSet();
-            this.departmentsTableAdapter = new WFA_APP._Department_DataSetTableAdapters.DepartmentsTableAdapter();
             this.BtnDepartment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Btn3Param = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Check = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.DropProj = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Project_DataSet = new WFA_APP._Project_DataSet();
-            this.projectsTableAdapter = new WFA_APP._Project_DataSetTableAdapters.ProjectsTableAdapter();
             this.Btn4Params = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this._pr_appDataSet = new WFA_APP._pr_appDataSet();
+            this.departmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departmentsTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.DepartmentsTableAdapter();
+            this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectsTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.ProjectsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Weekly2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Department_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // Weekly2BindingSource
@@ -76,9 +74,9 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.Weekly2BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.Weekly2BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WFA_APP.View.Modules.Report.ReportPR.Report.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 62);
             this.reportViewer1.Name = "reportViewer1";
@@ -158,11 +156,11 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.ShowBtn.ColorContrastOnClick = 45;
             this.ShowBtn.ColorContrastOnHover = 45;
             this.ShowBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.ShowBtn.CustomizableEdges = borderEdges1;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.ShowBtn.CustomizableEdges = borderEdges9;
             this.ShowBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ShowBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ShowBtn.DisabledFillColor = System.Drawing.Color.Empty;
@@ -283,20 +281,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Dropdown.ValueMember = "DepartmentID";
             this.Dropdown.SelectedValueChanged += new System.EventHandler(this.Dropdown_SelectedValueChanged);
             // 
-            // departmentsBindingSource
-            // 
-            this.departmentsBindingSource.DataMember = "Departments";
-            this.departmentsBindingSource.DataSource = this._Department_DataSet;
-            // 
-            // _Department_DataSet
-            // 
-            this._Department_DataSet.DataSetName = "_Department_DataSet";
-            this._Department_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departmentsTableAdapter
-            // 
-            this.departmentsTableAdapter.ClearBeforeFill = true;
-            // 
             // BtnDepartment
             // 
             this.BtnDepartment.AllowAnimations = true;
@@ -316,11 +300,11 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.BtnDepartment.ColorContrastOnClick = 45;
             this.BtnDepartment.ColorContrastOnHover = 45;
             this.BtnDepartment.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.BtnDepartment.CustomizableEdges = borderEdges2;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.BtnDepartment.CustomizableEdges = borderEdges10;
             this.BtnDepartment.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnDepartment.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnDepartment.DisabledFillColor = System.Drawing.Color.Empty;
@@ -408,11 +392,11 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Btn3Param.ColorContrastOnClick = 45;
             this.Btn3Param.ColorContrastOnHover = 45;
             this.Btn3Param.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.Btn3Param.CustomizableEdges = borderEdges3;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.Btn3Param.CustomizableEdges = borderEdges11;
             this.Btn3Param.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Btn3Param.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Btn3Param.DisabledFillColor = System.Drawing.Color.Empty;
@@ -583,20 +567,6 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.DropProj.ValueMember = "ProjectID";
             this.DropProj.SelectedValueChanged += new System.EventHandler(this.DropProj_SelectedValueChanged);
             // 
-            // projectsBindingSource
-            // 
-            this.projectsBindingSource.DataMember = "Projects";
-            this.projectsBindingSource.DataSource = this._Project_DataSet;
-            // 
-            // _Project_DataSet
-            // 
-            this._Project_DataSet.DataSetName = "_Project_DataSet";
-            this._Project_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // projectsTableAdapter
-            // 
-            this.projectsTableAdapter.ClearBeforeFill = true;
-            // 
             // Btn4Params
             // 
             this.Btn4Params.AllowAnimations = true;
@@ -616,11 +586,11 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Btn4Params.ColorContrastOnClick = 45;
             this.Btn4Params.ColorContrastOnHover = 45;
             this.Btn4Params.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.Btn4Params.CustomizableEdges = borderEdges4;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.Btn4Params.CustomizableEdges = borderEdges12;
             this.Btn4Params.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Btn4Params.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Btn4Params.DisabledFillColor = System.Drawing.Color.Empty;
@@ -689,6 +659,29 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Btn4Params.UseDefaultRadiusAndThickness = true;
             this.Btn4Params.Click += new System.EventHandler(this.Btn4Params_Click);
             // 
+            // _pr_appDataSet
+            // 
+            this._pr_appDataSet.DataSetName = "_pr_appDataSet";
+            this._pr_appDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // departmentsBindingSource
+            // 
+            this.departmentsBindingSource.DataMember = "Departments";
+            this.departmentsBindingSource.DataSource = this._pr_appDataSet;
+            // 
+            // departmentsTableAdapter
+            // 
+            this.departmentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // projectsBindingSource
+            // 
+            this.projectsBindingSource.DataMember = "Projects";
+            this.projectsBindingSource.DataSource = this._pr_appDataSet;
+            // 
+            // projectsTableAdapter
+            // 
+            this.projectsTableAdapter.ClearBeforeFill = true;
+            // 
             // PR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -710,10 +703,9 @@ namespace WFA_APP.View.Modules.Report.ReportPR
             this.Load += new System.EventHandler(this.PR_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Weekly2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeeklyPR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Department_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -728,16 +720,15 @@ namespace WFA_APP.View.Modules.Report.ReportPR
         private System.Windows.Forms.BindingSource Weekly2BindingSource;
         private WeeklyPRTableAdapters.Weekly2TableAdapter Weekly2TableAdapter;
         private Bunifu.UI.WinForms.BunifuDropdown Dropdown;
-        private _Department_DataSet _Department_DataSet;
-        private System.Windows.Forms.BindingSource departmentsBindingSource;
-        private _Department_DataSetTableAdapters.DepartmentsTableAdapter departmentsTableAdapter;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnDepartment;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Btn3Param;
         private Bunifu.UI.WinForms.BunifuCheckBox Check;
         private Bunifu.UI.WinForms.BunifuDropdown DropProj;
-        private _Project_DataSet _Project_DataSet;
-        private System.Windows.Forms.BindingSource projectsBindingSource;
-        private _Project_DataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Btn4Params;
+        private _pr_appDataSet _pr_appDataSet;
+        private System.Windows.Forms.BindingSource departmentsBindingSource;
+        private _pr_appDataSetTableAdapters.DepartmentsTableAdapter departmentsTableAdapter;
+        private System.Windows.Forms.BindingSource projectsBindingSource;
+        private _pr_appDataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
     }
 }

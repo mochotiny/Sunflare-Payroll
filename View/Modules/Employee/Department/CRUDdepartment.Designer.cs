@@ -104,7 +104,7 @@
             this.DeptDgv.EnableHeadersVisualStyles = false;
             this.DeptDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.DeptDgv.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.DeptDgv.HeaderBgColor = System.Drawing.Color.Empty;
+            //this.DeptDgv.HeaderBgColor = System.Drawing.Color.Empty;
             this.DeptDgv.HeaderForeColor = System.Drawing.Color.White;
             this.DeptDgv.Location = new System.Drawing.Point(408, 62);
             this.DeptDgv.Name = "DeptDgv";

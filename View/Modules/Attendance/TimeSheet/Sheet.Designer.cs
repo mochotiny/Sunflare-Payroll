@@ -85,7 +85,7 @@
             this.SheetDgv.EnableHeadersVisualStyles = false;
             this.SheetDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.SheetDgv.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.SheetDgv.HeaderBgColor = System.Drawing.Color.Empty;
+            //this.SheetDgv.HeaderBgColor = System.Drawing.Color.Empty;
             this.SheetDgv.HeaderForeColor = System.Drawing.Color.White;
             this.SheetDgv.Location = new System.Drawing.Point(12, 46);
             this.SheetDgv.Name = "SheetDgv";

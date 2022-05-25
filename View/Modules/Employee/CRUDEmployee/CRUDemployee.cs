@@ -18,7 +18,7 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
     public partial class CRUDemployee : Form
     {
         //readonly Connection db = new Connection();
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
         
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
@@ -54,7 +54,13 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
 
         private void CRUDemployee_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the '_pr_appDataSet.Projects' table. You can move, or remove it, as needed.
+            this.projectsTableAdapter.Fill(this._pr_appDataSet.Projects);
+            // TODO: This line of code loads data into the '_pr_appDataSet.Jobs' table. You can move, or remove it, as needed.
+            this.jobsTableAdapter.Fill(this._pr_appDataSet.Jobs);
+            // TODO: This line of code loads data into the '_pr_appDataSet.Departments' table. You can move, or remove it, as needed.
+            this.departmentsTableAdapter.Fill(this._pr_appDataSet.Departments);
+
             // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.
             //this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
             // TODO: This line of code loads data into the '_Job_DataSet.Jobs' table. You can move, or remove it, as needed.
@@ -278,15 +284,11 @@ namespace WFA_APP.View.Modules.Employee.CRUDEmployee
 
         private void FilterLabel_Click(object sender, EventArgs e)
         {
-            
-            con.Open();
-
-            sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly, ProjName FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID INNER JOIN Projects AS P ON Employees.ProjectID = P.ProjectID WHERE Department_Name = '"+FilterDrop.SelectedValue.ToString()+"' ", con);
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-39MS9Q2;Initial Catalog=pr-app;Integrated Security=True");
+            sda = new SqlDataAdapter("SELECT EmployeeID, BiometricID, Employee_Name, Employee_Contact, Employee_Address, Department_Name, JobTitle, Phil_Health, PagIbig, SSS, Weekly, ProjName FROM Employees INNER JOIN Departments AS D ON Employees.DepartmentID = D.DepartmentID INNER JOIN Jobs AS J ON Employees.JobID = J.JobID INNER JOIN Projects AS P ON Employees.ProjectID = P.ProjectID WHERE Department_Name = '" + FilterDrop.SelectedValue.ToString() + "' ", con);
             DataSet ds = new DataSet();
             sda.Fill(ds, "Employees");
             EmpDgv.DataSource = ds.Tables["Employees"].DefaultView;
-            con.Close();
-
         }
     }
 }

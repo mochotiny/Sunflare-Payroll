@@ -50,13 +50,13 @@
             this.Pay = new Bunifu.UI.WinForms.BunifuTextBox();
             this.CheckBtn = new System.Windows.Forms.PictureBox();
             this.EmpDrop = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Employee_DataSet = new WFA_APP._Employee_DataSet();
-            this.employeesTableAdapter = new WFA_APP._Employee_DataSetTableAdapters.EmployeesTableAdapter();
+            this.employeesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._pr_appDataSet = new WFA_APP._pr_appDataSet();
+            this.employeesTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.EmployeesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.AccountDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // AccountDgv
@@ -471,7 +471,7 @@
             this.EmpDrop.BorderColor = System.Drawing.Color.Silver;
             this.EmpDrop.BorderRadius = 1;
             this.EmpDrop.Color = System.Drawing.Color.Silver;
-            this.EmpDrop.DataSource = this.employeesBindingSource;
+            this.EmpDrop.DataSource = this.employeesBindingSource1;
             this.EmpDrop.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.EmpDrop.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.EmpDrop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -513,15 +513,15 @@
             this.EmpDrop.TextLeftMargin = 5;
             this.EmpDrop.ValueMember = "BiometricID";
             // 
-            // employeesBindingSource
+            // employeesBindingSource1
             // 
-            this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this._Employee_DataSet;
+            this.employeesBindingSource1.DataMember = "Employees";
+            this.employeesBindingSource1.DataSource = this._pr_appDataSet;
             // 
-            // _Employee_DataSet
+            // _pr_appDataSet
             // 
-            this._Employee_DataSet.DataSetName = "_Employee_DataSet";
-            this._Employee_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this._pr_appDataSet.DataSetName = "_pr_appDataSet";
+            this._pr_appDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // employeesTableAdapter
             // 
@@ -545,8 +545,8 @@
             this.Load += new System.EventHandler(this.Account_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AccountDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -560,8 +560,8 @@
         private Bunifu.UI.WinForms.BunifuTextBox Pay;
         private System.Windows.Forms.PictureBox CheckBtn;
         private Bunifu.UI.WinForms.BunifuDropdown EmpDrop;
-        private _Employee_DataSet _Employee_DataSet;
-        private System.Windows.Forms.BindingSource employeesBindingSource;
-        private _Employee_DataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
+        private _pr_appDataSet _pr_appDataSet;
+        private System.Windows.Forms.BindingSource employeesBindingSource1;
+        private _pr_appDataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
     }
 }

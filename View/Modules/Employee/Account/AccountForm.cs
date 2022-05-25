@@ -16,7 +16,7 @@ namespace WFA_APP.View.Modules.Employee.Account
     public partial class AccountForm : Form
     {
         //readonly Connection db = new Connection();
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
 
@@ -39,10 +39,9 @@ namespace WFA_APP.View.Modules.Employee.Account
 
         private void Account_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_Employee_DataSet.Employees' table. You can move, or remove it, as needed.
-            this.employeesTableAdapter.Fill(this._Employee_DataSet.Employees);
-            // TODO: This line of code loads data into the '_Employee_DataSet.Employees' table. You can move, or remove it, as needed.
-            this.employeesTableAdapter.Fill(this._Employee_DataSet.Employees);
+            // TODO: This line of code loads data into the '_pr_appDataSet.Employees' table. You can move, or remove it, as needed.
+            this.employeesTableAdapter.Fill(this._pr_appDataSet.Employees);
+            
 
 
             sda = new SqlDataAdapter("SELECT E.Employee_Name, Balance, Pay FROM Balance INNER JOIN Employees AS E ON Balance.BiometricID = E.BiometricID", con);
@@ -99,5 +98,7 @@ namespace WFA_APP.View.Modules.Employee.Account
                 AccountDgv.DataSource = ds.Tables["Balance"].DefaultView;
             }
         }
+
+        
     }
 }

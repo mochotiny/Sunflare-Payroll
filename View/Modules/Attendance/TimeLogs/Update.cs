@@ -14,7 +14,7 @@ namespace WFA_APP.View.Modules.Attendance
 {
     public partial class Update : Form
     {
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
         SqlCommand cmd = new SqlCommand();
         public Update()
         {

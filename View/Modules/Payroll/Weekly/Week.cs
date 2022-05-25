@@ -25,7 +25,7 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
             int nWidthEllipse,
             int nHeightEllipse
         );
-        SqlConnection conn = new SqlConnection(DbConnection.Connect());
+        SqlConnection conn = new SqlConnection(DbConnection.ConnectionString);
         SqlDataAdapter sda = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         public Week()
@@ -84,12 +84,9 @@ namespace WFA_APP.View.Modules.Payroll.Weekly
 
         private void Week_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_Project_Dataset.Projects' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the '_pr_appDataSet.Projects' table. You can move, or remove it, as needed.
+            this.projectsTableAdapter.Fill(this._pr_appDataSet.Projects);
             
-            // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.
-            this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
-            // TODO: This line of code loads data into the '_Holiday_DataSet.TblHoliday' table. You can move, or remove it, as needed.
-            //this.tblHolidayTableAdapter.Fill(this._Holiday_DataSet.TblHoliday);
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)

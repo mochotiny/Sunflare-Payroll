@@ -39,17 +39,12 @@
             this.Startat = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.Endat = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.ProjDrop = new Bunifu.UI.WinForms.BunifuDropdown();
+            this._pr_appDataSet = new WFA_APP._pr_appDataSet();
             this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Project_DataSet = new WFA_APP._Project_DataSet();
-            this.projectsTableAdapter = new WFA_APP._Project_DataSetTableAdapters.ProjectsTableAdapter();
-            //this.dB_Project_Dataset = new WFA_APP.DB_Project_Dataset();
-            this.projectsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            //this.projectsTableAdapter1 = new WFA_APP.DB_Project_DatasetTableAdapters.ProjectsTableAdapter();
+            this.projectsTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.ProjectsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DeductDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dB_Project_Dataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // DeductDgv
@@ -261,7 +256,7 @@
             this.ProjDrop.BorderColor = System.Drawing.Color.Silver;
             this.ProjDrop.BorderRadius = 1;
             this.ProjDrop.Color = System.Drawing.Color.Silver;
-            this.ProjDrop.DataSource = this.projectsBindingSource1;
+            this.ProjDrop.DataSource = this.projectsBindingSource;
             this.ProjDrop.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.ProjDrop.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ProjDrop.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -301,33 +296,19 @@
             this.ProjDrop.TextLeftMargin = 5;
             this.ProjDrop.ValueMember = "ProjectID";
             // 
+            // _pr_appDataSet
+            // 
+            this._pr_appDataSet.DataSetName = "_pr_appDataSet";
+            this._pr_appDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // projectsBindingSource
             // 
             this.projectsBindingSource.DataMember = "Projects";
-            this.projectsBindingSource.DataSource = this._Project_DataSet;
-            // 
-            // _Project_DataSet
-            // 
-            this._Project_DataSet.DataSetName = "_Project_DataSet";
-            this._Project_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.projectsBindingSource.DataSource = this._pr_appDataSet;
             // 
             // projectsTableAdapter
             // 
             this.projectsTableAdapter.ClearBeforeFill = true;
-            // 
-            // dB_Project_Dataset
-            // 
-            //this.dB_Project_Dataset.DataSetName = "DB_Project_Dataset";
-            //this.dB_Project_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // projectsBindingSource1
-            // 
-            this.projectsBindingSource1.DataMember = "Projects";
-            //this.projectsBindingSource1.DataSource = this.dB_Project_Dataset;
-            // 
-            // projectsTableAdapter1
-            // 
-            //this.projectsTableAdapter1.ClearBeforeFill = true;
             // 
             // Deductions
             // 
@@ -345,10 +326,8 @@
             this.Text = "Deductions";
             this.Load += new System.EventHandler(this.Deductions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DeductDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Project_DataSet)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dB_Project_Dataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,11 +339,9 @@
         private Bunifu.UI.WinForms.BunifuDatePicker Startat;
         private Bunifu.UI.WinForms.BunifuDatePicker Endat;
         private Bunifu.UI.WinForms.BunifuDropdown ProjDrop;
-        private _Project_DataSet _Project_DataSet;
+        private _pr_appDataSet _pr_appDataSet;
         private System.Windows.Forms.BindingSource projectsBindingSource;
-        private _Project_DataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
-        //private DB_Project_Dataset dB_Project_Dataset;
-        private System.Windows.Forms.BindingSource projectsBindingSource1;
+        private _pr_appDataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
         //private DB_Project_DatasetTableAdapters.ProjectsTableAdapter projectsTableAdapter1;
     }
 }

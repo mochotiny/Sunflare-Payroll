@@ -38,17 +38,17 @@
             this.AttDgv = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.EmpDrop = new Bunifu.UI.WinForms.BunifuDropdown();
             this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Employee_DataSet = new WFA_APP._Employee_DataSet();
+            this._pr_appDataSet = new WFA_APP._pr_appDataSet();
             this.StartAt = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.EndAt = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.LogBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.UpdateBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.employeesTableAdapter = new WFA_APP._Employee_DataSetTableAdapters.EmployeesTableAdapter();
             this.FilterLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.RefreshBtn = new System.Windows.Forms.PictureBox();
+            this.employeesTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.EmployeesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.AttDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,12 +164,12 @@
             // employeesBindingSource
             // 
             this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this._Employee_DataSet;
+            this.employeesBindingSource.DataSource = this._pr_appDataSet;
             // 
-            // _Employee_DataSet
+            // _pr_appDataSet
             // 
-            this._Employee_DataSet.DataSetName = "_Employee_DataSet";
-            this._Employee_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this._pr_appDataSet.DataSetName = "_pr_appDataSet";
+            this._pr_appDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // StartAt
             // 
@@ -405,10 +405,6 @@
             this.UpdateBtn.UseDefaultRadiusAndThickness = true;
             this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
-            // employeesTableAdapter
-            // 
-            this.employeesTableAdapter.ClearBeforeFill = true;
-            // 
             // FilterLabel
             // 
             this.FilterLabel.AllowParentOverrides = false;
@@ -437,6 +433,10 @@
             this.RefreshBtn.TabStop = false;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
+            // 
             // AttendanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,7 +457,7 @@
             this.Load += new System.EventHandler(this.AttendanceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AttDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -472,10 +472,10 @@
         private Bunifu.UI.WinForms.BunifuDatePicker EndAt;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton LogBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton UpdateBtn;
-        private _Employee_DataSet _Employee_DataSet;
-        private System.Windows.Forms.BindingSource employeesBindingSource;
-        private _Employee_DataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
         private Bunifu.UI.WinForms.BunifuLabel FilterLabel;
         private System.Windows.Forms.PictureBox RefreshBtn;
+        private _pr_appDataSet _pr_appDataSet;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
+        private _pr_appDataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
     }
 }

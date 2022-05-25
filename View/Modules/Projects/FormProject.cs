@@ -26,7 +26,7 @@ namespace WFA_APP.View.Modules.Projects
             int nHeightEllipse
         );
         //Connection db = new Connection();
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
         public FormProject()

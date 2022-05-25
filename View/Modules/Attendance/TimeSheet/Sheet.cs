@@ -14,7 +14,7 @@ namespace WFA_APP.View.Modules.Attendance.TimeSheet
 {
     public partial class Sheet : Form
     {
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
         SqlDataAdapter sda = new SqlDataAdapter();
         public Sheet()
         {

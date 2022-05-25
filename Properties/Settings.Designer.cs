@@ -43,5 +43,16 @@ namespace WFA_APP.Properties {
                 return ((string)(this["DatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=D:\\DIBFILES\\SOURCE\\REPO\\WFA-AP" +
+            "P\\BIN\\DEBUG\\DATABASE.MDF;Integrated Security=True")]
+        public string D__DIBFILES_SOURCE_REPO_WFA_APP_BIN_DEBUG_DATABASE_MDFConnectionString {
+            get {
+                return ((string)(this["D__DIBFILES_SOURCE_REPO_WFA_APP_BIN_DEBUG_DATABASE_MDFConnectionString"]));
+            }
+        }
     }
 }

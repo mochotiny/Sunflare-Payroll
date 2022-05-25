@@ -17,7 +17,7 @@ namespace WFA_APP.View.Modules.Attendance
     {
         //Connection db = new Connection();
         SqlDataAdapter sda = new SqlDataAdapter();
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
 
         public AttendancePresenter Presenter { get; set; }
         public AttendanceForm()
@@ -28,9 +28,8 @@ namespace WFA_APP.View.Modules.Attendance
         private void AttendanceForm_Load(object sender, EventArgs e)
         {
             FillData();
-            // TODO: This line of code loads data into the '_Employee_DataSet.Employees' table. You can move, or remove it, as needed.
-            this.employeesTableAdapter.Fill(this._Employee_DataSet.Employees);
-
+            // TODO: This line of code loads data into the '_pr_appDataSet.Employees' table. You can move, or remove it, as needed.
+            this.employeesTableAdapter.Fill(this._pr_appDataSet.Employees);
         }
 
         void FillData()
@@ -46,6 +45,7 @@ namespace WFA_APP.View.Modules.Attendance
         }
         void FilterData()
         {
+            SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
             con.Open();
             string sql = ("SELECT AttendanceID, BioID, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances WHERE BioID = @EmployeeId AND WorkedDay BETWEEN @Start AND @End");
             DataTable dt = new DataTable();
@@ -57,7 +57,7 @@ namespace WFA_APP.View.Modules.Attendance
             con.Close();
             AttDgv.DataSource = dt;
             this.Refresh();
-            
+            con.Close();
         }
 
         private void FilterLabel_Click(object sender, EventArgs e)
@@ -85,12 +85,12 @@ namespace WFA_APP.View.Modules.Attendance
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-           
             sda = new SqlDataAdapter("SELECT AttendanceID, E.Employee_Name, WorkedDay, StartAt, EndAt, NoOfOvertime, LogStatus FROM Attendances AS A INNER JOIN Employees AS E ON E.BiometricID = A.BioID", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             AttDgv.DataSource = dt;
             this.Refresh();
+            
         }
     }  
 

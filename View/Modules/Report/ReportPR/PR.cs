@@ -20,10 +20,11 @@ namespace WFA_APP.View.Modules.Report.ReportPR
 
         private void PR_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_Project_DataSet.Projects' table. You can move, or remove it, as needed.
-            this.projectsTableAdapter.Fill(this._Project_DataSet.Projects);
-            // TODO: This line of code loads data into the '_Department_DataSet.Departments' table. You can move, or remove it, as needed.
-            this.departmentsTableAdapter.Fill(this._Department_DataSet.Departments);
+            // TODO: This line of code loads data into the '_pr_appDataSet.Projects' table. You can move, or remove it, as needed.
+            this.projectsTableAdapter.Fill(this._pr_appDataSet.Projects);
+            // TODO: This line of code loads data into the '_pr_appDataSet.Departments' table. You can move, or remove it, as needed.
+            this.departmentsTableAdapter.Fill(this._pr_appDataSet.Departments);
+
             BtnDepartment.Visible = false;
             Btn3Param.Visible = false;
             Btn4Params.Visible = false;

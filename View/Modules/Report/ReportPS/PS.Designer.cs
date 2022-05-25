@@ -40,19 +40,14 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.Start = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.DataTable1TableAdapter = new WFA_APP.View.Modules.Report.ReportPS.WeekPSTableAdapters.DataTable1TableAdapter();
             this.ShowBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Employee_DataSet = new WFA_APP._Employee_DataSet();
-            this.employeesTableAdapter = new WFA_APP._Employee_DataSetTableAdapters.EmployeesTableAdapter();
             this.Dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
-            //this.dB_Employee_Dataset = new WFA_APP.DB_Employee_Dataset();
-            this.employeesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            //this.employeesTableAdapter1 = new WFA_APP.DB_Employee_DatasetTableAdapters.EmployeesTableAdapter();
+            this._pr_appDataSet = new WFA_APP._pr_appDataSet();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesTableAdapter = new WFA_APP._pr_appDataSetTableAdapters.EmployeesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeekPS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dB_Employee_Dataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // DataTable1BindingSource
@@ -224,20 +219,6 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.ShowBtn.UseDefaultRadiusAndThickness = true;
             this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
             // 
-            // employeesBindingSource
-            // 
-            this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this._Employee_DataSet;
-            // 
-            // _Employee_DataSet
-            // 
-            this._Employee_DataSet.DataSetName = "_Employee_DataSet";
-            this._Employee_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeesTableAdapter
-            // 
-            this.employeesTableAdapter.ClearBeforeFill = true;
-            // 
             // Dropdown
             // 
             this.Dropdown.BackColor = System.Drawing.Color.Transparent;
@@ -245,7 +226,7 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.Dropdown.BorderColor = System.Drawing.Color.Silver;
             this.Dropdown.BorderRadius = 1;
             this.Dropdown.Color = System.Drawing.Color.Silver;
-            this.Dropdown.DataSource = this.employeesBindingSource1;
+            this.Dropdown.DataSource = this.employeesBindingSource;
             this.Dropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.Dropdown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Dropdown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -287,19 +268,19 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.Dropdown.TextLeftMargin = 5;
             this.Dropdown.ValueMember = "BiometricID";
             // 
-            // dB_Employee_Dataset
+            // _pr_appDataSet
             // 
-            //this.dB_Employee_Dataset.DataSetName = "DB_Employee_Dataset";
-            //this.dB_Employee_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this._pr_appDataSet.DataSetName = "_pr_appDataSet";
+            this._pr_appDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // employeesBindingSource1
+            // employeesBindingSource
             // 
-            this.employeesBindingSource1.DataMember = "Employees";
-            //this.employeesBindingSource1.DataSource = this.dB_Employee_Dataset;
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this._pr_appDataSet;
             // 
-            // employeesTableAdapter1
+            // employeesTableAdapter
             // 
-            //this.employeesTableAdapter1.ClearBeforeFill = true;
+            this.employeesTableAdapter.ClearBeforeFill = true;
             // 
             // PS
             // 
@@ -317,10 +298,8 @@ namespace WFA_APP.View.Modules.Report.ReportPS
             this.Load += new System.EventHandler(this.PS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeekPS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._pr_appDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dB_Employee_Dataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,12 +313,10 @@ namespace WFA_APP.View.Modules.Report.ReportPS
         private WeekPS WeekPS;
         private WeekPSTableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ShowBtn;
-        private _Employee_DataSet _Employee_DataSet;
-        private System.Windows.Forms.BindingSource employeesBindingSource;
-        private _Employee_DataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
         private Bunifu.UI.WinForms.BunifuDropdown Dropdown;
-        //private DB_Employee_Dataset dB_Employee_Dataset;
-        private System.Windows.Forms.BindingSource employeesBindingSource1;
+        private _pr_appDataSet _pr_appDataSet;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
+        private _pr_appDataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
         //private DB_Employee_DatasetTableAdapters.EmployeesTableAdapter employeesTableAdapter1;
     }
 }

@@ -17,7 +17,7 @@ namespace WFA_APP.View.App
     public partial class LogForm : Form
     {
         //Connection mycon = new Connection();
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn

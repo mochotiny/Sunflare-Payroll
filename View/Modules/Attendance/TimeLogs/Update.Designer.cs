@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -43,9 +42,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Employee_DataSet = new WFA_APP._Employee_DataSet();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.CloseBtn = new System.Windows.Forms.PictureBox();
             this.PunchLog = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Overtime = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -53,32 +49,12 @@
             this.OutLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.Inlabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.DayWork = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.employeesTableAdapter = new WFA_APP._Employee_DataSetTableAdapters.EmployeesTableAdapter();
             this.TimeOut = new System.Windows.Forms.DateTimePicker();
             this.TimeIn = new System.Windows.Forms.DateTimePicker();
             this.ID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.Name = new Bunifu.UI.WinForms.BunifuTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
             this.SuspendLayout();
-            // 
-            // employeesBindingSource
-            // 
-            this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this._Employee_DataSet;
-            // 
-            // _Employee_DataSet
-            // 
-            this._Employee_DataSet.DataSetName = "_Employee_DataSet";
-            this._Employee_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = null;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // CloseBtn
             // 
@@ -328,10 +304,6 @@
             this.DayWork.Size = new System.Drawing.Size(230, 32);
             this.DayWork.TabIndex = 12;
             // 
-            // employeesTableAdapter
-            // 
-            this.employeesTableAdapter.ClearBeforeFill = true;
-            // 
             // TimeOut
             // 
             this.TimeOut.CustomFormat = "hh:mm:ss";
@@ -503,7 +475,6 @@
             this.Name.TextPlaceholder = "Biometric ID";
             this.Name.UseSystemPasswordChar = false;
             this.Name.WordWrap = true;
-            
             // 
             // Update
             // 
@@ -525,8 +496,6 @@
             //this.Name = "Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Update";
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Employee_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -534,15 +503,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource employeesBindingSource;
-        private _Employee_DataSet _Employee_DataSet;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.PictureBox CloseBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton PunchLog;
         private Bunifu.UI.WinForms.BunifuLabel DayLabel;
         private Bunifu.UI.WinForms.BunifuLabel OutLabel;
         private Bunifu.UI.WinForms.BunifuLabel Inlabel;
-        private _Employee_DataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
+        //private _Employee_DataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
         public Bunifu.UI.WinForms.BunifuTextBox Overtime;
         public Bunifu.UI.WinForms.BunifuDatePicker DayWork;
         public System.Windows.Forms.DateTimePicker TimeOut;

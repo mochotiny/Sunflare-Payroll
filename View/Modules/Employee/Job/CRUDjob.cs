@@ -16,7 +16,7 @@ namespace WFA_APP.View.Modules.Job
     public partial class CRUDjob : Form
     {
         //readonly Connection db = new Connection();
-        SqlConnection con = new SqlConnection(DbConnection.Connect());
+        SqlConnection con = new SqlConnection(DbConnection.ConnectionString);
         SqlDataAdapter sda = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
 
